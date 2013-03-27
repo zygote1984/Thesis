@@ -1,0 +1,29 @@
+
+\begin{tikzpicture}
+
+\umlemptyclass{Client}
+\umlclass[x = 4, y = 0]{Target}{ 
+ 
+  }{ 
+  + Request()
+} 
+
+\umlclass[x = 8, y = 0]{Adaptee}{ 
+ 
+  }{ 
+  + SpecificRequest()
+}
+
+
+\umlclass[x = 6, y = -3]{Adapter}{ 
+  +adaptee : Adaptee
+  }{
+  + Request()
+}
+
+\umlinherit{Adapter}{Target}
+\umluniassoc{Client}{Target} 
+\umluniassoc{Adapter}{Adaptee}
+
+  \end{tikzpicture}
+

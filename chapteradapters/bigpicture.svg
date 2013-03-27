@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   style="background-color: rgb(255, 255, 255);"
+   width="1149px"
+   height="743px"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="bigpicture.svg">
+  <metadata
+     id="metadata546">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1699"
+     inkscape:window-height="1083"
+     id="namedview544"
+     showgrid="false"
+     inkscape:zoom="0.71879958"
+     inkscape:cx="763.50879"
+     inkscape:cy="504.6605"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g6" />
+  <defs
+     id="defs4" />
+  <g
+     transform="translate(0.5,0.5)"
+     id="g6">
+    <rect
+       x="17"
+       y="432"
+       width="1130"
+       height="300"
+       fill="#99ccff"
+       stroke="none"
+       id="rect8" />
+    <rect
+       x="327"
+       y="432"
+       width="820"
+       height="270"
+       fill="#cce5ff"
+       stroke="none"
+       id="rect10" />
+    <rect
+       x="166"
+       y="432"
+       width="161"
+       height="270"
+       fill="#ebf3ff"
+       stroke="none"
+       id="rect12" />
+    <rect
+       x="17"
+       y="2"
+       width="1130"
+       height="430"
+       fill="#f8cecc"
+       stroke="none"
+       id="rect14" />
+    <rect
+       x="657"
+       y="32"
+       width="350"
+       height="400"
+       fill="#ccffcc"
+       stroke="none"
+       id="rect16" />
+    <rect
+       x="477"
+       y="32"
+       width="180"
+       height="400"
+       fill="#e6ffcc"
+       stroke="none"
+       id="rect18" />
+    <rect
+       x="166"
+       y="32"
+       width="311"
+       height="400"
+       fill="#ffffcc"
+       stroke="none"
+       id="rect20" />
+    <rect
+       x="17"
+       y="2"
+       width="149"
+       height="430"
+       fill="#ffe6cc"
+       stroke="none"
+       id="rect22" />
+    <path
+       d="M 36 259 C 36 258 37 257 37 256 C 38 255 40 255 41 255 L 129 255 C 130 255 132 255 133 256 C 133 257 134 258 134 259 L 134 309 C 118 303 101 303 85 309 C 69 315 52 315 36 309 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path24" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g26">
+      <text
+         x="85"
+         y="289"
+         id="text28">Converters</text>
+    </g>
+    <path
+       d="M 40 89 C 40 87 41 86 41 85 C 42 84 44 84 45 84 L 133 84 C 134 84 136 84 137 85 C 137 86 138 87 138 89 L 138 138 C 122 132 105 132 89 138 C 73 144 56 144 40 138 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path30" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g32">
+      <text
+         x="89"
+         y="118"
+         id="text34">Gluer statemets</text>
+    </g>
+    <path
+       d="M 36 343 C 36 341 37 340 37 339 C 38 338 40 337 41 337 L 129 337 C 130 337 132 338 133 339 C 133 340 134 341 134 343 L 134 400 C 118 393 101 393 85 400 C 69 407 52 407 36 400 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path36" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g38">
+      <text
+         x="85"
+         y="362"
+         id="text40">Converter</text>
+      <text
+         x="85"
+         y="376"
+         id="text42">Precedence</text>
+      <text
+         x="85"
+         y="390"
+         id="text44">Declarations</text>
+    </g>
+    <path
+       d="M 48 168 C 48 165 50 162 53 162 L 132 162 C 135 162 138 165 138 168 L 138 214 C 124 208 107 208 93 214 C 78 220 62 220 48 214 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path46" />
+    <path
+       d="M 42 174 C 42 172 42 171 43 170 C 45 168 46 168 48 168 L 126 168 C 128 168 129 168 131 170 C 132 171 132 172 132 174 L 132 220 C 118 214 101 214 87 220 C 73 226 56 226 42 220 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path48" />
+    <path
+       d="M 36 179 C 36 176 39 174 42 174 L 121 174 C 124 174 126 176 126 179 L 126 226 C 112 220 96 220 81 226 C 67 232 50 232 36 226 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path50" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g52">
+      <text
+         x="87"
+         y="194"
+         id="text54">Application</text>
+      <text
+         x="87"
+         y="208"
+         id="text56">Classes</text>
+    </g>
+    <rect
+       x="200"
+       y="324"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect58" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g60">
+      <text
+         x="249"
+         y="351"
+         id="text62">Check</text>
+      <text
+         x="249"
+         y="365"
+         id="text64">Converters</text>
+    </g>
+    <rect
+       x="200"
+       y="85"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect66" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g68">
+      <text
+         x="249"
+         y="112"
+         id="text70">Check Gluer</text>
+      <text
+         x="249"
+         y="126"
+         id="text72">Statements</text>
+    </g>
+    <path
+       d="M 138 197 L 198 348"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path74" />
+    <path
+       d="M 200 352 L 194 347 L 198 348 L 200 345 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path76" />
+    <path
+       d="M 134 285 L 196 349"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path78" />
+    <path
+       d="M 199 353 L 192 350 L 196 349 L 197 345 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path80" />
+    <path
+       d="M 134 372 L 194 355"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path82" />
+    <path
+       d="M 199 354 L 193 359 L 194 355 L 191 352 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path84" />
+    <path
+       d="M 138 114 L 194 115"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path86" />
+    <path
+       d="M 199 115 L 192 118 L 194 115 L 192 111 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path88" />
+    <path
+       d="M 138 197 L 196 120"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path90" />
+    <path
+       d="M 199 116 L 198 124 L 196 120 L 192 120 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path92" />
+    <path
+       d="M 391 323 L 437 349 C 438 349 438 350 438 350 C 438 351 438 352 437 352 L 391 378 C 390 379 388 379 387 378 L 341 352 C 340 352 340 351 340 350 C 340 350 340 349 341 349 L 387 323 C 388 322 390 322 391 323 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path94" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g96">
+      <text
+         x="389"
+         y="355"
+         id="text98">passed?</text>
+    </g>
+    <rect
+       x="340"
+       y="199"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#ff0000"
+       stroke-width="2"
+       id="rect100" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g102">
+      <text
+         x="389"
+         y="226"
+         id="text104">Compile</text>
+      <text
+         x="389"
+         y="240"
+         id="text106">Error</text>
+    </g>
+    <path
+       d="M 298 115 L 334 116"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path108" />
+    <path
+       d="M 339 116 L 332 119 L 334 116 L 332 112 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path110" />
+    <path
+       d="M 298 354 L 334 351"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path112" />
+    <path
+       d="M 339 351 L 332 355 L 334 351 L 332 348 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path114" />
+    <path
+       d="M 389 322 L 389 265"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path116" />
+    <path
+       d="M 389 260 L 393 267 L 389 265 L 386 267 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path118" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="11px"
+       id="g120">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="377"
+         y="285"
+         width="26"
+         height="13"
+         stroke-width="0"
+         id="rect122" />
+      <text
+         x="389"
+         y="294"
+         id="text124">false</text>
+    </g>
+    <path
+       d="M 391 87 L 437 114 C 438 114 438 115 438 116 C 438 117 438 118 437 118 L 391 145 C 390 145 388 145 387 145 L 341 118 C 340 118 340 117 340 116 C 340 115 340 114 341 114 L 387 87 C 388 87 390 87 391 87 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path126" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g128">
+      <text
+         x="389"
+         y="120"
+         id="text130">passed?</text>
+    </g>
+    <path
+       d="M 389 145 L 389 192"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path132" />
+    <path
+       d="M 389 197 L 386 190 L 389 192 L 393 190 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path134" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="11px"
+       id="g136">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="377"
+         y="166"
+         width="26"
+         height="13"
+         stroke-width="0"
+         id="rect138" />
+      <text
+         x="389"
+         y="175"
+         id="text140">false</text>
+    </g>
+    <rect
+       x="513"
+       y="100"
+       width="98"
+       height="62"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect142" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g144">
+      <text
+         x="562"
+         y="128"
+         id="text146">Build Conversion</text>
+      <text
+         x="562"
+         y="142"
+         id="text148">Registry</text>
+    </g>
+    <path
+       d="M 532 192 C 533 191 533 189 534 188 C 535 188 536 187 537 187 L 606 187 C 607 187 609 188 610 189 C 611 190 611 191 611 192 L 592 242 C 591 243 590 245 590 246 C 589 246 588 247 587 247 L 517 247 C 516 247 515 246 514 245 C 513 244 513 243 513 242 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path150" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g152">
+      <text
+         x="562"
+         y="214"
+         id="text154">Conversion</text>
+      <text
+         x="562"
+         y="228"
+         id="text156">Registry</text>
+    </g>
+    <path
+       d="M 438 351 L 511 137"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path158" />
+    <path
+       d="M 513 132 L 514 140 L 511 137 L 507 138 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path160" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="11px"
+       id="g162">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="465"
+         y="235"
+         width="22"
+         height="13"
+         stroke-width="0"
+         id="rect164" />
+      <text
+         x="476"
+         y="244"
+         id="text166">true</text>
+    </g>
+    <path
+       d="M 562 162 L 562 179"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path168" />
+    <path
+       d="M 562 186 L 559 179 L 566 179 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path170" />
+    <rect
+       x="697"
+       y="314"
+       width="98"
+       height="57"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect172" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g174">
+      <text
+         x="746"
+         y="332"
+         id="text176">Generate</text>
+      <text
+         x="746"
+         y="346"
+         id="text178">Conversion </text>
+      <text
+         x="746"
+         y="360"
+         id="text180">Aspects</text>
+    </g>
+    <path
+       d="M 602 217 L 693 337"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path182" />
+    <path
+       d="M 696 341 L 689 338 L 693 337 L 695 333 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path184" />
+    <rect
+       x="697"
+       y="84"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect186" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g188">
+      <text
+         x="746"
+         y="111"
+         id="text190">Byte-code</text>
+      <text
+         x="746"
+         y="125"
+         id="text192">instrumentation</text>
+    </g>
+    <path
+       d="M 438 116 L 547 85 Q 557 82 567 84 L 691 104"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path194" />
+    <path
+       d="M 696 105 L 688 108 L 691 104 L 690 101 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path196" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="11px"
+       id="g198">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="555"
+         y="78"
+         width="22"
+         height="13"
+         stroke-width="0"
+         id="rect200" />
+      <text
+         x="566"
+         y="87"
+         id="text202">true</text>
+    </g>
+    <path
+       d="M 852 149 C 851 147 853 143 855 142 C 857 141 860 141 861 144 L 980 144 C 982 144 985 144 987 145 C 988 146 989 148 988 149 L 956 200 C 957 203 955 206 953 207 C 951 209 948 208 947 205 L 827 205 C 824 205 822 205 821 204 C 819 203 819 201 820 200 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path204" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g206">
+      <text
+         x="904"
+         y="165"
+         id="text208">Application code</text>
+      <text
+         x="904"
+         y="179"
+         id="text210">instrumented with</text>
+      <text
+         x="904"
+         y="193"
+         id="text212">conversion requests</text>
+    </g>
+    <path
+       d="M 838 247 C 839 246 839 244 840 243 C 841 243 842 242 843 242 L 912 242 C 913 242 915 243 916 244 C 917 245 917 246 917 247 L 898 297 C 897 298 896 300 896 301 C 895 301 894 302 893 302 L 823 302 C 822 302 821 301 820 300 C 819 299 819 298 819 297 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path214" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g216">
+      <text
+         x="868"
+         y="269"
+         id="text218">Conversion</text>
+      <text
+         x="868"
+         y="283"
+         id="text220">Aspects</text>
+    </g>
+    <path
+       d="M 746 314 L 823 275"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path222" />
+    <path
+       d="M 827 273 L 823 279 L 823 275 L 819 273 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path224" />
+    <path
+       d="M 795 114 L 832 169"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path226" />
+    <path
+       d="M 835 174 L 828 170 L 832 169 L 834 166 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path228" />
+    <rect
+       x="1027"
+       y="145"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect230" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g232">
+      <text
+         x="1076"
+         y="172"
+         id="text234">Final </text>
+      <text
+         x="1076"
+         y="186"
+         id="text236">Compilation</text>
+    </g>
+    <path
+       d="M 908 272 L 1022 179"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path238" />
+    <path
+       d="M 1026 176 L 1023 183 L 1022 179 L 1018 178 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path240" />
+    <path
+       d="M 973 175 L 1021 175"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path242" />
+    <path
+       d="M 1026 175 L 1019 179 L 1021 175 L 1019 172 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path244" />
+    <path
+       d="M 138 197 L 183 81 Q 187 72 197 72 L 1007 72 Q 1017 72 1023 80 L 1072 140"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path246" />
+    <path
+       d="M 1075 144 L 1068 141 L 1072 140 L 1074 137 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path248" />
+    <path
+       d="M 1046 316 C 1047 314 1047 313 1048 312 C 1049 311 1050 311 1051 311 L 1120 311 C 1121 311 1123 311 1124 312 C 1125 313 1125 314 1125 316 L 1106 365 C 1105 367 1104 368 1104 369 C 1103 370 1102 370 1101 370 L 1031 370 C 1030 370 1029 370 1028 369 C 1027 368 1027 366 1027 365 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path250" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g252">
+      <text
+         x="1076"
+         y="345"
+         id="text254">Executable</text>
+    </g>
+    <path
+       d="M 1076 205 L 1076 304"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path256" />
+    <path
+       d="M 1076 309 L 1073 302 L 1076 304 L 1080 302 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path258" />
+    <rect
+       x="25"
+       y="5"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect260" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="14px"
+       id="g262">
+      <text
+         x="27"
+         y="20"
+         id="text264">Development Time</text>
+    </g>
+    <rect
+       x="583"
+       y="3"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect266" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="18px"
+       id="g268">
+      <text
+         x="585"
+         y="22"
+         id="text270">Compile Time</text>
+    </g>
+    <rect
+       x="283"
+       y="42"
+       width="34"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect272" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="14px"
+       id="g274">
+      <text
+         x="285"
+         y="57"
+         id="text276">Checking</text>
+    </g>
+    <rect
+       x="547"
+       y="36"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect278" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       text-anchor="middle"
+       font-size="12px"
+       id="g280">
+      <text
+         x="562"
+         y="49"
+         id="text282">Creating the </text>
+      <text
+         x="562"
+         y="63"
+         id="text284">Conversion Registry</text>
+    </g>
+    <rect
+       x="42"
+       y="494"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect286" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g288">
+      <text
+         x="91"
+         y="528"
+         id="text290">Run Executable</text>
+    </g>
+    <path
+       d="M 1076 371 L 1076 442 Q 1076 452 1066 452 L 76 452 Q 66 452 66 462 L 66 488"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path292" />
+    <path
+       d="M 66 493 L 63 486 L 66 488 L 70 486 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path294" />
+    <rect
+       x="347"
+       y="494"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect296" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g298">
+      <text
+         x="396"
+         y="514"
+         id="text300">Process </text>
+      <text
+         x="396"
+         y="528"
+         id="text302">Conversion </text>
+      <text
+         x="396"
+         y="542"
+         id="text304">Request</text>
+    </g>
+    <rect
+       x="188"
+       y="494"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect306" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g308">
+      <text
+         x="237"
+         y="521"
+         id="text310">Load Conversion</text>
+      <text
+         x="237"
+         y="535"
+         id="text312">Registry</text>
+    </g>
+    <path
+       d="M 562 422 L 562 448 Q 562 458 552 458 L 247 458 Q 237 458 237 468 L 237 488"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path314" />
+    <path
+       d="M 237 493 L 233 486 L 237 488 L 240 486 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path316" />
+    <path
+       d="M 140 524 L 181 524"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path318" />
+    <path
+       d="M 186 524 L 179 528 L 181 524 L 179 521 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path320" />
+    <path
+       d="M 286 524 L 341 524"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path322" />
+    <path
+       d="M 346 524 L 339 528 L 341 524 L 339 521 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path324" />
+    <rect
+       x="485"
+       y="494"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect326" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g328">
+      <text
+         x="534"
+         y="521"
+         id="text330">Find </text>
+      <text
+         x="534"
+         y="535"
+         id="text332">Conversion</text>
+    </g>
+    <path
+       d="M 445 524 L 478 524"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path334" />
+    <path
+       d="M 483 524 L 476 528 L 478 524 L 476 521 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path336" />
+    <path
+       d="M 207 596 C 208 595 208 593 209 592 C 210 592 211 591 212 591 L 281 591 C 282 591 284 592 285 593 C 286 594 286 595 286 596 L 267 646 C 266 647 265 649 265 650 C 264 650 263 651 262 651 L 192 651 C 191 651 190 650 189 649 C 188 648 188 647 188 646 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path338" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g340">
+      <text
+         x="237"
+         y="611"
+         id="text342">Run-time</text>
+      <text
+         x="237"
+         y="625"
+         id="text344">Conversion</text>
+      <text
+         x="237"
+         y="639"
+         id="text346">Registry</text>
+    </g>
+    <path
+       d="M 237 554 L 237 563 Q 237 573 237 573 L 237 573 Q 237 573 237 579 L 237 585"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path348" />
+    <path
+       d="M 237 590 L 234 583 L 237 585 L 241 583 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path350" />
+    <rect
+       x="513"
+       y="272"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect352" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g354">
+      <text
+         x="562"
+         y="299"
+         id="text356">Serialize </text>
+      <text
+         x="562"
+         y="313"
+         id="text358">Registry</text>
+    </g>
+    <path
+       d="M 562 247 L 562 266"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path360" />
+    <path
+       d="M 562 271 L 559 264 L 562 266 L 566 264 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path362" />
+    <path
+       d="M 532 367 C 533 366 533 364 534 363 C 535 363 536 362 537 362 L 606 362 C 607 362 609 363 610 364 C 611 365 611 366 611 367 L 592 417 C 591 418 590 420 590 421 C 589 421 588 422 587 422 L 517 422 C 516 422 515 421 514 420 C 513 419 513 418 513 417 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path364" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g366">
+      <text
+         x="562"
+         y="389"
+         id="text368">Registry</text>
+      <text
+         x="562"
+         y="403"
+         id="text370">XML</text>
+    </g>
+    <path
+       d="M 562 332 L 562 356"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path372" />
+    <path
+       d="M 562 361 L 559 354 L 562 356 L 566 354 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path374" />
+    <path
+       d="M 277 621 L 524 621 Q 534 621 534 611 L 534 560"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path376" />
+    <path
+       d="M 534 555 L 537 562 L 534 560 L 530 562 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path378" />
+    <path
+       d="M 664 496 L 710 522 C 711 522 711 523 711 524 C 711 525 711 526 710 526 L 664 552 C 663 552 661 552 660 552 L 614 526 C 613 526 613 525 613 524 C 613 523 613 522 614 522 L 660 496 C 661 495 663 495 664 496 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path380" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g382">
+      <text
+         x="662"
+         y="528"
+         id="text384">found?</text>
+    </g>
+    <path
+       d="M 583 524 L 607 524"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path386" />
+    <path
+       d="M 612 524 L 605 528 L 607 524 L 605 521 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path388" />
+    <rect
+       x="611"
+       y="586"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#ff3333"
+       stroke-width="2"
+       id="rect390" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g392">
+      <text
+         x="660"
+         y="613"
+         id="text394">Run-time</text>
+      <text
+         x="660"
+         y="627"
+         id="text396">Exception</text>
+    </g>
+    <path
+       d="M 662 553 L 662 561 Q 662 569 661 569 L 661 569 Q 660 569 660 574 L 660 580"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path398" />
+    <path
+       d="M 660 585 L 657 578 L 660 580 L 664 578 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path400" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="11px"
+       id="g402">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="649"
+         y="564"
+         width="26"
+         height="13"
+         stroke-width="0"
+         id="rect404" />
+      <text
+         x="661"
+         y="573"
+         id="text406">false</text>
+    </g>
+    <rect
+       x="875"
+       y="492"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect408" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g410">
+      <text
+         x="924"
+         y="512"
+         id="text412">Return </text>
+      <text
+         x="924"
+         y="526"
+         id="text414">converted</text>
+      <text
+         x="924"
+         y="540"
+         id="text416">target object</text>
+    </g>
+    <path
+       d="M 711 524 L 724 524 Q 734 524 734 523 L 734 523 Q 734 522 742 522 L 751 522"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path418" />
+    <path
+       d="M 756 522 L 749 526 L 751 522 L 749 519 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path420" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="11px"
+       id="g422">
+      <rect
+         fill="#ffffff"
+         stroke="none"
+         x="724"
+         y="518"
+         width="22"
+         height="13"
+         stroke-width="0"
+         id="rect424" />
+      <text
+         x="734"
+         y="527"
+         id="text426">true</text>
+    </g>
+    <rect
+       x="757"
+       y="492"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect428" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g430">
+      <text
+         x="806"
+         y="519"
+         id="text432">Invoke</text>
+      <text
+         x="806"
+         y="533"
+         id="text434">Conversion</text>
+    </g>
+    <path
+       d="M 855 522 L 860 522 Q 865 522 865 522 L 865 522 Q 865 522 866 522 L 868 522"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path440" />
+    <path
+       d="M 873 522 L 866 526 L 868 522 L 866 519 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path442" />
+    <rect
+       x="642"
+       y="702"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect444" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       text-anchor="middle"
+       font-size="18px"
+       id="g446">
+      <text
+         x="657"
+         y="721"
+         id="text448">Run Time</text>
+    </g>
+    <rect
+       x="200"
+       y="678"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect450" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="14px"
+       id="g452">
+      <text
+         x="202"
+         y="693"
+         id="text454">Initialization</text>
+    </g>
+    <rect
+       x="875"
+       y="592"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect456" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g458">
+      <text
+         x="924"
+         y="612"
+         id="text460">Update </text>
+      <text
+         x="924"
+         y="626"
+         id="text462">source - target</text>
+      <text
+         x="924"
+         y="640"
+         id="text464">maps</text>
+    </g>
+    <path
+       d="M 924 552 L 924 586"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path466" />
+    <path
+       d="M 924 591 L 920 584 L 924 586 L 927 584 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path468" />
+    <rect
+       x="1007"
+       y="492"
+       width="98"
+       height="60"
+       rx="4"
+       ry="4"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect470" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       text-anchor="middle"
+       font-size="12px"
+       id="g472">
+      <text
+         x="1056"
+         y="519"
+         id="text474">Monitor source</text>
+      <text
+         x="1056"
+         y="533"
+         id="text476">objects</text>
+    </g>
+    <path
+       d="M 868 302 L 868 387 Q 868 397 878 397 L 1046 397 Q 1056 397 1056 407 L 1056 486"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path478" />
+    <path
+       d="M 1056 491 L 1053 484 L 1056 486 L 1060 484 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path480" />
+    <path
+       d="M 1056 552 L 1056 612 Q 1056 622 1046 622 L 979 622"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path482" />
+    <path
+       d="M 974 622 L 981 619 L 979 622 L 981 626 Z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       id="path484" />
+    <rect
+       x="780"
+       y="42"
+       width="31"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect486" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="14px"
+       id="g488">
+      <text
+         x="782"
+         y="57"
+         id="text490">Code Generation</text>
+    </g>
+    <rect
+       x="603"
+       y="678"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect492" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="14px"
+       id="g494">
+      <text
+         x="605"
+         y="693"
+         id="text496">zamk Run-time workflow</text>
+    </g>
+    <rect
+       x="2"
+       y="591"
+       width="140"
+       height="150"
+       fill="none"
+       stroke="none"
+       id="rect498" />
+    <rect
+       x="2"
+       y="591"
+       width="140"
+       height="150"
+       fill="#ffffff"
+       stroke="#000000"
+       id="rect500" />
+    <rect
+       x="52"
+       y="596"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect502" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-weight="bold"
+       font-size="12px"
+       id="g504">
+      <text
+         x="54"
+         y="609"
+         id="text506">Legend</text>
+    </g>
+    <path
+       d="M 10 631 C 10 630 11 629 12 629 L 38 629 C 39 629 40 630 40 631 L 40 647 C 35 645 30 645 25 647 C 20 649 15 649 10 647 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path508" />
+    <rect
+       x="7"
+       y="659"
+       width="36"
+       height="14"
+       rx="1"
+       ry="1"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="rect510" />
+    <path
+       d="M 14 683 C 14 682 14 682 15 681 C 15 681 16 681 16 681 L 41 681 C 42 681 42 681 43 682 C 43 682 43 682 43 683 L 36 699 C 36 700 35 700 35 701 C 35 701 34 701 34 701 L 9 701 C 8 701 8 701 7 700 C 7 700 7 700 7 699 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path512" />
+    <rect
+       x="55"
+       y="626"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect514" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-size="12px"
+       id="g516">
+      <text
+         x="57"
+         y="639"
+         id="text518">User-Provided </text>
+      <text
+         x="57"
+         y="653"
+         id="text520">Data</text>
+    </g>
+    <rect
+       x="55"
+       y="657"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect522" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-size="12px"
+       id="g524">
+      <text
+         x="57"
+         y="670"
+         id="text526">Process</text>
+    </g>
+    <rect
+       x="55"
+       y="676"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect528" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-size="12px"
+       id="g530">
+      <text
+         x="57"
+         y="689"
+         id="text532">Data generated</text>
+      <text
+         x="57"
+         y="703"
+         id="text534">by zamk</text>
+    </g>
+    <path
+       d="M 27 711 L 45 720 C 45 720 45 721 45 721 C 45 721 45 722 45 722 L 27 731 C 27 731 26 731 26 731 L 8 722 C 8 722 8 721 8 721 C 8 721 8 720 8 720 L 26 711 C 26 711 27 711 27 711 Z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       id="path536" />
+    <rect
+       x="55"
+       y="711"
+       width="30"
+       height="20"
+       fill="none"
+       stroke="none"
+       id="rect538" />
+    <g
+       fill="#000000"
+       font-family="Helvetica"
+       font-size="12px"
+       id="g540">
+      <text
+         x="57"
+         y="724"
+         id="text542">Decision</text>
+    </g>
+  </g>
+</svg>

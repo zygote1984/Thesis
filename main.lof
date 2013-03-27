@@ -1,0 +1,24 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Part of an online shop application}}{9}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Grammar definition for instance pointcuts}}{13}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Syntax for instance pointcut composition}}{17}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces An example to illustrate composition's effect on types}}{18}{figure.4.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {A simple type hierarchy}}}{18}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Instance pointcut compositions and effect on the captured instance type}}}{18}{subfigure.4.2}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Meta-model of a Specialization in ALIA4J.}}{22}{figure.4.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces UML diagram for the two components}}{33}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The diagram of the object adapter and the corresponding Java implementation}}{33}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Abstract view of the object adapter pattern}}}{33}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Concrete view of the object adapter for the example case}}}{33}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {The implementation for the \begingroup \catcode `\_12 \textsf {C\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}r\hspace {0pt plus 0.1pt minus 0.1pt}t\hspace {0pt plus 0.1pt minus 0.1pt}e\hspace {0pt plus 0.1pt minus 0.1pt}s\hspace {0pt plus 0.1pt minus 0.1pt}i\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}n\hspace {0pt plus 0.1pt minus 0.1pt}2\hspace {0pt plus 0.1pt minus 0.1pt}P\hspace {0pt plus 0.1pt minus 0.1pt}o\hspace {0pt plus 0.1pt minus 0.1pt}l\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}r\hspace {0pt plus 0.1pt minus 0.1pt}A\hspace {0pt plus 0.1pt minus 0.1pt}d\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}p\hspace {0pt plus 0.1pt minus 0.1pt}t\hspace {0pt plus 0.1pt minus 0.1pt}e\hspace {0pt plus 0.1pt minus 0.1pt}r\hspace {0pt plus 0.1pt minus 0.1pt}}\endgroup }}}{33}{subfigure.2.3}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces The diagram of the object adapter and the corresponding Java implementation}}{34}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Abstract view of the object adapter pattern with inter-type declarations}}}{34}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Concrete view of the aspect-oriented adapter pattern for the example case}}}{34}{subfigure.3.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {The implementation for the \begingroup \catcode `\_12 \textsf {C\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}r\hspace {0pt plus 0.1pt minus 0.1pt}t\hspace {0pt plus 0.1pt minus 0.1pt}e\hspace {0pt plus 0.1pt minus 0.1pt}s\hspace {0pt plus 0.1pt minus 0.1pt}i\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}n\hspace {0pt plus 0.1pt minus 0.1pt}2\hspace {0pt plus 0.1pt minus 0.1pt}P\hspace {0pt plus 0.1pt minus 0.1pt}o\hspace {0pt plus 0.1pt minus 0.1pt}l\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}r\hspace {0pt plus 0.1pt minus 0.1pt}A\hspace {0pt plus 0.1pt minus 0.1pt}d\hspace {0pt plus 0.1pt minus 0.1pt}a\hspace {0pt plus 0.1pt minus 0.1pt}p\hspace {0pt plus 0.1pt minus 0.1pt}t\hspace {0pt plus 0.1pt minus 0.1pt}e\hspace {0pt plus 0.1pt minus 0.1pt}r\hspace {0pt plus 0.1pt minus 0.1pt}}\endgroup in AspectJ}}}{34}{subfigure.3.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {A new adaptation request}}}{37}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Keeping source and target objects synchronized}}}{37}{subfigure.4.2}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The user provided input and the compile-time workflow of \textbf {\textit {\texttt {zamk}}}\nobreakspace {}}}{38}{figure.5.4}

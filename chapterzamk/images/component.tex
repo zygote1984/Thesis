@@ -1,0 +1,42 @@
+
+\begin{tikzpicture}[node distance = 2cm, scale=0.5]
+
+  \tikzstyle{final}=[rectangle, draw, fill=white, text=black, drop shadow, 
+    text width=3cm, text centered, rounded corners=2pt]
+
+    \node (client) [final, rectangle split, rectangle split parts=1,
+     text width=3.2cm] {
+      \textbf{Client}
+    };
+
+    \node (target) [final, rectangle split, rectangle split parts=2,
+     text width=3.0cm, right=of client]{
+      \textbf{Target}
+        \nodepart[text justified]{second}%
+       		Request()};
+	
+
+    \node(atee) [final, rectangle split, rectangle split parts = 2, text width=3.0cm,right=of target]{
+    	\textbf{Adaptee}
+    	\nodepart[text justified]{second}
+    	SpecificRequest()
+    };
+    
+    \coordinate (Middle) at ($(target)!0.5!(atee)$);
+
+    \node (adapter) [final, rectangle split, rectangle split parts=3,
+     text width=3.0cm,below =of target] {
+      \textbf{Adapter}
+         \nodepart[text justified]{second}%
+       +adaptee: Adaptee
+        \nodepart[text justified]{third}%
+       Request()
+    };
+ 
+
+
+	\draw[-latex] (client) -- (target);
+	\draw[-open triangle 45] (adapter) -- (target);
+	\draw[->] (adapter) -- (atee);
+  \end{tikzpicture}
+

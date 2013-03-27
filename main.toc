@@ -1,0 +1,58 @@
+\contentsline {chapter}{Contents}{1}{section*.1}
+\contentsline {chapter}{\chapternumberline {1}Instance Pointcuts}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Example Architecture}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Unanticipated Extensions}{4}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Problem Statement}{4}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Approach}{6}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Instance Pointcuts}{7}{subsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.1.1}Add/Remove Expressions}{8}{subsubsection.1.3.1.1}
+\contentsline {subsubsection}{\numberline {1.3.1.2}Multisets}{9}{subsubsection.1.3.1.2}
+\contentsline {subsection}{\numberline {1.3.2}Refinement and Composition}{10}{subsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Referencing and Type Refinement}{10}{subsubsection.1.3.2.1}
+\contentsline {subsubsection}{\numberline {1.3.2.2}Instance Pointcut Expression Refinement}{11}{subsubsection.1.3.2.2}
+\contentsline {subsubsection}{\numberline {1.3.2.3}Instance Pointcut Composition}{13}{subsubsection.1.3.2.3}
+\contentsline {subsection}{\numberline {1.3.3}Using Instance Pointcuts}{15}{subsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.3.1}Set Access}{15}{subsubsection.1.3.3.1}
+\contentsline {subsubsection}{\numberline {1.3.3.2}Set Monitoring}{15}{subsubsection.1.3.3.2}
+\contentsline {section}{\numberline {1.4}Compilation of Instance Pointcuts}{16}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Non-Composite Instance Pointcuts}{18}{subsection.1.4.1}
+\contentsline {paragraph}{Plain Instance Pointcuts}{19}{section*.2}
+\contentsline {paragraph}{Type Refinement}{20}{section*.3}
+\contentsline {paragraph}{Expression Refinement}{20}{section*.4}
+\contentsline {paragraph}{Deployment}{21}{section*.5}
+\contentsline {subsection}{\numberline {1.4.2}Composite Instance Pointcuts}{22}{subsection.1.4.2}
+\contentsline {paragraph}{Intersection and Union}{22}{section*.6}
+\contentsline {paragraph}{Type Refinement for Composite Instance Pointcuts}{24}{section*.7}
+\contentsline {subsection}{\numberline {1.4.3}Compiling Plain AspectJ constructs}{24}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Validation}{24}{section.1.5}
+\contentsline {section}{\numberline {1.6}Related Work}{27}{section.1.6}
+\contentsline {section}{\numberline {1.7}Conclusion and Future Work}{28}{section.1.7}
+\contentsline {chapter}{\chapternumberline {2}The Adapter Framework}{31}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{31}{section.2.1}
+\contentsline {section}{\numberline {2.2}Motivation}{33}{section.2.2}
+\contentsline {section}{\numberline {2.3}Approach}{36}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Decomposition of the adapter pattern}{37}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Compile-time}{38}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Gluer DSL}{39}{subsubsection.2.3.2.1}
+\contentsline {paragraph}{Checks}{40}{section*.12}
+\contentsline {subsubsection}{\numberline {2.3.2.2}User-defined Converters}{41}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.3}Conversion Registry}{43}{subsubsection.2.3.2.3}
+\contentsline {subsubsection}{\numberline {2.3.2.4}Code Generation}{45}{subsubsection.2.3.2.4}
+\contentsline {paragraph}{Byte-code generation and Weaving}{45}{section*.13}
+\contentsline {paragraph}{Aspect Generator}{45}{section*.14}
+\contentsline {paragraph}{Note}{49}{section*.15}
+\contentsline {subsection}{\numberline {2.3.3}Runtime}{49}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.1}Loading Conversion Registry}{49}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.2}Dependency Injection}{51}{subsubsection.2.3.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3.3}Finding the correct converter}{51}{subsubsection.2.3.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.4}Target Object Retrieval}{51}{subsubsection.2.3.3.4}
+\contentsline {subsubsection}{\numberline {2.3.3.5}Object Synchronization}{51}{subsubsection.2.3.3.5}
+\contentsline {subsubsection}{\numberline {2.3.3.6}Fault Tolerance????}{51}{subsubsection.2.3.3.6}
+\contentsline {subsection}{\numberline {2.3.4}Using the Framework}{51}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.1}Gluer DSL}{51}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.2}Calling the run-time directly}{51}{subsubsection.2.3.4.2}
+\contentsline {section}{\numberline {2.4}Related Work}{51}{section.2.4}
+\contentsline {section}{\numberline {2.5}Conclusion}{51}{section.2.5}
+\contentsline {chapter}{Bibliography}{53}{section*.17}

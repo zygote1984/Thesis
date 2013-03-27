@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="zamkoverview2.pdf">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="226.82643"
+     inkscape:cy="280.55706"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg2"
+     showgrid="true"
+     inkscape:snap-global="true"
+     showguides="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1176"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       id="grid3941"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       id="perspective3783"
+       inkscape:persp3d-origin="884.96981 : 557.69797 : 1"
+       inkscape:vp_z="-709.745 : -31.71262 : 0"
+       inkscape:vp_y="3.1603567e-14 : 516.14247 : 0"
+       inkscape:vp_x="471.42493 : 595.17688 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       ry="18.756496"
+       y="652.36218"
+       x="60"
+       height="370"
+       width="559.28571"
+       id="rect2985"
+       style="fill:#fff8e0;fill-opacity:0.7579909;fill-rule:evenodd;stroke:none" />
+    <flowRoot
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;stroke-miterlimit:4;stroke-dasharray:none"
+       id="flowRoot3757"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3759"><rect
+           style="stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-miterlimit:4;stroke-dasharray:none"
+           y="213.93558"
+           x="110.10663"
+           height="41.416256"
+           width="503.05597"
+           id="rect3761" /></flowRegion><flowPara
+         id="flowPara3763" /></flowRoot>    <rect
+       rx="10"
+       ry="30"
+       y="662.36218"
+       x="98.659744"
+       height="70"
+       width="511.34027"
+       id="rect3769"
+       style="opacity:0.51440328000000002;fill:#880e64;fill-opacity:0.369863;stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3779"
+       y="712.60217"
+       x="241.74364"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="712.60217"
+         x="241.74364"
+         id="tspan3781"
+         sodipodi:role="line">Gluer Parser</tspan></text>
+    <rect
+       rx="0"
+       ry="29.770803"
+       y="742.36218"
+       x="260"
+       height="190.00002"
+       width="350"
+       id="rect3906"
+       style="opacity:0.66020572000000000;fill:#3a880e;fill-opacity:0.11764706000000000;stroke:none;stroke-width:0.84216440000000004;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       rx="9.393939"
+       ry="24.99999"
+       y="752.36218"
+       x="290"
+       height="49.999981"
+       width="309.99997"
+       id="rect3908"
+       style="opacity:0.51440328000000002;fill:#3a880e;fill-opacity:0.23529412000000000;stroke:none;stroke-width:0.95582776999999997;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       rx="9.393939"
+       ry="24.999992"
+       y="872.36218"
+       x="291.84665"
+       height="49.999985"
+       width="310"
+       id="rect3908-9"
+       style="opacity:0.51440328;fill:#3a880e;fill-opacity:0.70588235;stroke:none" />
+    <rect
+       rx="10"
+       ry="30"
+       y="942.36218"
+       x="102.07328"
+       height="69.999992"
+       width="510"
+       id="rect3937"
+       style="opacity:0.51440328;fill:#de1600;fill-opacity:0.36986299;stroke:none" />
+    <flowRoot
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;stroke-miterlimit:4;stroke-dasharray:none"
+       id="flowRoot3945"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3947"><rect
+           style="stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-miterlimit:4;stroke-dasharray:none"
+           y="562.43817"
+           x="254.55844"
+           height="41.416256"
+           width="112.12693"
+           id="rect3949" /></flowRegion><flowPara
+         id="flowPara3951" /></flowRoot>    <text
+       transform="matrix(-0.00174185,-0.99999848,0.99999848,-0.00174185,0,0)"
+       sodipodi:linespacing="125%"
+       id="text3953"
+       y="278.40524"
+       x="-915.76373"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       xml:space="preserve"><tspan
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="278.40524"
+         x="-915.76373"
+         id="tspan3955"
+         sodipodi:role="line">Integration Logic</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3957"
+       y="789.53815"
+       x="385.77475"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="789.53815"
+         x="385.77475"
+         id="tspan3959"
+         sodipodi:role="line">Checker</tspan></text>
+    <flowRoot
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;stroke-miterlimit:4;stroke-dasharray:none"
+       id="flowRoot3961"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3963"><rect
+           style="stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-miterlimit:4;stroke-dasharray:none"
+           y="823.05756"
+           x="360.62445"
+           height="49.497475"
+           width="187.88837"
+           id="rect3965" /></flowRegion><flowPara
+         id="flowPara3967" /></flowRoot>    <g
+       transform="translate(0,-7.4860229)"
+       id="g3802">
+      <rect
+         style="opacity:0.51440328;fill:#3a880e;fill-opacity:0.47058824;stroke:none"
+         id="rect3908-4"
+         width="310"
+         height="49.999985"
+         x="290"
+         y="819.84821"
+         ry="24.999992"
+         rx="9.393939" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:Sans"
+         x="444.02133"
+         y="852.49219"
+         id="text3969"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="444.02133"
+           y="852.49219"
+           style="font-size:26px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+           id="tspan3800">Integration Path Builder</tspan></text>
+    </g>
+    <text
+       transform="scale(1.0225405,0.97795637)"
+       sodipodi:linespacing="125%"
+       id="text3975"
+       y="928.24316"
+       x="303.0885"
+       style="font-size:31.41214371px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:ubuntu;-inkscape-font-specification:ubuntu"
+       xml:space="preserve"><tspan
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="928.24316"
+         x="303.0885"
+         id="tspan3977"
+         sodipodi:role="line">Glue Code Generator</tspan></text>
+    <flowRoot
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:ubuntu;font-style:normal;font-weight:normal;font-size:32px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:ubuntu;stroke-miterlimit:4;stroke-dasharray:none"
+       id="flowRoot3979"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3981"><rect
+           style="stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-miterlimit:4;stroke-dasharray:none"
+           y="774.57025"
+           x="119.198"
+           height="138.3909"
+           width="115.15739"
+           id="rect3983" /></flowRegion><flowPara
+         id="flowPara3985" /></flowRoot>    <g
+       transform="matrix(1,0,0,1.0587437,0,-43.609104)"
+       style="stroke:none"
+       id="g3865">
+      <path
+         style="opacity:0.64609052;fill:#b0e7f5;fill-opacity:0.75799088;stroke:none"
+         d="m 100,752.375 0,160 c 0,5.52285 33.57865,10 75,10 41.42135,0 75,-4.47715 75,-10 l 0,-160"
+         id="path3822-8"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="csssc" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#3f97d0;fill-opacity:0.75799088;stroke:none"
+         id="path3822"
+         sodipodi:cx="-85"
+         sodipodi:cy="712.36218"
+         sodipodi:rx="65"
+         sodipodi:ry="10"
+         d="m -20,712.36218 c 0,5.52285 -29.101491,10 -65,10 -35.89851,0 -65,-4.47715 -65,-10 0,-5.52284 29.10149,-10 65,-10 35.898509,0 65,4.47716 65,10 z"
+         transform="matrix(1.1538462,0,0,1,273.07693,40)" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3987"
+       y="814.23187"
+       x="173.968"
+       style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="814.23187"
+         x="176.73363"
+         id="tspan3989"
+         sodipodi:role="line">Integration </tspan><tspan
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="tspan3991"
+         y="844.23187"
+         x="173.968"
+         sodipodi:role="line">Module</tspan><tspan
+         id="tspan3816"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="874.23187"
+         x="173.968"
+         sodipodi:role="line">Registry</tspan></text>
+    <flowRoot
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:ubuntu;font-style:normal;font-weight:normal;font-size:32px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:ubuntu;stroke-miterlimit:4;stroke-dasharray:none"
+       id="flowRoot3993"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3995"><rect
+           style="stroke:none;stroke-opacity:1;stroke-width:0.99800104000000001;stroke-miterlimit:4;stroke-dasharray:none"
+           y="959.42816"
+           x="127.27922"
+           height="35.355339"
+           width="443.45697"
+           id="rect3997" /></flowRegion><flowPara
+         id="flowPara3999" /></flowRoot>    <text
+       sodipodi:linespacing="125%"
+       id="text4001"
+       y="986.18219"
+       x="124.52523"
+       style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#15112a;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#15112a;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="986.18219"
+         x="124.52523"
+         id="tspan4003"
+         sodipodi:role="line">Dependency Injection Component</tspan></text>
+    <text
+       transform="matrix(-6.6606996e-4,-0.99999978,0.99999978,-6.6606996e-4,0,0)"
+       sodipodi:linespacing="125%"
+       id="text3028"
+       y="84.346542"
+       x="-981.0921"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="84.346542"
+         x="-981.0921"
+         id="tspan3030"
+         sodipodi:role="line">zamk Integration Framework</tspan></text>
+  </g>
+</svg>

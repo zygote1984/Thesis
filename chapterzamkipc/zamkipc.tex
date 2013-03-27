@@ -1,0 +1,6 @@
+\chapter{Usage-based Integration}
+\section{Integration of instance pointcuts with Integration framework}
+Instance pointcuts allow objects to be selected according to how they are used. Integrated with the adapter injection framework, this allows wrapping objects based on their uses in the system.
+Implicit content change case
+Some methods can change the contents of an object, which may require the object to be handled later in its life cycle. These changes may not necessarily require creating an object of different type.
+Example: A file object is passed to the addHeader() method, this method appends a header at the beginning of the file contents. This method changes the content of the file. This is an implicit event. The type of the object is still File, so how will the system know if this file has a header or not, if a flag is not present? Instance pointcuts can bookkeep such objects.

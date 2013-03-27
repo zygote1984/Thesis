@@ -1,0 +1,304 @@
+\documentclass{llncs}
+\usepackage{llncsdoc}
+
+\input{header.tex}
+\graphicspath{{images}}
+\begin{document}
+
+\title{Integration framework}
+
+\author{Kardelen Hatun \and Christoph Bockisch \and Mehmet Ak\c{s}it}
+\institute{TRESE, University of Twente \\7500AE Enschede \\The Netherlands \\
+\url{http://www.utwente.nl/ewi/trese/}\\
+\email{ \{hatunk,c.m.bockisch,aksit\}@ewi.utwente.nl}
+}
+\maketitle
+
+\section{Introduction}
+Systems are often faced with new requirements for adding new functionality or updating what is already there. 
+A preferred way of extending or updating system behavior is through adding components. 
+A software component can be described as a self-contained entity with a well-defined interface and behavior. 
+Components can be plugged into legacy systems to extend the system with their provided functionality.
+In order to make the composed system functional, proper connections between the new component and the target system should be established; this operation is usually referred as component integration or component binding. 
+
+
+A specific issue regarding the extensibility of legacy systems is the integration of an \emph{unanticipated concern}. 
+It is common that some requirements are not taken into account, or even not foreseeable, when the systems are being designed. 
+Depending on the extensibility of the legacy system such an integration task can be very difficult and requires extensive manual labor. 
+This is due to the fact that, usually the interfaces of the legacy system and the new component is incompatible. 
+This is a known problem and its solution is captured in the \emph{adapter pattern} (cite Gamma). 
+Typically adapters are tailored for a given integration. 
+The complexity of the adapters depend on the complexity of the structures they adapt from and to. 
+It is common that adaptation is seen as a one time task, which results in adaptation code that is fragile against software evolution and is non-reusable. 
+
+
+Another important aspect of component integration is establishing instance-level dependencies. 
+Hence the other step of integration is assigning the data values to the relevant fields.
+Keeping the system and the components loosely coupled is an important principle of component-based design. 
+Dependency injection (DI) (cite fowler) is a lightweight method for keeping modules loosely coupled by delegating the creation of concrete objects to so-called \emph{injectors}. This approach allows a customizable and a decoupled way of creating dependencies, while maintaining loose coupling.
+
+In this paper we introduce our component integration framework, \zamk, which unites dependency injection with \emph{under-the-hood} adaptation logic. The \zamk framework creates a registry of user-defined adaptation modules, which are composable entities. \zamk framework also comes with a concise domain-specific language called \textsf{gluer} to define dependency injections. Given a dependency injection statement the framework tries to build the \emph{type path} between the injectee and the injection field. We automate the adaptation process by exploiting the type hierarchies and provide checks and context-relevant messages for correct integration. 
+
+
+The rest of the paper is organized at follows.
+In section~\ref{zamk:sec:motivation} layout the problem statement in detail and motivate our conceptual solution. In section~\ref{zamk:sec:approach} we go into the details of the \zamk integration framework. The checks performed by \zamk is shown in section~\ref{zamk:sec:checks}. 
+
+
+%Component integration is trivial when the target system and the component have a common interface. However in most cases the integration introduces the requirement that the interfaces should be made compatible with each other to make the final system functional.
+% In distributed software systems, traditional middleware approaches such as CORBA, DCOM or JRMI can be used to manage the complexity introduced by inter-component dependencies. 
+% These middleware solutions are geared towards providing built-in support for widely-used technologies and offer little support for customization. 
+% For non-distributed systems, using such software can be inefficient, since they are intended to be used for component integration in enterprise software and their adoption is itself complex and requires effort.
+
+ 
+\section{Motivation and Goals}
+\label{zamk:sec:motivation}
+The goal of component integration is to make two components work together to provide a required functionality. However component integration efforts can be difficult to estimate, since the design and implementation of components vary greatly. Component models try to remedy this situation by defining the term component as ``\ldots a software element that conforms to a component model and can be independently deployed and composed without modification according to a composition standard.~\cite{Heineman2001}'' Unfortunately component models do not guarantee well-structured binding, since one cannot guarantee that every used component conforms to a single component model. The incompatibility starts on the model level which translates to the interface level. 
+
+The code that binds components together is referred to as \emph{glue code}. This is an umbrella term which refers to all code that facilitate the ``hooking'' the components together and establish channels for information exchange. The overall effort spent on the glue code varies and is dependent on many other factors. In \cite{abts2000cocots}, the preliminary findings of a software integration life-cycle cost model is presented. The authors state that the largest efforts in commercial-off the shelf integration is spent on glue code development. Typically glue code is viewed as a one-time task during integration, which results in non-reusable implementation.
+
+\begin{figure}[h]
+\centering
+\input{images/example.tex}
+\caption{Plugging a polar coordinate component to a cartesian component system}%
+\label{fig:cartesian}%
+\end{figure}
+
+Let us illustrate our claim with a simple example. In Figure~\ref{fig:cartesian}\footnote{In order to save space we do not show the setter and getter methods, assume these methods are also members of the shown classes.} two components are shown. \textsf{component1} contains one class called \textsf{Cartesian}. Now we would like to support also polar coordinates and \textsf{component2} provides this support. However all the existing data is in Cartesian coordinates and we need to convert in to polar coordinates. In order to make this conversion, one can write an adapter that looks like the one shown in Listing~\ref{lst:cart2polar}. The class \textsf{Cartesian2Polar} is an object adapter and it is a valid solution to the problem at hand. Note that \textsf{component2} also provides support for cylindrical and spherical coordinates, which are not used, since \lstinln{component1} does not support 3D coordinates. 
+
+\begin{lstlisting}[float, caption={A Cartesian to polar adapter}, label={lst:cart2polar}]
+public class Cartesian2Polar extends Polar{
+	Cartesian adaptee;
+	public Cartesian2Polar(Cartesian c) {
+		super();
+		this.adaptee = c;
+		super.setR(Math.sqrt(Math.pow(adaptee.getX(), 2) + Math.pow(adaptee.getY(), 2)));~\label{lst:cart2polar:setR}~
+		super.setTheta(new Angle(Math.atan(adaptee.getY()/adaptee.getX())));~\label{lst:cart2polar:setTheta}~
+	}
+}
+\end{lstlisting}
+
+Now let's take a look at the situation where this system evolves. Now we would like to support three dimensional Cartesian coordinates. Therefore we extend the class \textsf{Cartesian} as \textsf{Cartesian3D}. This new feature gives us the opportunity to use the cylindrical and spherical coordinates provided by \textsf{component2}. Once again we need to write adapters to convert between \textsf{Cartesian3D} and \textsf{Spherical, Cylindrical} classes (\TODO{Figure evolved model}). 
+
+
+\begin{figure}[h]
+\centering
+\input{images/evolved.tex}
+\caption{\lstinln{component1} is evolved to include 3D coordinates}%
+\label{fig:evolved}%
+\end{figure}
+
+
+\begin{lstlisting}[float, caption={Adapter for converting three dimensional cartesian coordinates to Cylindrical coordinates}, label={lst:cart3d2Cyn}]
+public class Cart3D2Cylindrical extends Cylindrical {
+	Cartesian3D adaptee;
+	public Cart3D2Cylindrical(Cartesian3D adaptee) {
+		super(0, null, 0);
+		this.adaptee = adaptee;
+		super.setR(Math.sqrt(Math.pow(adaptee.getX(), 2) + Math.pow(adaptee.getY(), 2))); ~\label{lst:cart3d:setR}~
+		super.setTheta(new Angle(Math.atan(adaptee.getY()/adaptee.getX()))); ~\label{lst:cart3d:setTheta}~
+		super.setZ(adaptee.getZ());
+	}
+}
+\end{lstlisting}
+\begin{lstlisting}[float, caption={Adapter for converting three dimensional cartesian coordinates to Spherical coordinates}, label={lst:cart3d2Sph}]
+public class Cart3D2Spherical extends Spherical {
+	Cartesian3D adaptee;
+	public Cart3D2Spherical(Cartesian3D adaptee) {
+		super(0, null, null);
+		this.adaptee = adaptee;
+		super.setR(Math.sqrt(Math.pow(adaptee.getX(), 2) + Math.pow(adaptee.getY(), 2) + Math.pow(adaptee.getZ(), 2) )); ~\label{lst:cart3d:setRho}~
+		super.setTheta(new Angle(Math.atan(adaptee.getY()/adaptee.getX()))); ~\label{lst:cart3d:setTheta2}~
+		super.setPhi(new Angle(Math.atan(adaptee.getZ()/(Math.sqrt(Math.pow(adaptee.getX(), 2) +
+				Math.pow(adaptee.getY(), 2))))));
+	}
+}
+\end{lstlisting}
+
+ 
+The implementation for \lstinln{Cartesian3D2Cylindrical} and \lstinln{Cartesian3D2Spherical} are shown in Listing~\ref{lst:cart3d2Cyn} and Listing~\ref{lst:cart3d2Sph} respectively. All of the adapters presented in these implementations have repeated lines of code. In Listing~\ref{lst:cart2polar} on line~\ref{lst:cart2polar:setR}, in Listing~\ref{lst:cart3d2Cyn} on line~\ref{lst:cart3d:setR} and in Listing~\ref{lst:cart3d2Sph} on line~\ref{lst:cart3d:setRho} all include the same calculation. In fact the calculations made in \lstinln{Cartesian2Polar} adapters appear in \lstinln{Cart3D2Cylindrical} and \lstinln{Cart3D2Spherical}. However the way \lstinln{Cartesian2Polar} is defined makes it impossible for us to reuse these calculations.\footnote{If Java supported multiple inheritance, we could have reused the \lstinln{Cartesian2Polar} adapter's code by declaring \lstinln{Cart3D2Cylindrical} as a subclass of both \lstinln{Cartesian2Polar} and \lstinln{Cylindrical}. However the lack of reuse would still be present in \lstinln{Cart3D2Spherical}.} 
+
+% \begin{lstlisting}[float, caption={Decomposition of the members of the polar coordinate}, label={lst:ctpdecomp}]
+% public class CartesianToAngleAdapter extends Angle{
+% 	private Cartesian adaptee;
+% 	public CartesianToAngleAdapter(Cartesian c)
+% 	{
+% 		super();
+% 		this.adaptee = c;
+% 		super.angle = Math.atan(adaptee.getY()/adaptee.getX());
+% 	}	
+% }
+% public class Pythagoras{
+% 	private Cartesian adaptee;
+% 	public Pythagoras(Cartesian c)
+% 	{
+% 		this.adaptee = c;
+% 		r = Math.sqrt(Math.pow(adaptee.getX(), 2) + Math.pow(adaptee.getY(), 2));
+% 	}
+% 	public double getAdaptedValue()
+% 	{
+% 		return r;
+% 	}	
+% }
+% \end{lstlisting}
+
+% Let us re-design the adapter shown in Listing~\ref{lst:cart2polar}. Then we can have the decomposition shown in Listing~\ref{lst:ctpdecomp}. Using this decomposition we can create a \lstinln{Polar} object given a \lstinln{Cartesian} object \lstinln{c} by writing:
+% \begin{lstlisting}
+% Polar p = new Polar(new Angle(c), (new Pythagoras(c)).getAdaptedValue());
+% \end{lstlisting}
+
+% Furthermore we can reuse these classes to create a \lstinln{Cylindrical} object given a \lstinln{Cartesian3D} object \lstinln{c3d} as follows:
+% \begin{lstlisting}
+% Cylindrical cyn =  new Cylindrical(new Angle(c3d), (new Pythagoras(c3d)).getAdaptedValue(), c3d.getZ());
+% \end{lstlisting}
+
+% By decomposing the glue code into two reusable classes we were able to make the coordinate conversions in a modular manner. The classes we have defined so far are not sufficient for converting from \lstinln{Cartesian3D} to \lstinln{Spherical}. Still we can reuse these classes by extending them as seen on listing~\ref{lst:ctpdecomp2}.
+
+% \begin{lstlisting}[float, caption={Extended versions of conversion classes}, label={lst:ctpdecomp2}]
+% public class Cartesian3DToAngleAdapter extends CartesianToAngleAdapter{
+% 	private Pythagoras pyth;
+% 	public Cartesian3DToAngleAdapter(Cartesian3D c)
+% 	{
+% 		super(c);
+% 		pyth = new Pythagoras(c);
+% 		super.angle = Math.atan(adaptee.getZ()/pyth.getAdaptedValue());
+% 	}	
+% }
+% public class Pythagoras3D extends Pythagoras{
+% 	public Pythagoras3D(Cartesian3D c)
+% 	{
+% 		super(c);
+% 		this.r = Math.sqrt(Math.pow(super.getAdaptedValue(), 2) + Math.pow(c.getZ(), 2));
+% 	}	
+% }
+% \end{lstlisting}
+
+% Using the extended decomposition we can convert a \lstinln{Cartesian3D} object to a \lstinln{Spherical} object in the following manner.
+
+%  \begin{lstlisting}
+% Spherical sph =  new Spherical((new Pythagoras3D(c3d)).getAdaptedValue(),new CartesianToAngleAdapte(c3d), new Cartesian3DtoAngleAdapter(c3d))
+% \end{lstlisting}
+
+
+Based on our observations on the reusability issues of glue code we have devised our goal to solve these issues. Our main idea is that given \emph{atomic adaptations}, it is possible to build a path between two types automatically using static analysis techniques and generate the glue code that binds these types together. Our focus is on the structural binding, which entails forming the static dependencies between components. In its most basic form this corresponds to injecting values to certain fields. At this level the requirement is to establish the type compatibility. This is achieved by obtaining the correct type that is injectable to a field by wrapping the injected value. 
+
+Another issue we want to tackle is \emph{overloaded adapters}. Above we mentioned atomic adapters, by this we mean an adapter is a unit that only performs adaptation and nothing else. Therefore adapters are not sufficient to realize our goal, we need to have additional composition structures which assemble, enrich or compartmentalize these adapters. 
+
+\TODO{Requirements}
+
+\section{Background}
+\label{zamk:sec:bg}
+In this section we will give some background on the concepts that will be used as a part of our solution. 
+
+\subsection{Adapter Pattern}
+Adapter pattern is a design pattern that is used to translate an interface to a compatible interface. Adapters, also known as wrappers, can be implemented in two ways: as a \emph{class adapter} (Figure~\ref{fig:classadapter}), which uses multiple inheritance to adapt one interface to the other \emph{or} as an \emph{object adapter} (Figure~\ref{fig:objectadapter}), which uses object composition to adapt wrapped object to a specific interface. 
+
+\begin{figure}[h]
+\centering
+\subfloat[The class adapter pattern]{\inputtikz{0.80}{../images/classadapter.tex}
+\label{fig:classadapter}%
+}
+\hfill
+\subfloat[The object adapter pattern]{\inputtikz{0.80}{../images/objectadapter.tex}
+\label{fig:objectadapter}%
+}
+\caption{Different versions of the adapter pattern}
+\end{figure}
+
+
+
+
+\section{Approach}
+\label{zamk:sec:approach}
+
+Our approach is an integration framework that marries dependency injection pattern with object adapters. In Figure~\ref{fig:main} an overview of the \zamk integration framework is shown. The framework consists of several components that work together and introduces a concise domain-specific language (DSL) called \gluer. \gluer~ is used to define dependencies between objects. The specifications written in \gluer~ is parsed by the \emph{Gluer parser}. 
+
+\zamk uses a repository of composable \emph{integration modules} which are defined by the user. Integration modules can be adapters, enrichers, aggregators or splitters. The details of these modules will be explained in section~\ref{sec:zamk:modules}. When the user defines an injection between incompatible types, \emph{integration logic} component retrieves and assembles integration modules to convert the type of the injectee object to a compatible type expected by the injected field.
+
+Finally the \emph{dependency injection component} performs the injection; this component supports two types of injection, constructor injection and setter injection. The details of this operation will be elaborated in section~\ref{sec:zamk:di}.
+
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+%\input{../images/zamkoverview.pdf_tex}
+ \includegraphics[width=0.75\textwidth]{../images/zamkoverview2.pdf}
+\caption{An abstract view of the \zamk integration framework}
+\label{fig:main}
+\end{figure}
+
+\subsection{The Gluer Language}
+The \gluer~ language is a concise DSL that is designed to declare dependencies between fields and objects. Essentially the \gluer~ language is an external dependency injection declaration which triggers an internal logic that processes the injectee object. Therefore the \gluer~ language is not a plain dependency injection language. This is why we chose the keyword \lstinln{glue} instead of \lstinln{inject}. A simple gluer statement looks like the following:
+
+\lstinline~glue <injection-field> with <injectee-object>~
+
+\begin{description}
+\item[<injection-field>] The injection field is a fully qualified name of a non-static field of a class. It can refer to any type, including primitive types. 
+\end{description}
+
+\begin{description}
+\item[<injectee-object>] The injectee object represents the object to be processed and injected to the injection field. There are several options for creating this objects.
+	\begin{description}
+	\item[new] The \lstinline{new} statement is followed by a fully classified name of a class. This means, whenever an object is to be injected, it should be newly created using the \emph{default constructor} of the given class. 
+
+	\item[single] Similar to \lstinline{new}, \lstinline{single} statement is followed by a fully qualified name of a class, which is instantiated when an injection is triggered. The difference is instead of creating a new object each time, a \emph{single} object is reused among injections.
+	\TODO{possible use case}
+
+	\item[retval] Short for ``return value'', this keyword is followed by a fully qualified reference to a method, which returns the object we would like to inject. When an injection is triggered, the method is called and the returned value is glued to the injection field.
+	\end{description}
+\end{description}
+
+The \gluer~language also supports 1--to--many and many--to--1 gluing operations. \TODO{Expand}
+
+
+
+
+\subsection{Integration Logic}
+\label{sec:zamk:logic}
+The integration logic is responsible for wrapping the what objects with appropriate adapters to be injected to where field. 
+The what objects may need to be preprocessed before adaptation, a what object can be split into different objects (one-to-many) or multiple what objects can be aggregated to a single object. 
+These operations are done automatically by the integration logic. Figure~\textbf{ref} shows the flowchart of operations that take place for finding splitters and aggregators for objects.
+
+\textbf{flowcharts for splitter and aggregator}
+
+\subsection{Integration Modules : Splitter, Aggregator, Adapters}
+\label{sec:zamk:modules}
+
+The integration modules are composable 
+
+\subsubsection{Splitters}
+\begin{enumerate}
+\item how are they defined; regular classes with @Splitter annotation, They should implement the ISplitter interface which comes with the split(Object) method
+\item How are they registered, we may need some meta information
+\end{enumerate}
+
+\subsubsection{Aggregators}
+\begin{enumerate}
+\item how are they defined; regular classes with @Aggregator annotation, They should implement the IAggregator interface which comes with the aggregate(List --Object--) method
+\item How are they registered, we may need some meta information
+\end{enumerate}
+
+\subsubsection{Adapters}
+Once the structural mapping is done, the resulting object(s) should be adapted to be injected. This step is also automated\ldots
+
+\textbf{The flowchart from Arnout about adapter retrieval}
+
+\subsubsection{Adapter Resolution}
+Precedence rules
+
+Informative error messages
+\subsection{Dependency Injection}\label{sec:zamk:di}
+
+\section{Module Retrieval Algorithm}
+\section{Checks}
+\label{zamk:sec:checks}
+\section{Evaluation}
+
+\section{Conclusion}
+\label{zamk:sec:conclusion}
+
+\bibliographystyle{splncs}
+\bibliography{../../biblio}
+
+\end{document}
+
+
+

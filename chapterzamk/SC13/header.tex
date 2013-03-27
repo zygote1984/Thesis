@@ -1,0 +1,92 @@
+\usepackage{color}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings, tikz, xcolor}
+\usepackage{bold-extra}
+\usepackage{enumerate}
+\usepackage{courier}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{syntax}
+\usepackage{tikz-uml} 
+\usepackage{hyperref}
+\usepackage[caption=false,position=bottom]{subfig}
+\let\subtop\subfloat
+
+
+\definecolor{lightGrey}{rgb}{0.9, 0.9, 0.9}
+\newcommand{\hilight}{\makebox[0pt][l]{\color{lightGrey}\rule[-0.45em]{0.9\linewidth}{1.5em}}}
+\newtheorem{mydef}{Definition}
+
+
+\newcommand{\inputtikz}[2]{%  
+     \scalebox{#1}{\input{#2}}  
+}
+
+
+
+
+\interfootnotelinepenalty=10000
+
+ \makeatletter
+        \newcommand\breakabletextsf{\begingroup\catcode`\_12 \breakabletextsf@i}
+        \newcommand\breakabletextsf@i[1]{\textsf{\breakable@textsf#1\@nil}\endgroup}
+        \def\@gobble@fi#1\fi{\fi#1}
+        \def\breakable@textsf#1#2\@nil{%
+            #1\hspace{0pt plus 0.1pt minus 0.1pt}%
+                \ifx\relax#2\relax
+            \else
+                \@gobble@fi\breakable@textsf#2\@nil
+            \fi
+        }
+\makeatother
+
+
+\lstset{ 
+	language = [AspectJ]Java,
+  basicstyle=\small\sffamily,
+  numbers=left,
+	numberstyle=\sffamily\tiny\color[rgb]{0.25,0.25,0.25},
+	numberblanklines=false,
+  firstnumber=auto,
+	breaklines=true,
+  tabsize=2,
+  	backgroundcolor=\color[rgb]{0.95,0.95,0.85},
+	emph={aspect,declare, adapter, instance pointcut, instance, adaptee, adapts, select, UNTIL,pc, instanceType, exp, removeExp, composite, inter, union, .add , .remove, .add_after, .add_before, .remove_after, .remove_before, glue, with, single, retval}, 
+	emphstyle=\textbf,
+	escapechar={~},
+	showstringspaces= false,
+	%frame=single,
+	captionpos = b,
+	numberbychapter=true,
+	breakatwhitespace = true,
+	columns=fullflexible
+	}
+% \lstset{prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rhookswarrow}}} % 
+
+\usetikzlibrary{arrows,shapes.multipart,shapes.arrows,shapes.misc,calc,fit,shadows,positioning,patterns} 
+
+% \newcommand\bh{\tikz[remember picture]
+% 					\node (begin highlight) {};
+% 			 }
+%   \newcommand\eh{\tikz[remember picture]
+% 		 \node (end highlight) {};
+% 		 \tikz[remember picture, overlay] 
+% 		 \draw[yellow,line width=10pt,opacity=0.3] (begin highlight) -- (end
+% 			highlight);
+% 		 }
+
+\newcommand{\lstinlineabstract}[1]{\lstinline[emph={#1},emphstyle=\textit, breaklines = true]~#1~}
+
+\newcommand{\TODO}[1]{\textcolor{red}{\textbf{TODO:#1}}}
+
+\newcommand{\lstinln}[1]{\breakabletextsf{#1}}
+%\newcommand{\lstinln}[1]{\lstinline[breaklines=true]~#1~}
+\tikzstyle{every picture}+=[font=\sffamily]
+\newcommand{\zamk}{\textbf{\textit{\textsf{zamk}}}~}
+\newcommand{\gluer}{\textsf{\textit{Gluer}}}
+\tikzumlset{font = \sffamily}
+% \cftsetindents{section}{0.5in}{0.3in}
+% \cftsetindents{subsection}{0.6in}{0.3in}
+% \cftsetindents{subsubsection}{0.7in}{0.1in}
+% \cftsetindents{paragraph}{0.8in}{0.1in}
+

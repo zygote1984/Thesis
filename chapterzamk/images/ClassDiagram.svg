@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="164"
+   version="1.1"
+   width="500"
+   id="svg3103"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="ClassDiagram.svg">
+  <metadata
+     id="metadata3165">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3163" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1176"
+     id="namedview3161"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.44"
+     inkscape:cx="174.77059"
+     inkscape:cy="11.056904"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3103">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3209" />
+  </sodipodi:namedview>
+  <rect
+     style="opacity:0.64609052;color:#000000;fill:#ffeeaa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect3984"
+     width="38.090279"
+     height="39.409721"
+     x="176.90973"
+     y="79" />
+  <polygon
+     points="14,38 106,38 106,61 155,61 155,141 14,141 14,38"
+     id="polygon3105"
+     stroke-width="1"
+     stroke="#ffffff"
+     fill="#ffffff" />
+  <rect
+     fill="none"
+     height="23"
+     stroke="#000000"
+     stroke-width="1"
+     width="92"
+     x="14"
+     y="38"
+     id="rect3107" />
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="19"
+     y="51"
+     id="text3109">
+Component 1</text>
+  <rect
+     height="80"
+     width="141"
+     x="14"
+     y="61"
+     id="rect3111"
+     ry="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <rect
+     fill="#ffffff"
+     height="64"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="70"
+     x="46"
+     y="70"
+     id="rect3113" />
+  <g
+     id="g3169"
+     transform="translate(3.5,-1)">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1"
+       ry="9.0277777"
+       id="rect3115"
+       y="70"
+       x="46"
+       width="70"
+       height="64" />
+    <text
+       id="text3117"
+       y="83"
+       x="51"
+       font-size="12"
+       style="font-size:12px;font-family:Dialog">Cartesian</text>
+    <rect
+       id="rect3119"
+       y="93"
+       x="46"
+       width="70"
+       height="1"
+       style="fill:#000000;stroke:#000000;stroke-width:1" />
+    <text
+       id="text3121"
+       y="107"
+       x="50"
+       font-size="12"
+       style="font-size:12px;font-family:Dialog">x : double</text>
+    <text
+       id="text3123"
+       y="123"
+       x="50"
+       font-size="12"
+       style="font-size:12px;font-family:Dialog">y : double</text>
+  </g>
+  <polygon
+     fill="#ffffff"
+     points="238,14 436,14 436,37 485,37 485,149 238,149 238,14"
+     stroke="#ffffff"
+     stroke-width="1"
+     id="polygon3125" />
+  <rect
+     fill="none"
+     height="23"
+     stroke="#000000"
+     stroke-width="1"
+     width="198"
+     x="238"
+     y="14"
+     id="rect3127" />
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="243"
+     y="27"
+     id="text3129">
+Component 2</text>
+  <rect
+     fill="none"
+     height="112"
+     stroke="#000000"
+     stroke-width="1"
+     width="247"
+     x="238"
+     y="37"
+     id="rect3131" />
+  <rect
+     fill="#ffffff"
+     height="64"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="89"
+     x="246"
+     y="62"
+     id="rect3133" />
+  <rect
+     height="64"
+     width="89"
+     x="246"
+     y="62"
+     id="rect3135"
+     ry="8.333333"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="274"
+     y="75"
+     id="text3137">
+Polar</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="89"
+     x="246"
+     y="85"
+     id="rect3139" />
+  <text
+     font-size="12"
+     x="250"
+     y="99"
+     id="text3141"
+     style="font-size:12px;font-family:Dialog">r : double</text>
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="250"
+     y="115"
+     id="text3143">
+theta : Angle</text>
+  <rect
+     fill="#ffffff"
+     height="88"
+     stroke="#ffffff"
+     stroke-width="1"
+     width="117"
+     x="358"
+     y="46"
+     id="rect3145" />
+  <rect
+     height="88"
+     width="117"
+     x="358"
+     y="46"
+     id="rect3147"
+     ry="9.0277777"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="399"
+     y="59"
+     id="text3149">
+Angle</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="117"
+     x="358"
+     y="69"
+     id="rect3151" />
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="362"
+     y="83"
+     id="text3153">
+value : double</text>
+  <rect
+     fill="#000000"
+     height="1"
+     stroke="#000000"
+     stroke-width="1"
+     width="117"
+     x="358"
+     y="93"
+     id="rect3155" />
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="362"
+     y="107"
+     id="text3157">
+getSin() : double</text>
+  <text
+     font-family="Dialog"
+     font-size="12"
+     x="362"
+     y="123"
+     id="text3159">
+getCos() : double</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.01418507px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 155,99 35,0"
+     id="path3176"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <a
+     id="a3182"
+     transform="translate(-2.36111,1.145835)"
+     style="fill:none">
+    <path
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 196.18056,102.02083 c -2.10942,0 -3.81945,-1.86548 -3.81945,-4.166665 0,-2.301186 1.71003,-4.166666 3.81945,-4.166666"
+       id="path3178"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+  </a>
+  <a
+     id="a3182-3"
+     transform="translate(2.63889,1.145835)"
+     style="fill:none">
+    <path
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 196.18056,102.02083 c -2.10942,0 -3.81945,-1.86548 -3.81945,-4.166665 0,-2.301186 1.71003,-4.166666 3.81945,-4.166666 m 0,0 c 2.10942,0 3.81944,1.86548 3.81944,4.166666 0,2.301185 -1.71002,4.166665 -3.81944,4.166665"
+       id="path3178-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccsc" />
+  </a>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 237.84722,99 -35.41666,0"
+     id="path3986"
+     inkscape:connector-curvature="0" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="166"
+     y="76"
+     id="text3988"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3990"
+       x="166"
+       y="76"
+       style="font-size:13px">glue code</tspan></text>
+</svg>

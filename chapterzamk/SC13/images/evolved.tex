@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+
+
+\begin{umlpackage}[x=0, y=-2]{Component1}
+
+\umlclass[x=0, y=0]{Cartesian}
+{
+	-x: double \\
+	-y: double
+}
+{
+	getX():double \\
+	getY():double
+}
+
+\umlclass[x=3, y=0]{Cartesian3D}
+{
+	-z: double 
+}
+{
+	getZ():double
+}
+
+\umlinherit{Cartesian3D}{Cartesian}
+
+\end{umlpackage}
+
+\end{tikzpicture}

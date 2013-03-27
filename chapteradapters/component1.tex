@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=0.7, transform shape]
+
+\begin{umlpackage}[x = 0, y = 0]{Component1}
+
+\umlclass{Cartesian}
+{
+	x: double \\
+	y: double \\
+}
+{
+	
+}
+
+\end{umlpackage}
+
+\begin{umlpackage}[x = 6, y = 0]{Component2}
+
+\umlclass[x = 0, y= 0]{Polar}
+{
+	r: double \\
+	theta: Angle \\
+}
+{
+	
+}
+
+\umlclass[x = 4, y= 0]{Angle}
+{
+	value: double
+}
+{
+	+getSin() : double \\
+	+getCos() : double
+}
+
+\end{umlpackage}
+
+
+
+\end{tikzpicture}

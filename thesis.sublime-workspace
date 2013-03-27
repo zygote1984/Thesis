@@ -1,0 +1,529 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Car",
+				"Cartesian3DToAngleAdapter"
+			],
+			[
+				"Pyh",
+				"Pythagoras3D"
+			],
+			[
+				"get",
+				"getAdaptedValue"
+			],
+			[
+				"albumna",
+				"albumnamepart"
+			],
+			[
+				"en",
+				"end"
+			],
+			[
+				"st",
+				"start"
+			],
+			[
+				"album",
+				"albumIds"
+			],
+			[
+				"al",
+				"albumdIds"
+			],
+			[
+				"lst",
+				"lstlisting"
+			],
+			[
+				"cart",
+				"cart3d"
+			],
+			[
+				"sel",
+				"selProjects"
+			],
+			[
+				"so",
+				"sortedSelPro"
+			],
+			[
+				"k",
+				"key"
+			],
+			[
+				"ent",
+				"entries"
+			],
+			[
+				"c",
+				"comment"
+			],
+			[
+				"readl",
+				"readlines  (function)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.tex",
+			"settings":
+			{
+				"buffer_size": 537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.tex",
+			"settings":
+			{
+				"buffer_size": 3358,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapterzamk/images/classadapter.tex",
+			"settings":
+			{
+				"buffer_size": 363,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapterzamk/images/objectadapter.tex",
+			"settings":
+			{
+				"buffer_size": 365,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapterzamk/zamk.tex",
+			"settings":
+			{
+				"buffer_size": 24000,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapterzamk/images/components.tex",
+			"settings":
+			{
+				"buffer_size": 449,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Snippet: import"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/main.log",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapterzamk/images/components.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapterzamk/zamk.tex",
+		"/usr/local/share/texmf/tex/latex/MnSymbol/MnSymbol.sty",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapterzamk/SC13/sc13.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapterzamk/images/objectadapter.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapterzamk/images/classadapter.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/header.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapterzamk/images/component.tex",
+		"/home/kardelen/Desktop/main.cpp",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/main.aux",
+		"/home/kardelen/Desktop/zeynepodev/zeynep.sublime-project",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/biblio.bib",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapteripc/instancepc.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapteripc/Compilation.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapteripc/absintromotiv.tex",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/thesis_master/chapteripc/cp3instancepc.aux",
+		"/home/kardelen/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/kardelen/Desktop/svnlog/bockisch-boa-output.txt",
+		"/home/kardelen/Desktop/svnlog/EntryClass.py",
+		"/home/kardelen/Desktop/svnlog/formattedboa.txt",
+		"/home/kardelen/Desktop/svnlog/svnparse.py",
+		"/home/kardelen/.config/sublime-text-2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/home/kardelen/Desktop/thesis/chapter3ipc/cp3instancepc.tex",
+		"/home/kardelen/Desktop/thesis/chapter3ipc/absintromotiv.tex",
+		"/home/kardelen/Desktop/thesis/chapter1intro/introduction.tex",
+		"/home/kardelen/Desktop/thesis/chapteripc/instancepc.tex",
+		"/home/kardelen/Desktop/thesis/chapteripc/cp3instancepc.aux",
+		"/home/kardelen/Desktop/thesis/chapteripc/absintromotiv.tex",
+		"/home/kardelen/Desktop/thesis/chapter1intro/indtroduction.tex",
+		"/home/kardelen/Desktop/thesis/chapter2bg/background.tex",
+		"/home/kardelen/Desktop/thesis/main.tex~",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/ECOOP2013/ecoop13.tex",
+		"/home/kardelen/Documents/strutils.h",
+		"/home/kardelen/Documents/strutils.cpp",
+		"/home/kardelen/Documents/zeynep.cpp",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/ECOOP2013/concepts.txt",
+		"/home/kardelen/Documents/tmp.cpp",
+		"/home/kardelen/Desktop/Bitmap to 20sim map/Bitmap2Text",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/ECOOP2013/Main.java",
+		"/usr/share/texmf-texlive/tex/latex/mnsymbol/MnSymbol.sty",
+		"/home/kardelen/Insync/kardelenhatun@gmail.com/ECOOP2013/ecoop13.pdf",
+		"/home/kardelen/.config/sublime-text-2/Packages/User/latex.sublime-build",
+		"/home/kardelen/robots.cpp",
+		"/usr/share/applications/sublime.desktop",
+		"/home/kardelen/robots.h",
+		"/usr/share/applications/defaults.list",
+		"/home/kardelen/Desktop/aroemers-gluer-58f78a4/src/gluer/agent.clj",
+		"/home/kardelen/Desktop/aroemers-gluer-58f78a4/src/gluer/runtime.clj"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"aggregator",
+			"}.\n",
+			"aggregat",
+			"aggregator",
+			"umlcomponent",
+			"RequireP",
+			"chapterzamk/images",
+			"directorName",
+			"directorSurname",
+			"movieName",
+			"input",
+			"80",
+			"hfill",
+			"subf",
+			"input",
+			"<<",
+			"string",
+			"int",
+			"end",
+			"albums",
+			"genre",
+			"injected",
+			"%\\",
+			"}}}\n",
+			" exact type BeautyProduct\n exact type BeautyProduct\nexact type",
+			"Cylindrical",
+			"lst:example:simple",
+			"lst:example",
+			"paper",
+			"sffamily",
+			"6in",
+			"slow",
+			"sffamily",
+			"texttt",
+			"bookman",
+			"pair",
+			"chapter3ipc",
+			"images/",
+			"injectors",
+			"enum",
+			" \n",
+			"instances"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Assembler",
+			"assembl",
+			"assembler",
+			"chapteripc",
+			"chapter3ipc/images/",
+			"enumerate"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.tex",
+					"settings":
+					{
+						"buffer_size": 537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "header.tex",
+					"settings":
+					{
+						"buffer_size": 3358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1838,
+								1838
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 864.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "chapterzamk/images/classadapter.tex",
+					"settings":
+					{
+						"buffer_size": 363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "chapterzamk/images/objectadapter.tex",
+					"settings":
+					{
+						"buffer_size": 365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								365,
+								365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "chapterzamk/zamk.tex",
+					"settings":
+					{
+						"buffer_size": 24000,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11782,
+								11782
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4230.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "chapterzamk/images/components.tex",
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								251
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.909185663588,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 215.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 331.0,
+	"status_bar_visible": true
+}

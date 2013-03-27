@@ -1,0 +1,30 @@
+\begin{tikzpicture}[scale=0.5, transform shape]
+
+\umlemptyclass{Client}
+\umlclass[x = 4, y = 0]{Polar}{ 
+ 
+  }{ 
+  + getR() \\
+  + getTheta()
+} 
+
+\umlclass[x = 8, y = 0]{Cartesian}{ 
+ 
+  }{ 
+  + getX() \\
+  + getY()
+}
+
+
+\umlclass[x = 6, y = -3]{Cartesian2PolarAdapter}{ 
+  +adaptee : Cartesian
+  }{
+  + getR() \\
+  + getTheta()
+}
+
+\umlinherit{Cartesian2PolarAdapter}{Polar}
+\umluniassoc{Client}{Polar} 
+\umlaggreg{Cartesian2PolarAdapter}{Cartesian}
+
+  \end{tikzpicture}

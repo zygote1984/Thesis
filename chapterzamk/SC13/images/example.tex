@@ -1,0 +1,61 @@
+\begin{tikzpicture}
+
+
+\begin{umlpackage}[x=0, y=-1]{Component1}
+
+\umlclass[x=0, y=0]{Cartesian}
+{
+	-x: double \\
+	-y: double
+}
+{
+}
+
+\end{umlpackage}
+
+
+
+\begin{umlpackage}[x =  5, y = 0]{Component2}
+\umlclass[x=0, y=0]{Polar}
+{
+	-r: double \\
+	-theta: Angle
+}
+{
+}
+
+\umlclass[x=3, y=0]{Angle}
+{
+	-value: double
+}
+{
+	getSin(): double \\
+	getCos(): double
+}
+
+\umlclass[x=0, y=-3]{Cylindrical}
+{
+	-r: double \\
+	-theta: Angle \\
+	-z: double
+}
+{
+}
+
+\umlclass[x=3, y=-3]{Spherical}
+{
+	-r: double \\
+	-theta: Angle \\
+	-phi: Angle
+}
+{
+}
+
+
+
+\end{umlpackage}
+
+\umlinherit{Cylindrical}{Polar}
+\umlinherit{Spherical}{Polar}
+\umlassemblyconnector[interface=glue]{Component1}{Component2}
+\end{tikzpicture}
