@@ -722,21 +722,8 @@ public privileged Cartesian2PolarUserCartesian2PolarGenAspect extends ZamkRuntim
 The \zamk run-time is triggered by conversion requests.
 There are two ways to create such requests; first one is the \gluer~ statements which are transformed into \zamk API calls in the byte-code, second one is including direct references to the \zamk API in the base-code. 
 Both of these operations trigger the same conversion finding process. 
-\begin{figure}
-\centering
- \includegraphics[width=0.8\textwidth]{chapteradapters/runtime2.pdf}
- \caption{The process triggered by a conversion request}
-\label{fig:runtime}
-\end{figure}
-
-Figure~\ref{fig:runtime} shows how \zamk processes a conversion request. 
-For each request the appropriate conversion is found by the \textsf{Find Conversion} process. 
-When this process completes successfully, the conversion map of the found conversion is retrieved. 
-If the source object already exists in the conversion map, the corresponding target object is retrieved. 
-Otherwise a new target object is created by invoking the convert method of the conversion. 
-The conversion map is also updated to include the new source--target pair.
 Once the desired target object is created or retrieved (in case the given source object is already associated with a target object), it is returned to the owner of the request. 
-\zamk runtime is also responsible for managing source--target object pairs, by monitoring the source objects and updating the maps accordingly.
+\zamk runtime is responsible for applying correct conversions and managing source--target object pairs. 
 
 \subsubsection{Initialization}
 \label{sec:adapter:loadconvreg}
@@ -814,6 +801,7 @@ The closest conversion is characterized as follows:
 \item Among eligible conversions its source-type is the closest to the actual type $X$ object given in the conversion request. 
 \item Among the eligible conversions with the same source-type proximity, its target-type is the closest to the $Z$ type given in the conversion request.
 \end{enumerate}
+
 
 
 \begin{figure}[h]

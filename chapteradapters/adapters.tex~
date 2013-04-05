@@ -738,6 +738,10 @@ The conversion map is also updated to include the new source--target pair.
 Once the desired target object is created or retrieved (in case the given source object is already associated with a target object), it is returned to the owner of the request. 
 \zamk runtime is also responsible for managing source--target object pairs, by monitoring the source objects and updating the maps accordingly.
 
+
+
+
+
 \subsubsection{Initialization}
 \label{sec:adapter:loadconvreg}
 In order to process conversion requests, \zamk performs a one-time initialization step at the beginning of the run-time which consists of loading the conversion registry and conversion aspect registration. 

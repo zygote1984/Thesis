@@ -1,0 +1,37 @@
+\documentclass[10pt, b5paper, twoside]{memoir} 
+\include{header}
+\include{memoirspec}
+
+
+\begin{document} 
+\author{Kardelen Hatun} 
+\title{Kardo's Thesis} 
+\date{September} 
+
+% \maketitle
+% \frontmatter 
+%\tableofcontents 
+% \listoffigures
+% \listoftables
+% \include{todo}
+
+\mainmatter 
+% \include{chapter1intro/introduction}
+% \include{chapter2bg/background}
+% \include{chapteroce/chapteroce}
+%\include{chapteripc/instancepc} 
+\include{chapteradapters/adapters}
+% \include{chapterzamk/zamk}
+% \include{chapterzamkipc/zamkipc}
+
+
+\backmatter 
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+
+\end{document} 
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
