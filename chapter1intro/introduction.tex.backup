@@ -1,0 +1,14 @@
+\chapter{Introduction}
+
+In this thesis we explore new modularization paradigms and component integration technologies for handling the introduction of new features into legacy systems.
+This introductory chapter sets the context for this thesis and presents an overview of our research domain.
+
+\section{The Context}
+In component-based design, a \emph{component} is defined as self-contained structure with a clear function which communicates through a pre-determined interface. 
+Component-based design is yet another way to decompose software into maintainable and reusable parts.
+In a smaller scale, this is anologous to the class concept in the object-oriented design paradigm. 
+In fact a component can even be a single class.
+
+
+
+

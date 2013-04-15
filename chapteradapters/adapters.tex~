@@ -2,45 +2,61 @@
 
 \section{Introduction}
 \label{sec:adapter:intro}
-Changing requirements force software systems to include new components to extend their features. 
+
+\TODO{Assumptions should be explicit in the beginning}
+Changing requirements force software systems to include new components to extend their functionality. 
 Software components are self-contained entities with a well-defined interface and behavior. 
-For two components to function together they must be \emph{integrated} through a compatible interface. 
-Typically such compatibility is not a given and it should be, often manually, established through additional programming. 
-The integration task also entails binding the data values, i.e creating dependencies between the components. 
-Once the data is represented through a compatible interface it is assigned to a target field and kept synchronized with the source data, this operation is called data binding.
+For two components to co-operate they must be \emph{integrated} through a compatible interface. 
+When components are developed separately the compatibility is not a given. 
+Therefore it should be, often manually, established through additional programming. 
+
+
+The integration task also entails creating dependencies between the components. 
+These dependencies are...
+Once the object is represented through a compatible interface it is assigned to a target field. 
+This integration also requires keeping the referenced data synchronized. 
+...
+%; this operation is called data binding.
 
 The problem of incompatible interfaces is a common software engineering problem and a possible  solution is captured in the \emph{adapter pattern} (cite Gamma).
-The adapter pattern makes two interfaced compatible by using a source interface to implement the methods of a target interface. 
+
+Gamma et al. defined the adapter pattern as follows... one object makes a reference to a data value it requires a specific type, a target type. another object repersents the desired data and behaavior but this object is an insance of a source type, which is different of the target type then the adapter pattern tells you how to make this source object compatible with the expected target type. 
+Adapter implements the target type and wraps the source object, it implments the methods of the target type by invoking methods defined in the source type.
+\TODO{make it better}The adapter pattern makes two interfaces compatible by adapting the instances of a source interface to work with a target interface. 
+This means when an object of the source interface should be assigned to an field of target interface, an adapter object which wraps the source object and implements the target interface is created and passed on as the target object. 
+
 The structure which establishes this compatibility is called an adapter and the source interface is referred as the \emph{adaptee}. 
 An adapter introduces  a level of indirection between the incompatible interfaces.
-This means the when an object of the source interface is should be adapted to an object of a target interface, an adapter object which wraps the source object and implements the target interface is created and passed on as the target object. 
 
-There are some issues attached to the traditional adapter pattern; its implementation can be problematic with some programming languages.
-If we look at a class adapter, we see that it should be implemented with a language that allows multiple inheritance. 
-Single inheritance programming languages need to use workarounds to achieve the same effect.
+There are some issues attached to the traditional adapter pattern.
+A class adapter pattern is most efficiently implemented with a language that allows multiple inheritance. 
+Developers of the ingle inheritance programming languages need to use workarounds to achieve the same effect.
 For example in Java multiple inheritance is simulated with the usage of interfaces since a class can implement multiple of them. 
-In order to inherit from two concrete types using Java, we need to extract the interface of one of the types and add this interface to the implements list. 
+In order to inherit from two concrete types using Java, we need to extract the interface of one of the types and add this interface to the list of super-interfaces. 
+\TODO{Limitation, we don't always have control over source code}
 Then the concrete implementation of the interface is repeated in the sub-class. 
 
-The implementation of object adapter pattern is more flexible, since it only needs to inherit from the target type. 
-However this implementation also does not allow a single object adapter to adapt to multiple target types. 
-Another issue is that the adapter pattern adds a level of indirection between the source and the target, which needs to be maintained. 
+\TODO{There are two problem statements, better structuring separate into two paragraphs}
+The implementation of the object adapter pattern is more flexible, since it only needs to inherit from the target type. 
+An issue is that the adapter pattern adds a level of indirection between the source and the target, which needs to be maintained \TODO{Maintained why?}. 
 The last issue is related to the additional dependencies introduced by the adapter classes. 
 The integration code has to refer to the specific adapter classes to initialize the desired objects. 
-This need for specific references has two side effects; first, the implementation contains a direct reference to the adapter type instead of just the source and the target types. This introduces an additional maintenance efforts. 
-Second, the user is required to know exactly which adapter is responsible for a specific interface conversion.d
+This need for specific references has two side effects; first, the implementation contains a direct reference to the adapter type instead of just the source and the target types, which introduces an additional maintenance efforts. 
+\TODO{It should be explicit that the user wants to reuse the adapter}
+Second, the user is required to know exactly which adapter is responsible for a establishing type compatibility.
 This may be a problem when adapters are not planned to be reusable and documented poorly. 
+One has to search the type hierarchy.....to find the classes implementing the target type...
 In such cases the information about which interfaces are adapted is communicated through a particular adapters name or one has to go inside that adapter class to understand the expected source and the target types. 
+\TODO{How would you know if it is an adapter if it is not indicated with naming conventions?}
 This process is error-prone as well as time consuming.
 
 Adaptation is only one part of the integration problem. 
 The second part entails establishing dependencies between the integrated components. i.e binding. 
 In component-based design loose-coupling is an important principle.  
 Dependency injection (DI) (cite fowler) is a lightweight method for keeping modules loosely coupled by delegating the creation of concrete objects to so-called \emph{injectors}. 
-This approach allows a customizable and a decoupled way of creating dependencies, while maintaining loose coupling.
-
+This approach allows a customizable and a decoupled way of creating dependencies, while maintaining loose coupling. 
 Typically these two parts, adaptation and binding, are handled separately from each other during integration. 
-We think these parts can be unified from the users perspective by providing a concise interface for the whole integration task.
+
 
 Let us summarize the problems we have identified so far:
 \begin{enumerate}[{P}-1]
@@ -49,33 +65,33 @@ Let us summarize the problems we have identified so far:
 \item Adapters require additional knowledge and effort from the side of the developer to be used properly.
 \end{enumerate}
 
-In light of the issues discussed, we have devised the requirements below. The first three requirements to a specific problem in the above itemization. The last two requirements are concerned with the binding.
+In light of the issues discussed, we have devised the requirements below. The first three requirements refer to a specific problem in the above itemization. The last two requirements are concerned with the binding.
 
 \begin{enumerate}[{R}-1]
-\item Inheritance-free adapter structures. (P-1) 
+\item Inheritance-free adapter structures. (P-1) \TODO{I don't have a restriction, I do not require it!} 
 \item Use adaptation without creating dependencies to specific adapter classes. (P-2)
 \item Adapters are found automatically given a source object and a target type. (P-3)
 \item Means to separate the adaptation logic from the integration logic during development time.
-\item Binding mechanisms that provide loose coupling, which can work with the adaptation logic.
+\item Dependency injection which can work with the adaptation logic.
 \end{enumerate}
 
 In order to satisfy these requirements we have designed the \zamk framework, which unites dependency injection with \emph{under-the-hood} adaptation logic.
 For our framework we do not employ the traditional adapter pattern and we have created \emph{converters}, which are user-defined inheritance-free classes. 
 \zamk comes with its own dependency injection mechanism that is used with a designated domain-specific language called \gluer. 
-The dependency injection logic is intertwined with the adaptation logic which uses the converter registry to perform automated adaptation between source and target types. 
+The dependency injection logic is intertwined with the adaptation logic which uses the conversion registry to perform automated adaptation between source and target types. 
 We automate the adaptation process by exploiting the type hierarchies and provide checks and context-relevant messages for correct integration. The details of the framework will be explained throughout the chapter.
 
 \subsection{Motivating Example}
 \label{sec:adapter:motiv}
 
-In the previous section we have identified the problems attached to the traditional adapter pattern\footnote{Throughout this chapter, the term adapter pattern will refer to the object adapter pattern. The class adapter pattern will explicitly include the term class.} and we have come up with requirements for a solution that would remedy these problems. In this section we will illustrate the said problems with an hypothetical example.
+In the previous section we have identified the problems attached to the traditional adapter pattern\footnote{Throughout this chapter, the term adapter pattern will refer to the object adapter pattern. References to the class adapter pattern will explicitly include the term class.} and we have come up with requirements for a solution that would remedy these problems. In this section we will illustrate the said problems with an hypothetical example.
 
 Assume we have a plot drawing software which uses the Cartesian coordinate system to represent the points in the plot. 
-The software includes a data component which contains a class called \lstinln{Cartesian} which includes two fields \lstinln{x, y}, that represents the values on the x-axis and y-axis respectively. 
+The software includes a data component which contains a class called \lstinln{Cartesian} which has two fields \lstinln{x, y}, that represents the values on the x-axis and y-axis respectively. 
 This class also includes getters and setters for these fields (\lstinln{Component1} in Figure~\ref{fig:components}).
-A new requirement is received which states that the software must also support polar coordinates, and the points on a plot should be shown in a selected format (Cartesian or polar). 
+A new requirement is received which states that the software must also support polar coordinates, and the user must be able to view plot points in a selected view. (Cartesian or polar). 
 
-In order to support polar coordinates, a new component which contains classes to represent such data is introduced (\lstinln{Component2} in Figure~\ref{fig:components}). The class \lstinln{Polar} contains two field \lstinln{r} representing the radius and \lstinln{theta} of type \lstinln{Angle}. This component is to be integrated with the \lstinln{Cartesian} component. It should be possible to obtain the \lstinln{Polar} representation of any \lstinln{Cartesian} object by using an \emph{adapter}.
+In order to support polar coordinates, a new component which contains classes to represent such data is introduced (\lstinln{Component2} in Figure~\ref{fig:components}). The class \lstinln{Polar} contains two fields \lstinln{r} representing the radius and \lstinln{theta} of type \lstinln{Angle}. This component is to be integrated with the \lstinln{Cartesian} component. It should be possible to obtain the \lstinln{Polar} representation of any \lstinln{Cartesian} object by using an \emph{adapter}.
 
 \begin{figure}
 \centering
@@ -215,6 +231,7 @@ In this simple example, this reference is manageable.
 However if several such extensions are to be made, there will be several such references.
 This requires keeping track of all referenced classes; if one is deleted then we would have errors in our code, due to broken dependencies. 
 Also the developer performing the integration has to know all the specific classes that are responsible for adaptations. 
+\TODO{Rephrase according to the change in introduction}
 If the adapter class is not known, then the names of the adapter classes gives the developer hints about the types the adapter adapts from and to. 
 However depending solely on naming is error-prone. 
 In this case the developer has to go into the class to understand the types included in the adapter. 
@@ -223,7 +240,7 @@ This results in a slower integration process.
 \begin{lstlisting}[float, caption={The integration of Polar coordinates}, label={lst:integration}]
 
 public void viewPointValue(Point selected)
-{
+
 	if(GUI.format == CARTESIAN)
 		GUI.createNewValueBox(selected.loc(), selected.getCoordinates().toString());
 	else if(GUI.format == POLAR)
@@ -236,18 +253,18 @@ public void viewPointValue(Point selected)
 
 In this section we have used the plotter example to illustrate the problems we have identified in Section~\ref{sec:adapter:intro}. 
 Firstly we have described how programming languages can affect the implementation of the adapter pattern by using Java and AspectJ (P-1). 
-Secondly we have shown the disadvantages of introducing adapter dependencies in the integration code, by using the introduction \lstinln{Polar} view extension to the plotter software.
-Lastly, using the same example, we have discussed why the developer needs adapter specific knowledge and how it slows down the integration process. 
+Secondly we have shown the disadvantages of introducing adapter dependencies in the integration code, by using the introduction \lstinln{Polar} view extension to the plotter software (P-2).
+Lastly, using the same example, we have discussed why the developer needs adapter specific knowledge and how it slows down the integration process (P-3). 
 
 
 
 \section{Approach}
 \label{sec:adapter:approach}
-We have concluded with a set of requirements in Section~\ref{sec:adapter:motiv}. In this section we will explain the details of the \zamk framework which is designed according to these requirements. 
+In this section we will explain the details of the \zamk framework which is designed according to the requirements specified in Section~\ref{sec:adapter:intro}. 
 
 \zamk is a development framework specifically tailored for adapter-based integration. 
 It offers a new and a light-weight way of defining adapters; these light-weight structures are called \emph{converters}. 
-Converters are user-defined classes that do not need use sub-class any of the types they are converting from and to.  Converter classes are stateless. 
+Converters are user-defined classes that do not need use sub-class any of the types to implement adaptations. Converter classes are stateless. 
 \zamk runtime is responsible for finding the correct converter, given a source and a target object. 
 This means the only additional dependency we have to include in the implementation is the \zamk runtime API. 
 Since the user does not have to refer to specific adapters, \zamk allows separation of adaptation and binding concerns during integration.
@@ -262,31 +279,31 @@ Integration using \zamk also helps separating the binding concern and the adapta
 \label{fig:framework}
 \end{figure}
 
-In Figure~\ref{fig:framework} shown an overview of the stages that are necessary to perform an integration using \zamk.
+Figure~\ref{fig:framework} shows an overview of the stages that are necessary to perform an integration using \zamk.
 \zamk requires user-defined input to perform an integration.
 
 \paragraph{Development Time}
-The user-defined input is a produced during \zamkph{development time}. In the figure we show four inputs that are fed to the \zamk compile-time; there are (in the order shown in the figure):
+The user-defined input is a produced during \zamkph{development time}. In the figure we show four inputs that are fed to the \zamk compile-time; they are (in the order shown in the figure):
 
 \begin{description}
 \item{\gluer files}: Gluer files contain the \gluer statements that define which objects are going to be injected to which fields. \gluer statements are used to generate conversion requests, which are \zamk API calls that trigger the \zamk adaptation work-flow. The \gluer language is discussed in Section~\ref{sec:adapter:gluer}. 
-\item{Application Classes}: These classes are scanned to retrieve information for integration. This information is used in checking. Also applications classes are instrumented with conversion requests that are derived from \gluer statements. 
-\item{Converter}: These are the user-defined classes that adhere to a specific structure. Converters contains methods necessary to convert one type to the other. These are discussed in Section~\ref{sec:adapter:converter}.
+\item{Application Classes}: These classes are scanned to retrieve information for integration. The retrieved information is used in checking. Also application classes are instrumented with conversion requests that are derived from \gluer statements. 
+\item{Converters}: These are the user-defined classes that adhere to a specific structure. Converters contains methods necessary to convert one type to the other. These are discussed in Section~\ref{sec:adapter:converter}.
 \item{Converter Precedence Declarations}: these are used to resolve conflicts when more than one conversion is found for a specific request. In this case the conversion which is contained by the converter class that has the higher precedence is used. 
 \end{description}
 
 It is also possible to write plain Java code that calls the \zamk API directly.
-However these statements are not processed during compile-time, they are considered as ordinary Java code. 
+However these statements are not processed during compile-time; plain Java statements. 
 That is why we do not list them as compile-time inputs. 
 During the \zamkph{final compilation} phase, they are compiled with all the code that is provided by the user and generated by \zamk.
 
 \paragraph{Compile Time}
-Once this input is provided, the \zamk compiler work-flow starts. This work-flow is composed of the following sequential phases. The descriptions below follow the same structure and the order as in upper-half of the Figure~\ref{fig:framework}. 
+Once the input is provided, the \zamk compiler work-flow starts. This work-flow is composed of the following sequential phases. The descriptions below follow the same structure and the order as in upper-half of the Figure~\ref{fig:framework}. 
 
 \begin{description}
-\item{\zamkph{Checking}}: There are two checkers which are responsible for checking the \gluer files and converter classes. The gluer checker performs the syntax checking; it also checks if the references made in the \gluer statement actually exist in the application code. The converter checker performs type checking and well-formedness checking. If any of these checks fails, a compile-error is produced. 
-\item{\zamkph{Conversion registry}}: When the converter checking is finished without any problems, \zamk builds a conversion registry\footnote{One converter class may include multiple conversions} in the form of a data structure to be used in the next step of compile-time work flow; \zamkph{code generation}. Also during this phase the conversion registry data structure is serialized in XML format creating registry XML. 
-\item{\zamkph{Code Generation}}: This step consists of two separate generation processes. Byte-code instrumentation is responsible for inserting \zamk conversion requests to the places indicated as the binding points defined in the \gluer statements. The conversion registry created in the previous step is used to generate the conversion aspects, which are responsible for monitoring the converted objects. 
+\item{\zamkph{Checking}}: There are two checkers; one responsible for checking the \gluer files and the other for converter classes. The gluer checker performs the syntax checking; it also checks if the references made in the \gluer statement actually exist in the application code. The converter checker performs type checking and well-formedness checking. If any of these checks fails, a compile-error is produced. 
+\item{\zamkph{Conversion registry}}: When the converter checking is finished without any problems, \zamk builds a conversion registry\footnote{One converter class may include multiple conversions} in the form of a data structure to be used in the next step of compile-time work flow; \zamkph{code generation}. Also during this phase the conversion registry data structure is serialized in XML format creating the registry XML. 
+\item{\zamkph{Code Generation}}: This step consists of two separate generation processes. Byte-code instrumentation is responsible for inserting \zamk conversion requests to the places indicated as the binding points defined in the \gluer statements. The conversion registry that is created in the previous step is used to generate the conversion aspects, which are responsible for monitoring the converted objects. 
 \item{\zamkph{Final Compilation}}: When the compile-time work flow is complete a final compilation step is performed, which makes sure the instrumented application classes and the generated files do not contain any errors. At the end of this step we obtain a \zamk run-time ready code, in this figure we assume the final compilation product is an executable.
 \end{description}
  
@@ -306,7 +323,7 @@ A conversion request contains the source object and the desired target type to w
 The \emph{find conversion} process searches for the correct conversion by using the type information included in the conversion request. 
 If a suitable conversion cannot be found, \zamk produces a run-time exception indicating the error. 
 If a conversion is found, one of two things can happen. Either the request may result in a new conversion, i.e. it may trigger the process to create a new source--target pair. In order to create a new source--target pair, the corresponding conversion method is invoked and the newly created target object is returned. 
-The conversion aspects are responsible for monitoring the source objects which are associated with a target object. Or \zamk may find that a request to the same target type was processed before with the given source object. In that case the existing target object is retrieved and returned. 
+The conversion aspects are responsible for monitoring the source objects which are associated with a target object. Alternatively, \zamk may find that a request to the same target type was processed before with the given source object. In that case the existing target object is retrieved and returned. 
 \end{description}
 
 
@@ -316,7 +333,7 @@ In order to eliminate the dependency to the adapter type, we have created the no
 Conversions are defined in user-provided converter classes. Conversions simulate adaptation as a one-time conversion and a series of updates during an objects life-cycle. 
 
 A conversion consists of two parts, the first part consists of two user-defined methods: a convert and an update method. 
-The second part is an \emph{aspect}, so-called conversion aspect, generated by \zamk which contains a hash-map of source(adaptee) and target objects. 
+The second part is an \emph{aspect}, so-called conversion aspect, generated by \zamk which contains a hash-map of source (adaptee) and target objects. 
 The conversion aspect is generated during compile-time\footnote{Please refer to the code generation step of Figure~\ref{fig:framework}}. 
 The responsibility of this aspect is to monitor the source (adaptee) objects and update the target objects if a source object changes. 
 The update operation is performed by calling the user-defined update method.
@@ -325,8 +342,8 @@ In Figure~\ref{fig:conv1} the first step of the conversion process is shown.
 A new conversion requested by giving a source object and a target type. 
 In the traditional adapter pattern this source object is the adaptee and an adapter which is a subtype of the target type is instantiated that aggregates this source object. 
 In our conversion process this source object is passed onto the convert method of an appropriate conversion (automatically found by the framework, section~\ref{sec:adapter:find}) and this method returns the corresponding target object, which is initialized according to the values provided by the source object. 
-When a new target object is created, the \zamk runtime registers the source-target tuple in a hashmap. 
-This hashmap replaces the \emph{has-a} relationship between the adapter and the adaptee. 
+When a new target object is created, the \zamk runtime registers the source-target pair in a hashmap. 
+This hashmap represents the \emph{has-a} relationship between the adapter and the adaptee. 
 
 Once a target object is linked to a source object, they are kept synchronized. 
 This is ensured by the generated conversion aspect. 
@@ -361,7 +378,7 @@ In this figure we have numbered the steps taken in the compile-time, since they 
 As mentioned before, the developer is responsible with providing converters that are specific to her application. The converters are required to adhere to a specific structure, which is discussed in section~\ref{sec:adapter:converter}. 
 The correctness of the converters are checked by the process \textsf{Check Converters}, in the \textsf{Checking} step. 
 All of the processes in this step take the application classes as input, since the checking operation uses these classes to investigate the existence of the dependencies. 
-\gluer files are checked by the \textsf{Check Gluer Statements} process. This process, the related processes and the input and outputs are shown in dashed style, since providing gluer files is an optional step. 
+\gluer files are checked by the \textsf{Check Gluer Statements} process. This process, the related processes and the input and outputs are shown in dashed style, since providing \gluer files is an optional step. 
 As mentioned before it is also possible to call \zamk API directly from Java. 
 
 Once the provided input is checked and proved to be error-free, the checked converter classes are input to the \textsf{Build Conversion Registry} process, inside the \textsf{Creating the Conversion Registry} step. 
@@ -384,8 +401,7 @@ The fourth and the final step is the compilation of all code that is generated b
 \label{sec:adapter:gluer}
 The \gluer language is a concise DSL that is designed to declare dependencies between fields and objects. 
 We have developed the \gluer language to offer an external, non-intrusive way of declaring bindings. 
-\gluer is not a plain dependency injection language.
-Essentially \gluer is an external dependency injection declaration language which creates the objects to be injected and is connected to an adaptation logic which can process the created objects before injection.
+Essentially \gluer is an external dependency injection declaration language which creates the objects to be injected and is connected to an adaptation logic which can process the created objects before the  injection happens.
 A \gluer program is stored in a file with the extension `.gluer'.
 
 \paragraph{Syntax and Semantics} We chose the keyword \lstinln{glue} instead of \lstinln{inject} since \gluer does more than dependency injection. 
@@ -419,7 +435,7 @@ The checks which result in compile errors contain specific information about the
 \begin{itemize}
 \item Target-field is checked to see if it actually exists.
 \item For creating the source object with the \lstinln{new} and \lstinln{single} keywords, the framework requires that the source class contains a no-argument constructor. For the \lstinln{retval} keyword, the framework checks if the referred method exists.
-\item The \lstinln{using} keyword triggers two checks. The first one checks if the referred converter exists and the second one checks if the converter is suitable for converting from the source class to the target field. 
+\item The \lstinln{using} keyword triggers two checks. The first one checks if the referred converter exists and the second one checks if any of the conversions in that converter is suitable for converting from the source class to the target field. 
 \item If the \gluer~statements are error free up to this point, then a conflict check is performed to see if any two \gluer~ statements try to inject into the same field. 
 \end{itemize}
 
@@ -428,7 +444,7 @@ The checks which result in compile errors contain specific information about the
 \subsubsection{User-defined Converters}
 \label{sec:adapter:converter}
 The users of \zamk are responsible for creating a converter, which we classify as a domain-specific aspect.
-Converter classes contains conversions and they must adhere to a specific structure and they are annotated in order to be managed by \zamk. 
+Converter classes contains conversions; they must adhere to a specific structure and they are annotated in order to be managed by \zamk. 
  
 
 A converter has three important requirements:
@@ -442,7 +458,7 @@ A converter has three important requirements:
 \item There cannot be two convert methods that have the same argument and return types in a single converter. The same is true for the update method.  
 \end{enumerate}
 
-Since the methods are annotated there are no restrictions on the method naming. 
+Since the methods are annotated there are no restrictions imposed by \zamk on the method naming. 
 The convert method contains the logic for converting a source object to a target object. It takes a source object as its single argument and creates the corresponding target object.
 This method is invoked by \zamk when an adaptation is requested for a \emph{new} source object, i.e a source object that was not adapted before to a given target type. 
 If the requested adaptations has been performed before and \zamk has a matching source--target pair in the registry, then the existing target object is returned.
@@ -451,8 +467,8 @@ The update method contains the logic for updating a target object.
 It takes two arguments of the type target; the first is the existing registry object which will be updated due to its associated source object's state change. 
 The second argument is the updated state of the registry object based on the new state of the associated source object. 
 In the update method, the developer specifies how an object of the target type is assigned a new state.
-The reason we update the values of an existing object is that, if we simply replace the object with a new one then the dependencies to the old object will be outdated. 
-Note that if we implemented this method in a language that supported pointers, then we would simply keep a registry of pointer and update the values they point to. 
+The reason we update the values of an existing object is, if we simply replace the object with a new one then the dependencies to the old object will be outdated. 
+Note that if we implemented this method in a language that supported pointers, then we would simply keep a registry of pointers and update the values they point to. 
 However with Java, we require that an additional update operation is defined.
 
 It is also possible to declare two-way conversions in a converter class. 
@@ -492,7 +508,7 @@ Otherwise a compile error indicating the situation is given to the user.
 
 Converters do not need to use inheritance to perform adaptations.
 Since all the adaptation related methods are static, they do not need to be initialized to function; they are stateless.
-Their well-structured definition allows the developer to focus the implementation on what is necessary to perform an adaptation. 
+Their well-structured definition allows the developer to focus the implementation efforts on what is necessary to perform an adaptation. 
 Converters are concise and light-weight structures that encapsulate the adaptation concern.
 
 \subsubsection{Conversion Registry}
@@ -516,7 +532,6 @@ The procedure for creating the converter registry can be seen in Procedure~\ref{
 					\State $conversion \gets (sourceType, targetType, cm, um)$
 					\State add $conversion$ to $record$
 					\State remove $cm$ from $cMethods$
-					\State remove $um$ from $uMethods$
 				\EndIf
 			\EndFor
 			\EndFor
@@ -536,8 +551,8 @@ For each convert method found in the converter the variables $targetType$ (the r
 Then the matching update method is found by iterating over the list of update methods and comparing their argument the target types. 
 When an update method is found and then the record of the conversion is created. 
 
-The $record$ data structure contains the list of $conversion$ items a converter contains. A $conversion$ consists of the the source and the target types, the name of the convert and update methods. 
-The convert and update methods included in the created $conversion$ are removed from the corresponding lists. 
+The $record$ data structure contains the list of $conversion$ items a converter contains. A $conversion$ consists of the source and the target types, the name of the convert and update methods. 
+The update method included in the created $conversion$ are removed from the corresponding lists. 
 When all conversions in a converter is found, the $record$ for a single converter class is complete. 
 However at this point the $record$ does not contain any information about two-way converters.
 
@@ -548,7 +563,7 @@ The $newConversion$ items are collected in a separate list called $newRecord$ an
 After all two-way conversions are found, the marked entries from $record$ are removed and the new entries collected in $newRecord$ are added to list $record$. 
 This procedure is also responsible for assigning the unique IDs to each conversion, which is done in the for loop shown on line~\ref{alg:idloop}.
 This unique ID is later used in the aspect generation as the aspect unique ID. 
-Once the $record$ list is in its final form it is mapped to the $registry$with the converter's fully-qualified name as the key. 
+Once the $record$ list is in its final form it is mapped to the $registry$ with the converter's fully-qualified name as the key. 
 After the list of converters is exhausted the $registry$ is fully populated.
 The last operation is the serialization of the $registry$ to an XML file, which is done by the serialize operation at the end of the procedure.
 
@@ -601,7 +616,7 @@ The convert and update tags contain the method names for convert and update meth
 \subsubsection{Code Generation}
 \label{sec:adapter:codegen}
 There are two separate code generation modules included in \zamk. The first one is the byte-code generation and weaving module which is used to generate code from \gluer~statements. 
-The second one is the aspect generator, which uses user-defined converters to generate the monitoring and managing aspects, so-called conversion aspects, for each converter.
+The second one is the aspect generator, which uses user-defined converters to generate conversion aspects for each converter.
 
 \paragraph{Byte-code generation and Instrumentation}
 The \gluer statements are parsed and transformed into Javassist (cite) library calls, which is used to insert byte-code into class files. 
@@ -647,7 +662,7 @@ Inside this constructor the aspect registers its \lstinln{map} to the \zamk runt
 It is constructed using generics notation; the \lstinln{[source-type]} is the type of the source object and the \lstinln{[target-type]} is the type of the target object. These types are determined by looking at the argument type and the return type of the convert method, respectively. 
 The generated aspect declares a single pointcut.
 
-The \lstinln{updateObserverThis} pointcut selects the join-points when fields of an object which is of \lstinln{[source-type]} is \lstinln{set} (line~\ref{lst:genaspect:uot}). This pointcut reuses a pointcut that is  declared in it's super-aspect, called \lstinln{updateObserver} and narrows the scope of this pointcut by composing an \lstinln{if} pointcut that checks if the updated object is indeed an instance of the \lstinln{[source-type]}. The \lstinln{after} advice that follows uses this pointcut and calls the update method of the user-defined class at the selected join-points(line~\ref{lst:genaspect:update}). 
+The \lstinln{updateObserverThis} pointcut selects the join-points when fields of an object which is of \lstinln{[source-type]} is \lstinln{set} (line~\ref{lst:genaspect:uot}). This pointcut reuses a pointcut that is  declared in it's super-aspect, called \lstinln{updateObserver} and narrows the scope of this pointcut by composing an \lstinln{if} pointcut that checks if the updated object is indeed an instance of the \lstinln{[source-type]}. The \lstinln{after} advice that follows uses this pointcut and calls the update method of the user-defined class at the selected join-points (line~\ref{lst:genaspect:update}). 
 This operation makes sure the target object associated with the updated source object is updated in the \lstinln{map}. 
 
 \begin{lstlisting}[float, caption={The aspect generated for the Cartesian to Polar converter in listing~\ref{lst:c2pconverter}}, label={lst:c2pconvertergenaspect}]
@@ -738,10 +753,6 @@ The conversion map is also updated to include the new source--target pair.
 Once the desired target object is created or retrieved (in case the given source object is already associated with a target object), it is returned to the owner of the request. 
 \zamk runtime is also responsible for managing source--target object pairs, by monitoring the source objects and updating the maps accordingly.
 
-
-
-
-
 \subsubsection{Initialization}
 \label{sec:adapter:loadconvreg}
 In order to process conversion requests, \zamk performs a one-time initialization step at the beginning of the run-time which consists of loading the conversion registry and conversion aspect registration. 
@@ -750,7 +761,7 @@ In order to process conversion requests, \zamk performs a one-time initializatio
 At the beginning of the runtime this registry is loaded by parsing the XML file which contains the conversions. 
 As mentioned before the XML file contains data about two kinds of conversions, one-way and two-way.
 Each \lstinln{<conversion>} tag is mapped to a \lstinln{Conversion} object, which is the parent type for \lstinln{OneWayConversion} and \lstinln{TwoWayConversion}.
-The class structure is shown in Figure\ref{fig:convclasses}.
+The class structure is shown in Figure~\ref{fig:convclasses}.
 
 \begin{figure}[h]
 \centering
@@ -830,9 +841,9 @@ The closest conversion is characterized as follows:
 
 Let us clarify these descriptions with an example. 
 In Figure~\ref{fig:animals} two separate hierarchies that represent different classifications for animals. 
-Conversions are defined between the types of the hierarchies.
+Conversions are defined between the types of these hierarchies.
 Consider the conversion request \lstinln{getConvertedValue(largeMammal, Vertebrate.class)}. 
-According to our description of the eligible conversions, we can check each conversion to determine if they are in fact able to perform this conversion.
+According to our description of the eligible conversions, we can check each conversion to determine if they are in fact eligible.
 Starting from the bottom of the figure:
 \begin{easylist}[itemize]
 & The \lstinln{L2W} conversion converts from \lstinln{LargeMammal} to \lstinln{WarmBlooded}. Since the type of the source object (\lstinln{LargeMammal}) exactly matched the conversion's source type (\lstinln{LargeMammal}) it satisfies E-1, since the target type of this conversion is \lstinln{WarmBlooede} which is a sub-type of \lstinln{Vertebrate}, the conversion also satisfied E-2. Hence we conclude that the conversion is eligible. 
@@ -904,9 +915,9 @@ That's why the closeness checks prefers the closeness of the source type over th
 
 These operations are implemented in \lstinln{findConversion}; pseudo code is shown in Procedure~\ref{alg:findconv}.
 The procedure starts by creating an empty list named $eligibles$ which will contain the eligible conversions.
-In order to determine these conversions, we first need to find the super types of the source and target types by walking their type hierarchy. 
+In order to determine these conversions, we first need to find the super types of the source  type by walking their type hierarchy. 
 This is done by the method \lstinln{getAllSuperTypes} which uses reflection to populate the full set of super types (classes and interfaces) of a given type. 
-On lines~\ref{getsupertypes} and~\ref{getsupertypes2} this method is called and the returned lists are stored in the respective variables; $superTypeSource$ and $superTypeTarget$. 
+On line~\ref{getsupertypes} this method is called and the returned list is stored in $superTypeSource$. 
 Note that when the \lstinln{java.lang.Object} is passed as an argument to this method, it returns a list that contains a set that contains the single element \lstinln{java.lang.Object}.
 
 The while loop (lines~\ref{fc:while:b}--~\ref{fc:while:e}) iterates over the $superTypeSource$ set and checks if that source type is associated with any conversions; in the \lstinln{if} statement on line~\ref{checksourcemap} checks if $sourceMap$'s key set contains the $sourceType$.
@@ -1026,7 +1037,7 @@ public static <T, U> T invokeConversion(String uid, U source) {
 The source--target pairs kept in the conversion maps are maintained by conversion aspects. 
 We have previously discussed the structure and the members of these aspect in section~\ref{sec:adapter:codegen}.
 A conversion adapter contains a pointcut (\lstinln{updateObserverThis}) which monitors all of the changes made to the objects of source type.
-When this pointcut matches, the change object is bound. 
+When this pointcut matches, the changed object is bound. 
 The after advice that uses this pointcut, looks at its source--target map to check if the map contains the bound object as a key. 
 If this is the case, then the corresponding target object is updated by creating a new object of target type and passing the values of the newly created object to the existing target object. 
 The copying of the values is performed by the update method of the conversion.

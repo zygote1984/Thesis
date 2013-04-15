@@ -1,0 +1,114 @@
+\usepackage[pdftex]{graphicx}
+\usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{listings, tikz, xcolor}
+\usepackage{algpseudocode, algorithm}
+\usepackage{enumerate}
+\usepackage{courier}
+\usepackage{transparent}
+\usepackage{syntax}
+\usepackage{amsmath}
+\usepackage{tikz-uml} 
+\usepackage{tabularx, multirow}
+\usepackage[ampersand]{easylist}
+\usepackage{hyperref}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[T1]{fontenc}
+\usepackage{dejavu}
+\usepackage[caption=false,position=bottom]{subfig}
+\usepackage{xspace}
+\let\subtop\subfloat
+
+\definecolor{lightGrey}{rgb}{0.9, 0.9, 0.9}
+\newcommand{\hilight}{\makebox[0pt][l]{\color{lightGrey}\rule[-0.45em]{0.9\linewidth}{1.5em}}}
+\newtheorem{mydef}{Definition}
+\floatname{algorithm}{Procedure}
+
+\newcommand{\inputtikz}[2]{%  
+     \scalebox{#1}{\input{#2}}  
+}
+
+
+\newcommand{\zamkph}[1]{\textsf{\textit{#1}}}
+
+
+\interfootnotelinepenalty=10000
+
+ \makeatletter
+        \newcommand\breakabletexttt{\begingroup\catcode`\_12 \breakabletexttt@i}
+        \newcommand\breakabletexttt@i[1]{\texttt{\breakable@texttt#1\@nil}\endgroup}
+        \def\@gobble@fi#1\fi{\fi#1}
+        \def\breakable@texttt#1#2\@nil{%
+            #1\hspace{0pt plus 0.1pt minus 0.1pt}%
+                \ifx\relax#2\relax
+            \else
+                \@gobble@fi\breakable@texttt#2\@nil
+            \fi
+        }
+\makeatother
+
+
+\lstset{ 
+	language = [AspectJ]Java,
+  basicstyle=\small\ttfamily,
+  numbers=left,
+	numberstyle=\ttfamily\tiny\color[rgb]{0.25,0.25,0.25},
+	numberblanklines=false,
+  firstnumber=auto,
+	breaklines=true,
+  tabsize=2,
+  	backgroundcolor=\color[rgb]{0.99,0.98,0.97},
+	emph={aspect, instance pointcut, instance, select, UNTIL,pc, instanceType, exp, removeExp, composite, inter, union, .add , .remove, .add_after, .add_before, .remove_after, .remove_before, glue, with, single, retval, parents}, 
+	emphstyle=\textbf,
+	escapechar={~},
+	showstringspaces= false,
+	%frame=single,
+	captionpos = b,
+	numberbychapter=true,
+	breakatwhitespace = true,
+  breaklines = true,
+	columns=fullflexible
+	}
+% \lstset{prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rhookswarrow}}} % 
+
+\usetikzlibrary{arrows,shapes.multipart,shapes.arrows,shapes.misc,calc,fit,shadows,positioning,patterns} 
+
+% \newcommand\bh{\tikz[remember picture]
+% 					\node (begin highlight) {};
+% 			 }
+%   \newcommand\eh{\tikz[remember picture]
+% 		 \node (end highlight) {};
+% 		 \tikz[remember picture, overlay] 
+% 		 \draw[yellow,line width=10pt,opacity=0.3] (begin highlight) -- (end
+% 			highlight);
+% 		 }
+
+\newcommand{\lstinlineabstract}[1]{\lstinline[emph={#1},emphstyle=\textit, breaklines = true]~#1~}
+
+\newcommand{\TODO}[1]{\textcolor{Mulberry}{\textbf{TODO:#1}}}
+
+%\newcommand{\lstinln}[1]{\breakabletexttt{#1}}
+\newcommand{\lstinln}[1]{\texttt{#1}}
+\tikzstyle{every picture}+=[font=\sffamily]
+\newcommand{\zamk}{\textit{\texttt{zamk}}\xspace}
+\newcommand{\gluer}{\textit{Gluer}\xspace}
+\tikzumlset{font = \sffamily\footnotesize}
+% \cftsetindents{section}{0.5in}{0.3in}
+% \cftsetindents{subsection}{0.6in}{0.3in}
+% \cftsetindents{subsubsection}{0.7in}{0.1in}
+% \cftsetindents{paragraph}{0.8in}{0.1in}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+
+
+\lstdefinelanguage{XMLRegistry}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={conversion, converter, twoway, source, target, convert, update}% list your attributes here
+}

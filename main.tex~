@@ -16,13 +16,11 @@
 % \include{todo}
 
 \mainmatter 
-% \include{chapter1intro/introduction}
-% \include{chapter2bg/background}
-% \include{chapteroce/chapteroce}
-%\include{chapteripc/instancepc} 
+\include{chapter1intro/introduction}
+\include{chapteroce/chapteroce}
+\include{chapteripc/instancepc} 
 \include{chapteradapters/adapters}
-% \include{chapterzamk/zamk}
-% \include{chapterzamkipc/zamkipc}
+
 
 
 \backmatter 

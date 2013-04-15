@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.25)  4 APR 2013 16:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.25)  11 APR 2013 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -771,9 +771,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \mathdisplay@stack=\toks40
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
+\pltopsep=\skip197
+\plpartopsep=\skip198
+\plitemsep=\skip199
+\plparsep=\skip200
+\pl@lab=\toks41
 ) (./tikz-uml.sty
 Package: tikz-uml 2011/01/26
-
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write5
@@ -788,17 +795,17 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count190
 \calc@Adimen=\dimen209
 \calc@Bdimen=\dimen210
-\calc@Askip=\skip197
-\calc@Bskip=\skip198
+\calc@Askip=\skip201
+\calc@Bskip=\skip202
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count191
-\calc@Cskip=\skip199
+\calc@Cskip=\skip203
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2011/06/02 v2.1 LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks41
-\pgfopts@list@add@b@toks=\toks42
+\pgfopts@list@add@a@toks=\toks42
+\pgfopts@list@add@b@toks=\toks43
 )
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackg
 rounds.code.tex
@@ -993,32 +1000,32 @@ arkings.code.tex))
 \c@tikzumlCallStartFragmentNum=\count228
 Normal \count register pool exhausted, switching to extended pool.
 \c@tikzumlCallEndFragmentNum=\count277
-\tikzumlCall@xa=\skip200
-\tikzumlCall@xb=\skip201
+\tikzumlCall@xa=\skip204
+\tikzumlCall@xb=\skip205
 \c@tikzumlComponentLevel=\count278
 \c@tikzumlComponentSubComponentNum=\count279
 \c@tikzumlConnectorNum=\count280
-\tikzuml@AC@xa=\skip202
-\tikzuml@AC@ya=\skip203
-\tikzuml@AC@xb=\skip204
-\tikzuml@AC@yb=\skip205
-\tikzuml@AC@xi=\skip206
-\tikzuml@AC@yi=\skip207
-\tikzuml@AC@xic=\skip208
-\tikzuml@AC@yic=\skip209
-\tikzuml@AC@xio=\skip210
-\tikzuml@AC@yio=\skip211
-\tikzuml@AC@AB=\skip212
-\tikzuml@AC@lambda=\skip213
-\tikzuml@AC@xtrc=\skip214
-\tikzuml@AC@ytrc=\skip215
-\tikzuml@AC@xtlc=\skip216
-\tikzuml@AC@ytlc=\skip217
-\tikzuml@AC@xblc=\skip218
-\tikzuml@AC@yblc=\skip219
-\tikzuml@AC@xbrc=\skip220
-\tikzuml@AC@ybrc=\skip221
-\tikzuml@AC@middleArm=\skip222
+\tikzuml@AC@xa=\skip206
+\tikzuml@AC@ya=\skip207
+\tikzuml@AC@xb=\skip208
+\tikzuml@AC@yb=\skip209
+\tikzuml@AC@xi=\skip210
+\tikzuml@AC@yi=\skip211
+\tikzuml@AC@xic=\skip212
+\tikzuml@AC@yic=\skip213
+\tikzuml@AC@xio=\skip214
+\tikzuml@AC@yio=\skip215
+\tikzuml@AC@AB=\skip216
+\tikzuml@AC@lambda=\skip217
+\tikzuml@AC@xtrc=\skip218
+\tikzuml@AC@ytrc=\skip219
+\tikzuml@AC@xtlc=\skip220
+\tikzuml@AC@ytlc=\skip221
+\tikzuml@AC@xblc=\skip222
+\tikzuml@AC@yblc=\skip223
+\tikzuml@AC@xbrc=\skip224
+\tikzuml@AC@ybrc=\skip225
+\tikzuml@AC@middleArm=\skip226
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen219
@@ -1154,15 +1161,15 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip223
+\Hy@SectionHShift=\skip227
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2010/01/10 v2.4 Micro-typography with pdfTeX (RS)
-\MT@toks=\toks43
+\MT@toks=\toks44
 \MT@count=\count306
 LaTeX Info: Redefining \lsstyle on input line 1597.
 LaTeX Info: Redefining \lslig on input line 1597.
-\MT@outer@space=\skip224
+\MT@outer@space=\skip228
 LaTeX Info: Redefining \textls on input line 1605.
 \MT@outer@kern=\dimen226
 LaTeX Info: Redefining \textmicrotypecontext on input line 2156.
@@ -1206,17 +1213,17 @@ Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
 \c@KVtest=\count307
-\sf@farskip=\skip225
+Normal \skip register pool exhausted, switching to extended pool.
+\sf@farskip=\skip256
 \sf@captopadj=\dimen260
-\sf@capskip=\skip226
-\sf@nearskip=\skip227
+\sf@capskip=\skip257
+\sf@nearskip=\skip258
 \c@subfigure=\count308
 \c@subfigure@save=\count309
 \c@subtable=\count310
 \c@subtable@save=\count311
-\sf@top=\skip228
-Normal \skip register pool exhausted, switching to extended pool.
-\sf@bottom=\skip256
+\sf@top=\skip259
+\sf@bottom=\skip260
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
@@ -1276,7 +1283,8 @@ Sidefoothsep and sidefootwidth: 7pt and 59pt
 Sidefootvsep and sidefootheight: 12pt and 464.39996pt
 ******************************************************
 
-) (./main.aux (./chapteradapters/adapters.aux))
+) (./main.aux (./chapter1intro/introduction.aux)
+(./chapteradapters/adapters.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -1306,12 +1314,12 @@ File: T1DejaVuSerif-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSerif-TLF.
 \scratchbox=\box109
 \nofMPsegments=\count316
 \nofMParguments=\count317
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks45
 \MPscratchCnt=\count318
 \MPscratchDim=\dimen262
 \MPnumerator=\count319
 \makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1364,9 +1372,9 @@ Package microtype Info: No adjustment of character kerning.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\openout2 = `chapteradapters/adapters.aux'.
+\openout2 = `chapter1intro/introduction.aux'.
 
- (./chapteradapters/adapters.tex
+ (./chapter1intro/introduction.tex
 LaTeX Font Info:    Try loading font information for T1+DejaVuSans-TLF on input
  line 1.
 
@@ -1377,14 +1385,16 @@ LaTeX Font Info:    Font shape `T1/DejaVuSans-TLF/bx/n' in size <20.74> not ava
 ilable
 (Font)              Font shape `T1/DejaVuSans-TLF/b/n' tried instead on input l
 ine 1.
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <12> not avail
-able
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 3.
+LaTeX Font Info:    Try loading font information for OMS+DejaVuSerif-TLF on inp
+ut line 7.
+LaTeX Font Info:    No file OMSDejaVuSerif-TLF.fd. on input line 7.
 
-Underfull \vbox (badness 2626) has occurred while \output is active []
 
- [1
+LaTeX Font Warning: Font shape `OMS/DejaVuSerif-TLF/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 7.
+
+) [1
 
 
 
@@ -1394,31 +1404,54 @@ Underfull \vbox (badness 2626) has occurred while \output is active []
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+\openout2 = `chapteradapters/adapters.aux'.
+
+
+(./chapteradapters/adapters.tex [2
+
+
+
+]
+LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <12> not avail
+able
+(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
+line 3.
+LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10> not avail
+able
+(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
+line 6.
+
+Underfull \vbox (badness 1314) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 4279) has occurred while \output is active []
+
+
 
 LaTeX Font Warning: Font shape `T1/DejaVuSerif-TLF/m/sc' undefined
-(Font)              using `T1/DejaVuSerif-TLF/m/n' instead on input line 49.
+(Font)              using `T1/DejaVuSerif-TLF/m/n' instead on input line 59.
 
-[2]
-Overfull \hbox (2.17992pt too wide) in paragraph at lines 56--57
+[4]
+Overfull \hbox (2.17992pt too wide) in paragraph at lines 72--73
 []\T1/DejaVuSerif-TLF/m/n/10 (-20) Use adap-ta-tion with-out cre-at-ing de-pen-
 den-cies to spe-cific adapter
  []
 
 LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
-nput line 62.
+nput line 78.
 (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
 File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
 -TLF.
 )
+[5]
 LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10.95> not av
 ailable
 (Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 68.
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+line 84.
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
 (RS)
-) [3]
+)
 (./chapteradapters/component1.tex
 Missing character: There is no C in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -1473,252 +1506,225 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--36
 LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <9> not availa
 ble
 (Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 84.
+line 100.
+ [6]
 \cartesiantopolar=\box111
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/n' in size <9> not ava
 ilable
 (Font)              Font shape `T1/DejaVuSansMono-TLF/b/n' tried instead on inp
-ut line 93.
+ut line 109.
 \cartesiantopolaraop=\box112
  (./chapteradapters/objectadapter.tex)
 (./chapteradapters/exampleobjadapter.tex)
-Overfull \hbox (95.63414pt too wide) in paragraph at lines 146--147
+Overfull \hbox (95.63414pt too wide) in paragraph at lines 162--163
  [][] 
  []
 
-[4]
-Underfull \hbox (badness 1337) in paragraph at lines 196--196
+
+Underfull \hbox (badness 1337) in paragraph at lines 212--212
 []\T1/DejaVuSerif-TLF/m/n/8 (+20) (b) |Con-crete view of the
  []
 
 
-Overfull \hbox (57.70184pt too wide) in paragraph at lines 200--201
+Overfull \hbox (57.70184pt too wide) in paragraph at lines 216--217
  [][] 
  []
 
-[5]
-Underfull \vbox (badness 1142) has occurred while \output is active []
-
- [6]
-[7] <chapteradapters/bigpicture.pdf, id=218, 1156.32pt x 748.7975pt>
+[7] [8] [9] <chapteradapters/bigpicture.pdf, id=231, 1156.32pt x 748.7975pt>
 File: chapteradapters/bigpicture.pdf Graphic file (type pdf)
 
 <use chapteradapters/bigpicture.pdf>
-Package pdftex.def Info: chapteradapters/bigpicture.pdf used on input line 260.
+Package pdftex.def Info: chapteradapters/bigpicture.pdf used on input line 276.
 
 (pdftex.def)             Requested size: 526.58517pt x 341.0pt.
 LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/it' in size <9> not avail
 able
 (Font)              Font shape `T1/DejaVuSerif-TLF/b/it' tried instead on input
- line 261.
+ line 277.
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/it' in size <9> not av
 ailable
 (Font)              Font shape `T1/DejaVuSansMono-TLF/b/it' tried instead on in
-put line 261.
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10> not avail
-able
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 269.
- [8] [9 <./chapteradapters/bigpicture.pdf>] [10] [11] <chapteradapters/conv1.pd
-f, id=258, 574.64688pt x 164.99141pt>
+put line 277.
+ [10] [11 <./chapteradapters/bigpicture.pdf>] [12] [13] <chapteradapters/conv1.
+pdf, id=270, 574.64688pt x 164.99141pt>
 File: chapteradapters/conv1.pdf Graphic file (type pdf)
 
 <use chapteradapters/conv1.pdf>
-Package pdftex.def Info: chapteradapters/conv1.pdf used on input line 340.
+Package pdftex.def Info: chapteradapters/conv1.pdf used on input line 356.
 (pdftex.def)             Requested size: 153.44896pt x 44.05734pt.
 
-<chapteradapters/conv2.pdf, id=259, 442.9047pt x 194.02487pt>
+<chapteradapters/conv2.pdf, id=271, 442.9047pt x 194.02487pt>
 File: chapteradapters/conv2.pdf Graphic file (type pdf)
 
 <use chapteradapters/conv2.pdf>
-Package pdftex.def Info: chapteradapters/conv2.pdf used on input line 344.
+Package pdftex.def Info: chapteradapters/conv2.pdf used on input line 360.
 (pdftex.def)             Requested size: 153.44896pt x 67.22285pt.
- [12 <./chapteradapters/conv1.pdf> <./chapteradapters/conv2.pdf
+
+Underfull \vbox (badness 4940) has occurred while \output is active []
+
+ [14 <./chapteradapters/conv1.pdf> <./chapteradapters/conv2.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./chapteradapters/conv2.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->] <chapteradapters/compiletime.pdf, id=272, 798.985pt x 256.96pt>
+>] <chapteradapters/compiletime.pdf, id=285, 798.985pt x 256.96pt>
 File: chapteradapters/compiletime.pdf Graphic file (type pdf)
 
 <use chapteradapters/compiletime.pdf>
-Package pdftex.def Info: chapteradapters/compiletime.pdf used on input line 378
+Package pdftex.def Info: chapteradapters/compiletime.pdf used on input line 394
 .
 (pdftex.def)             Requested size: 341.0pt x 109.66725pt.
- [13 <./chapteradapters/compiletime.pdf>]
+ [15]
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/n' in size <10> not av
 ailable
 (Font)              Font shape `T1/DejaVuSansMono-TLF/b/n' tried instead on inp
-ut line 395.
+ut line 410.
 
-Overfull \hbox (3.92805pt too wide) in paragraph at lines 403--404
+Overfull \hbox (3.92805pt too wide) in paragraph at lines 418--419
 []\T1/DejaVuSerif-TLF/m/sc/10 (-20) The source class rep-re-sents the fully-qua
 lified name
  []
 
-[14]
-LaTeX Font Info:    Try loading font information for OMS+DejaVuSerif-TLF on inp
-ut line 420.
-LaTeX Font Info:    No file OMSDejaVuSerif-TLF.fd. on input line 420.
+[16 <./chapteradapters/compiletime.pdf>] [17] [18]
+Underfull \vbox (badness 3271) has occurred while \output is active []
 
-
-LaTeX Font Warning: Font shape `OMS/DejaVuSerif-TLF/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 420.
-
-[15]
-Underfull \vbox (badness 1803) has occurred while \output is active []
-
- [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
+ [19]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 504.
+put line 519.
 
-[18] [19] [20] [21] [22]
-Overfull \hbox (8.4338pt too wide) in paragraph at lines 712--713
+[20]
+Underfull \vbox (badness 4279) has occurred while \output is active []
+
+ [21]
+[22] [23]
+Overfull \hbox (8.4338pt too wide) in paragraph at lines 726--727
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<chapteradapters/runtime2.pdf, id=410, 585.18625pt x 457.71pt>
+[24] <chapteradapters/runtime2.pdf, id=422, 585.18625pt x 457.71pt>
 File: chapteradapters/runtime2.pdf Graphic file (type pdf)
 
 <use chapteradapters/runtime2.pdf>
-Package pdftex.def Info: chapteradapters/runtime2.pdf used on input line 727.
+Package pdftex.def Info: chapteradapters/runtime2.pdf used on input line 741.
 (pdftex.def)             Requested size: 272.80104pt x 213.38469pt.
- [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-<chapteradapters/ConversionsUML.pdf, id=468, 406.51875pt x 235.88126pt>
+ [25] [26]
+<chapteradapters/ConversionsUML.pdf, id=481, 406.51875pt x 235.88126pt>
 File: chapteradapters/ConversionsUML.pdf Graphic file (type pdf)
 
 <use chapteradapters/ConversionsUML.pdf>
 Package pdftex.def Info: chapteradapters/ConversionsUML.pdf used on input line 
-757.
+767.
 (pdftex.def)             Requested size: 204.60208pt x 118.71777pt.
 
-Overfull \hbox (0.27275pt too wide) in paragraph at lines 762--766
+Overfull \hbox (0.27275pt too wide) in paragraph at lines 772--776
 \T1/DejaVuSansMono-TLF/m/n/10 Con-ver-sion> \T1/DejaVuSerif-TLF/m/sc/10 (-20) m
 ap-ping; the con-ver-sions are mapped with their unique
  []
 
 
-Overfull \hbox (1.49313pt too wide) in paragraph at lines 762--766
+Overfull \hbox (1.49313pt too wide) in paragraph at lines 772--776
 \T1/DejaVuSerif-TLF/m/sc/10 (-20) ID. The \T1/DejaVuSansMono-TLF/m/n/10 sourceM
 ap \T1/DejaVuSerif-TLF/m/sc/10 (-20) is map-ping from \T1/DejaVuSansMono-TLF/m/
 n/10 <Class<?>, Ar-rayList<String>
  []
 
-[25 <./chapteradapters/runtime2.pdf> <./chapteradapters/ConversionsUML.pdf>]
+[27 <./chapteradapters/runtime2.pdf> <./chapteradapters/ConversionsUML.pdf>]
 LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/it' in size <10> not avai
 lable
 (Font)              Font shape `T1/DejaVuSerif-TLF/b/it' tried instead on input
- line 772.
+ line 782.
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/it' in size <10> not a
 vailable
 (Font)              Font shape `T1/DejaVuSansMono-TLF/b/it' tried instead on in
-put line 772.
+put line 782.
 
-Underfull \vbox (badness 5217) has occurred while \output is active []
-
- [26]
-<chapteradapters/animals.pdf, id=498, 456.70625pt x 245.91875pt>
+[28] <chapteradapters/animals.pdf, id=510, 456.70625pt x 245.91875pt>
 File: chapteradapters/animals.pdf Graphic file (type pdf)
 
 <use chapteradapters/animals.pdf>
-Package pdftex.def Info: chapteradapters/animals.pdf used on input line 825.
+Package pdftex.def Info: chapteradapters/animals.pdf used on input line 835.
 (pdftex.def)             Requested size: 272.80104pt x 146.8957pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (29.9412pt too wide) in paragraph at lines 831--838
+Overfull \hbox (29.9412pt too wide) in paragraph at lines 841--848
 \T1/DejaVuSerif-TLF/m/sc/10 (-20) chies. Con-sider the con-ver-sion re-quest \T
 1/DejaVuSansMono-TLF/m/n/10 get-Con-vert-ed-Value(largeMammal,
  []
 
 
-Overfull \hbox (9.43666pt too wide) in paragraph at lines 838--839
+Overfull \hbox (9.43666pt too wide) in paragraph at lines 848--849
 \T1/DejaVuSerif-TLF/m/sc/10 (-20) Since the type of the source ob-ject (\T1/Dej
 aVuSansMono-TLF/m/n/10 LargeMammal\T1/DejaVuSerif-TLF/m/sc/10 (-20) ) ex-actly 
 matched
  []
 
-[27] [28 <./chapteradapters/animals.pdf>]
+[29] [30 <./chapteradapters/animals.pdf>]
 
 LaTeX Font Warning: Font shape `T1/DejaVuSansMono-TLF/m/sc' undefined
-(Font)              using `T1/DejaVuSansMono-TLF/m/n' instead on input line 870
+(Font)              using `T1/DejaVuSansMono-TLF/m/n' instead on input line 880
 .
-
-
-LaTeX Warning: Reference `getsupertypes2' on page 29 undefined on input line 90
-9.
 
 
 Underfull \vbox (badness 1194) has occurred while \output is active []
 
- [29]
-Underfull \vbox (badness 4279) has occurred while \output is active []
-
- [30]
-[31]
-Overfull \hbox (1.39865pt too wide) in paragraph at lines 969--972
+ [31]
+[32]
+Overfull \hbox (1.39865pt too wide) in paragraph at lines 979--982
 []\T1/DejaVuSansMono-TLF/b/n/10 resolvePrecedence \T1/DejaVuSerif-TLF/b/n/10 me
 thod[] \T1/DejaVuSerif-TLF/m/sc/10 (-20) When \T1/DejaVuSansMono-TLF/m/n/10 fin
 d-Clos-est \T1/DejaVuSerif-TLF/m/sc/10 (-20) method finds mul-
  []
 
-[32]
-Overfull \hbox (6.81502pt too wide) in paragraph at lines 1017--1018
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+ [33]
+[34]
+Overfull \hbox (6.81502pt too wide) in paragraph at lines 1027--1028
 [][][][][][][][][][][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-Overfull \hbox (2.61858pt too wide) in paragraph at lines 1038--1040
+Overfull \hbox (2.61858pt too wide) in paragraph at lines 1048--1050
 [] []\T1/DejaVuSansMono-TLF/m/n/10 getConvertedValue(U source, Class<T> tar-get
 -Type) \T1/DejaVuSerif-TLF/m/sc/10 (-20) : This
  []
 
 
-Overfull \hbox (15.1548pt too wide) in paragraph at lines 1040--1043
+Overfull \hbox (15.1548pt too wide) in paragraph at lines 1050--1053
 [] []\T1/DejaVuSansMono-TLF/m/n/10 getConvertedValue(U source, Class<T> tar-get
 -Type, String
  []
 
-) [34] (./main.bbl
+[35]) [36] (./main.bbl
 bibitemlist
-) [35
+) [37
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
- (./main.aux (./chapteradapters/adapters.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
+ (./main.aux (./chapter1intro/introduction.aux)
+(./chapteradapters/adapters.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 23785E858098EBEA6E523C16DF23C51C;1446.
+(rerunfilecheck)             Checksum: 1EDA714ECA915B4C0007462CA4B66B05;1494.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
  ) 
 Here is how much of TeX's memory you used:
- 27918 strings out of 493493
- 507803 string characters out of 3143797
- 825813 words of memory out of 3000000
- 30148 multiletter control sequences out of 15000+200000
- 88338 words of font info for 258 fonts, out of 3000000 for 9000
+ 28065 strings out of 493493
+ 510053 string characters out of 3143797
+ 831311 words of memory out of 3000000
+ 30277 multiletter control sequences out of 15000+200000
+ 88625 words of font info for 260 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  66i,12n,77p,791b,1179s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc
@@ -1737,10 +1743,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif-Italic
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (35 pages, 701656 bytes).
+Output written on main.pdf (37 pages, 711343 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 636 compressed objects within 7 object streams
- 279 named destinations out of 1000 (max. 500000)
- 51504 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 742 PDF objects out of 1000 (max. 8388607)
+ 649 compressed objects within 7 object streams
+ 282 named destinations out of 1000 (max. 500000)
+ 51512 words of extra memory for PDF output out of 51595 (max. 10000000)
 
