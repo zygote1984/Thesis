@@ -1,10 +1,3 @@
-\begin{thebibliography}{1}
-
-\bibitem{hannemann:oopsla02}
-J.~Hannemann and G.~Kiczales.
-\newblock Design pattern implementation in {Java} and {AspectJ}.
-\newblock In {\em Proceedings of the 17th ACM conference on Object-oriented
-  programming, systems, languages, and applications}, pages 161--173. ACM
-  Press, 2002.
+\begin{thebibliography}{}
 
 \end{thebibliography}

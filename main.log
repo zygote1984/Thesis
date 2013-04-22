@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.25)  11 APR 2013 14:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.25)  22 APR 2013 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1283,8 +1283,14 @@ Sidefoothsep and sidefootwidth: 7pt and 59pt
 Sidefootvsep and sidefootheight: 12pt and 464.39996pt
 ******************************************************
 
-) (./main.aux (./chapter1intro/introduction.aux)
-(./chapteradapters/adapters.aux))
+) (./main.aux (./chapteripc/instancepc.aux
+
+LaTeX Warning: Label `lst:countcircles' multiply defined.
+
+
+LaTeX Warning: Label `lst:cc:io' multiply defined.
+
+))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -1303,8 +1309,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Try loading font information for T1+DejaVuSerif-TLF on inpu
 t line 6.
-
-(/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSerif-TLF.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSerif-TLF.fd
 File: T1DejaVuSerif-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSerif-TLF.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1372,11 +1377,11 @@ Package microtype Info: No adjustment of character kerning.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\openout2 = `chapter1intro/introduction.aux'.
+\openout2 = `chapteripc/instancepc.aux'.
 
- (./chapter1intro/introduction.tex
+ (./chapteripc/instancepc.tex
 LaTeX Font Info:    Try loading font information for T1+DejaVuSans-TLF on input
- line 1.
+ line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSans-TLF.fd
 File: T1DejaVuSans-TLF.fd 2011/10/30 Font definitions for T1/DejaVuSans-TLF.
@@ -1384,17 +1389,40 @@ File: T1DejaVuSans-TLF.fd 2011/10/30 Font definitions for T1/DejaVuSans-TLF.
 LaTeX Font Info:    Font shape `T1/DejaVuSans-TLF/bx/n' in size <20.74> not ava
 ilable
 (Font)              Font shape `T1/DejaVuSans-TLF/b/n' tried instead on input l
-ine 1.
-LaTeX Font Info:    Try loading font information for OMS+DejaVuSerif-TLF on inp
-ut line 7.
-LaTeX Font Info:    No file OMSDejaVuSerif-TLF.fd. on input line 7.
+ine 7.
 
+(./chapteripc/ipcdesignpattern.tex
+LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <12> not avail
+able
+(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
+line 1.
 
-LaTeX Font Warning: Font shape `OMS/DejaVuSerif-TLF/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 7.
+<./chapteripc//images/shapes.pdf, id=164, 456.70625pt x 271.0125pt>
+File: ./chapteripc//images/shapes.pdf Graphic file (type pdf)
 
-) [1
+<use ./chapteripc//images/shapes.pdf>
+Package pdftex.def Info: ./chapteripc//images/shapes.pdf used on input line 16.
+
+(pdftex.def)             Requested size: 238.69896pt x 141.64272pt.
+LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <9> not availa
+ble
+(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
+line 17.
+LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
+nput line 21.
+
+(/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
+File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
+-TLF.
+)
+LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10.95> not av
+ailable
+(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
+line 29.
+
+Underfull \vbox (badness 3547) has occurred while \output is active []
+
+ [1
 
 
 
@@ -1404,349 +1432,245 @@ LaTeX Font Warning: Font shape `OMS/DejaVuSerif-TLF/m/n' undefined
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `chapteradapters/adapters.aux'.
-
-
-(./chapteradapters/adapters.tex [2
-
-
-
-]
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <12> not avail
-able
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 3.
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10> not avail
-able
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 6.
-
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 4279) has occurred while \output is active []
-
-
-
-LaTeX Font Warning: Font shape `T1/DejaVuSerif-TLF/m/sc' undefined
-(Font)              using `T1/DejaVuSerif-TLF/m/n' instead on input line 59.
-
-[4]
-Overfull \hbox (2.17992pt too wide) in paragraph at lines 72--73
-[]\T1/DejaVuSerif-TLF/m/n/10 (-20) Use adap-ta-tion with-out cre-at-ing de-pen-
-den-cies to spe-cific adapter
- []
-
-LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
-nput line 78.
-(/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
-File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
--TLF.
-)
-[5]
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10.95> not av
-ailable
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 84.
- (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
-(RS)
-)
-(./chapteradapters/component1.tex
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no 1 in font nullfont!
-LaTeX Font Info:    Font shape `T1/DejaVuSans-TLF/bx/n' in size <8> not availab
-le
-(Font)              Font shape `T1/DejaVuSans-TLF/b/n' tried instead on input l
-ine 12.
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no 2 in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--36
- [][][][] 
- []
-
-)
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <9> not availa
-ble
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
-line 100.
- [6]
-\cartesiantopolar=\box111
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/n' in size <9> not ava
 ilable
 (Font)              Font shape `T1/DejaVuSansMono-TLF/b/n' tried instead on inp
-ut line 109.
-\cartesiantopolaraop=\box112
- (./chapteradapters/objectadapter.tex)
-(./chapteradapters/exampleobjadapter.tex)
-Overfull \hbox (95.63414pt too wide) in paragraph at lines 162--163
- [][] 
- []
-
-
-Underfull \hbox (badness 1337) in paragraph at lines 212--212
-[]\T1/DejaVuSerif-TLF/m/n/8 (+20) (b) |Con-crete view of the
- []
-
-
-Overfull \hbox (57.70184pt too wide) in paragraph at lines 216--217
- [][] 
- []
-
-[7] [8] [9] <chapteradapters/bigpicture.pdf, id=231, 1156.32pt x 748.7975pt>
-File: chapteradapters/bigpicture.pdf Graphic file (type pdf)
-
-<use chapteradapters/bigpicture.pdf>
-Package pdftex.def Info: chapteradapters/bigpicture.pdf used on input line 276.
-
-(pdftex.def)             Requested size: 526.58517pt x 341.0pt.
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/it' in size <9> not avail
+ut line 38.
+LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/n' in size <10> not avail
 able
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/it' tried instead on input
- line 277.
-LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/it' in size <9> not av
-ailable
-(Font)              Font shape `T1/DejaVuSansMono-TLF/b/it' tried instead on in
-put line 277.
- [10] [11 <./chapteradapters/bigpicture.pdf>] [12] [13] <chapteradapters/conv1.
-pdf, id=270, 574.64688pt x 164.99141pt>
-File: chapteradapters/conv1.pdf Graphic file (type pdf)
-
-<use chapteradapters/conv1.pdf>
-Package pdftex.def Info: chapteradapters/conv1.pdf used on input line 356.
-(pdftex.def)             Requested size: 153.44896pt x 44.05734pt.
-
-<chapteradapters/conv2.pdf, id=271, 442.9047pt x 194.02487pt>
-File: chapteradapters/conv2.pdf Graphic file (type pdf)
-
-<use chapteradapters/conv2.pdf>
-Package pdftex.def Info: chapteradapters/conv2.pdf used on input line 360.
-(pdftex.def)             Requested size: 153.44896pt x 67.22285pt.
-
-Underfull \vbox (badness 4940) has occurred while \output is active []
-
- [14 <./chapteradapters/conv1.pdf> <./chapteradapters/conv2.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./chapteradapters/conv2.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->] <chapteradapters/compiletime.pdf, id=285, 798.985pt x 256.96pt>
-File: chapteradapters/compiletime.pdf Graphic file (type pdf)
-
-<use chapteradapters/compiletime.pdf>
-Package pdftex.def Info: chapteradapters/compiletime.pdf used on input line 394
-.
-(pdftex.def)             Requested size: 341.0pt x 109.66725pt.
- [15]
-LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/n' in size <10> not av
-ailable
-(Font)              Font shape `T1/DejaVuSansMono-TLF/b/n' tried instead on inp
-ut line 410.
-
-Overfull \hbox (3.92805pt too wide) in paragraph at lines 418--419
-[]\T1/DejaVuSerif-TLF/m/sc/10 (-20) The source class rep-re-sents the fully-qua
-lified name
- []
-
-[16 <./chapteradapters/compiletime.pdf>] [17] [18]
-Underfull \vbox (badness 3271) has occurred while \output is active []
-
- [19]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 519.
-
-[20]
-Underfull \vbox (badness 4279) has occurred while \output is active []
-
- [21]
-[22] [23]
-Overfull \hbox (8.4338pt too wide) in paragraph at lines 726--727
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[24] <chapteradapters/runtime2.pdf, id=422, 585.18625pt x 457.71pt>
-File: chapteradapters/runtime2.pdf Graphic file (type pdf)
-
-<use chapteradapters/runtime2.pdf>
-Package pdftex.def Info: chapteradapters/runtime2.pdf used on input line 741.
-(pdftex.def)             Requested size: 272.80104pt x 213.38469pt.
- [25] [26]
-<chapteradapters/ConversionsUML.pdf, id=481, 406.51875pt x 235.88126pt>
-File: chapteradapters/ConversionsUML.pdf Graphic file (type pdf)
-
-<use chapteradapters/ConversionsUML.pdf>
-Package pdftex.def Info: chapteradapters/ConversionsUML.pdf used on input line 
-767.
-(pdftex.def)             Requested size: 204.60208pt x 118.71777pt.
-
-Overfull \hbox (0.27275pt too wide) in paragraph at lines 772--776
-\T1/DejaVuSansMono-TLF/m/n/10 Con-ver-sion> \T1/DejaVuSerif-TLF/m/sc/10 (-20) m
-ap-ping; the con-ver-sions are mapped with their unique
- []
+(Font)              Font shape `T1/DejaVuSerif-TLF/b/n' tried instead on input 
+line 53.
 
 
-Overfull \hbox (1.49313pt too wide) in paragraph at lines 772--776
-\T1/DejaVuSerif-TLF/m/sc/10 (-20) ID. The \T1/DejaVuSansMono-TLF/m/n/10 sourceM
-ap \T1/DejaVuSerif-TLF/m/sc/10 (-20) is map-ping from \T1/DejaVuSansMono-TLF/m/
-n/10 <Class<?>, Ar-rayList<String>
- []
-
-[27 <./chapteradapters/runtime2.pdf> <./chapteradapters/ConversionsUML.pdf>]
-LaTeX Font Info:    Font shape `T1/DejaVuSerif-TLF/bx/it' in size <10> not avai
-lable
-(Font)              Font shape `T1/DejaVuSerif-TLF/b/it' tried instead on input
- line 782.
-LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/bx/it' in size <10> not a
-vailable
-(Font)              Font shape `T1/DejaVuSansMono-TLF/b/it' tried instead on in
-put line 782.
-
-[28] <chapteradapters/animals.pdf, id=510, 456.70625pt x 245.91875pt>
-File: chapteradapters/animals.pdf Graphic file (type pdf)
-
-<use chapteradapters/animals.pdf>
-Package pdftex.def Info: chapteradapters/animals.pdf used on input line 835.
-(pdftex.def)             Requested size: 272.80104pt x 146.8957pt.
+LaTeX Warning: Reference `lst:counrcirclesipc' on page 2 undefined on input lin
+e 53.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Font Warning: Font shape `T1/DejaVuSerif-TLF/m/sc' undefined
+(Font)              using `T1/DejaVuSerif-TLF/m/n' instead on input line 56.
+
+[2 <./chapteripc//images/shapes.pdf>]
+
+LaTeX Warning: Reference `lst:countcircles:ext' on page 3 undefined on input li
+ne 85.
+
+[3] [4] [5] [6])) [7] [8
 
 
-Overfull \hbox (29.9412pt too wide) in paragraph at lines 841--848
-\T1/DejaVuSerif-TLF/m/sc/10 (-20) chies. Con-sider the con-ver-sion re-quest \T
-1/DejaVuSansMono-TLF/m/n/10 get-Con-vert-ed-Value(largeMammal,
- []
-
-
-Overfull \hbox (9.43666pt too wide) in paragraph at lines 848--849
-\T1/DejaVuSerif-TLF/m/sc/10 (-20) Since the type of the source ob-ject (\T1/Dej
-aVuSansMono-TLF/m/n/10 LargeMammal\T1/DejaVuSerif-TLF/m/sc/10 (-20) ) ex-actly 
-matched
- []
-
-[29] [30 <./chapteradapters/animals.pdf>]
-
-LaTeX Font Warning: Font shape `T1/DejaVuSansMono-TLF/m/sc' undefined
-(Font)              using `T1/DejaVuSansMono-TLF/m/n' instead on input line 880
-.
-
-
-Underfull \vbox (badness 1194) has occurred while \output is active []
-
- [31]
-[32]
-Overfull \hbox (1.39865pt too wide) in paragraph at lines 979--982
-[]\T1/DejaVuSansMono-TLF/b/n/10 resolvePrecedence \T1/DejaVuSerif-TLF/b/n/10 me
-thod[] \T1/DejaVuSerif-TLF/m/sc/10 (-20) When \T1/DejaVuSansMono-TLF/m/n/10 fin
-d-Clos-est \T1/DejaVuSerif-TLF/m/sc/10 (-20) method finds mul-
- []
-
-
-Underfull \vbox (badness 1325) has occurred while \output is active []
-
- [33]
-[34]
-Overfull \hbox (6.81502pt too wide) in paragraph at lines 1027--1028
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (2.61858pt too wide) in paragraph at lines 1048--1050
-[] []\T1/DejaVuSansMono-TLF/m/n/10 getConvertedValue(U source, Class<T> tar-get
--Type) \T1/DejaVuSerif-TLF/m/sc/10 (-20) : This
- []
-
-
-Overfull \hbox (15.1548pt too wide) in paragraph at lines 1050--1053
-[] []\T1/DejaVuSansMono-TLF/m/n/10 getConvertedValue(U source, Class<T> tar-get
--Type, String
- []
-
-[35]) [36] (./main.bbl
+] (./main.bbl
 bibitemlist
-) [37
+[9
 
-
-
-]
+] [10]) [11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
- (./main.aux (./chapter1intro/introduction.aux)
-(./chapteradapters/adapters.aux))
+ (./main.aux (./chapteripc/instancepc.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1EDA714ECA915B4C0007462CA4B66B05;1494.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D51D87749C522850AA30D219027FC0A8;2620
+(rerunfilecheck)             After:  EE5F639BEE5FD65DCA1DA7D9A0D05FAE;445.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 30.
  ) 
 Here is how much of TeX's memory you used:
- 28065 strings out of 493493
- 510053 string characters out of 3143797
- 831311 words of memory out of 3000000
- 30277 multiletter control sequences out of 15000+200000
- 88625 words of font info for 260 fonts, out of 3000000 for 9000
+ 27105 strings out of 493493
+ 490075 string characters out of 3143797
+ 765274 words of memory out of 3000000
+ 29584 multiletter control sequences out of 15000+200000
+ 53804 words of font info for 158 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 66i,12n,77p,791b,1179s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc
-}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavusans_t1-type1.enc}
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavuserif_t1-type1.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSans-Bold.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSans-Oblique.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSans.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono-Bold.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono-BoldOblique.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono-Obli
-que.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif-Bold.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif-Italic
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (37 pages, 711343 bytes).
+ 66i,11n,77p,1022b,1223s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{lstnumber.1.27.8} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.27.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.27.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.27.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.27} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.26} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.25.10} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.25.7} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.25.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.25.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.25.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.25} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.24} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.23} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.21} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.22.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.22.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.21.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.1.21.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstlisting.1.22} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1.6} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.16} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.8.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.8.1.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.8.1.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.8.1.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.8.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.7.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.7.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.7.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.5.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.5.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.5.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.4.4.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.4.4.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.4.3.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.4.3.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.1.4.3.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}{
+/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavuserif_t1-type1.enc}{
+/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavusans_t1-type1.enc}</
+usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSans-Bold.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSans-Oblique.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono-Bold.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif-Bold.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif-Italic.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSerif.pfb>
+Output written on main.pdf (11 pages, 208690 bytes).
 PDF statistics:
- 742 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 282 named destinations out of 1000 (max. 500000)
- 51512 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 432 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
+ 167 named destinations out of 1000 (max. 500000)
+ 24970 words of extra memory for PDF output out of 29859 (max. 10000000)
 

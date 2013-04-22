@@ -1,3 +1,4 @@
+\maketitle
 
 \begin{abstract}
 In the life-cycle of objects there are different phases.
@@ -84,8 +85,7 @@ In an online shop application, objects of the same type can exist at different s
 
 
 \subsection{Unanticipated Extensions}
-A new feature is added to the online shop which requires creating an alert when a product is applied a surprise discount. The list of surprise discounted products should be available to the user at any time. The surprise discounts are submitted by \lstinln{Vendor}s and they can be submitted or withdrawn any time.  In order to realize this extension in an OO-approach, we need to change several classes. First the class \lstinln{ProductManager} should keep a set of \lstinln{Product}s to which a surprise discount is applied, in listing~\ref{lst:discountalert} this is shown in line~\ref{surpdisset}. This set is updated when a new discount of type \lstinln{SurpriseDiscount} is submitted or withdrawn (lines~\ref{surpset:begin}--~\ref{surpset:end}). There should also be some changes in the \lstinln{OnlineShop} class. A \lstinln{createDiscountAlert} method should be added. Also the \lstinln{displayList} method should be updated to include the \lstinln{surpriseDiscount} list defined in the \lstinln{ProductManager} 
-class.
+A new feature is added to the online shop which requires creating an alert when a product is applied a surprise discount. The list of surprise discounted products should be available to the user at any time. The surprise discounts are submitted by \lstinln{Vendor}s and they can be submitted or withdrawn any time.  In order to realize this extension in an OO-approach, we need to change several classes. First the class \lstinln{ProductManager} should keep a set of \lstinln{Product}s to which a surprise discount is applied, in listing~\ref{lst:discountalert} this is shown in line~\ref{surpdisset}. This set is updated when a new discount of type \lstinln{SurpriseDiscount} is submitted or withdrawn (lines~\ref{surpset:begin}--~\ref{surpset:end}). There should also be some changes in the \lstinln{OnlineShop} class. A \lstinln{createDiscountAlert} method should be added. Also the \lstinln{displayList} method should be updated to include the \lstinln{surpriseDiscount} list defined in the \lstinln{ProductManager} class.
 
 
 \begin{lstlisting}[float, caption={A Java implementation of discount alert concern}, label={lst:discountalert}]
@@ -121,8 +121,7 @@ class OnlineShop{//SINGLETON
 
  OO-solution is scattered among the classes \lstinln{ProductManager} and \lstinln{OnlineShop} and tangled with multiple methods.
 
-An aspect-oriented implementation can offer a better solution by encapsulating the concern in an aspect. Listing~\ref{lst:discountaop} shows a possible solution. The set of products which are applied a surprise discount is kept in the aspect (line~\ref{daop:set}). The following two pointcuts \lstinln{submit} and \lstinln{withdraw} selects the products to which a \lstinln{SurpriseDiscount} is applied (lines~\ref{daop:pc:submit}~\textendash~\ref{daop:pc:wdraw}). The corresponding advice declarations for these pointcuts maintain the \lstinln{surpriseDiscount} set. The \lstinln{submit} pointcut triggers the surprise discount alert method (line~\ref{daop:alert}). There is also the \lstinln{display} pointcut (line~\ref{daop:pc:display}), which intercepts the call to \lstinln{displayList} method and add the condition for the surprise discount list in an around advice (lines~\ref{daop:around:begin}~\textendash~\ref{daop:around:end}). This aspect includes an inter-type declaration which adds the \lstinln{
-createDiscountAlert} method to the \lstinln{OnlineShop} class.
+An aspect-oriented implementation can offer a better solution by encapsulating the concern in an aspect. Listing~\ref{lst:discountaop} shows a possible solution. The set of products which are applied a surprise discount is kept in the aspect (line~\ref{daop:set}). The following two pointcuts \lstinln{submit} and \lstinln{withdraw} selects the products to which a \lstinln{SurpriseDiscount} is applied (lines~\ref{daop:pc:submit}~\textendash~\ref{daop:pc:wdraw}). The corresponding advice declarations for these pointcuts maintain the \lstinln{surpriseDiscount} set. The \lstinln{submit} pointcut triggers the surprise discount alert method (line~\ref{daop:alert}). There is also the \lstinln{display} pointcut (line~\ref{daop:pc:display}), which intercepts the call to \lstinln{displayList} method and add the condition for the surprise discount list in an around advice (lines~\ref{daop:around:begin}~\textendash~\ref{daop:around:end}). This aspect includes an inter-type declaration which adds the \lstinln{createDiscountAlert} method to the \lstinln{OnlineShop} class.
 
 
 \begin{lstlisting}[float=h, caption={An AspectJ implementation of discount alert concern}, label={lst:discountaop}]

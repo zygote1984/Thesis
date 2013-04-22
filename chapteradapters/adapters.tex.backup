@@ -2,46 +2,55 @@
 
 \section{Introduction}
 \label{sec:adapter:intro}
-Changing requirements force software systems to include new components to extend their functionality. 
+
+\TODO{Assumptions should be explicit in the beginning}
+
 Software components are self-contained entities with a well-defined interface and behavior. 
 For two components to co-operate they must be \emph{integrated} through a compatible interface. 
+The integration task also entails creating dependencies between the components, i.e. assigning objects to target fields in order to communicate data.
+The assignment operation requires the object and the target field is of a compatible \textit{type}.
 When components are developed separately the compatibility is not a given. 
 Therefore it should be, often manually, established through additional programming. 
 
-The integration task also entails binding the data values, i.e creating dependencies between the components. 
-Once the data is represented through a compatible interface it is assigned to a target field and kept synchronized with the source data; this operation is called data binding.
+The problem of incompatible interfaces is a common software engineering problem and a possible  solution is captured in the \emph{adapter pattern}~\cite{gamma2011design}.
+The adapter pattern describes how to make two types compatible with each other. 
+When an object makes a reference to a data value it requires a specific type, \textit{a target type}. 
+Another object which represents the desired data and behavior but is an instance of \textit{a source type} that is different of the target type is made compatible with an \emph{adapter}.
+An adapter implements the methods of the target type by invoking methods defined in the source type, thereby establishing compatibility.
+There are two types of adapters; class adapters and object adapters.
+Class adapters use multiple inheritance to subclass both the source and the target types in order to adapt the source interface to the target.
+Object adapters wrap the source object and subclass the target type; it implements the target methods by invoking the methods of the source object.
+An adapter introduces a level of indirection between the incompatible interfaces.
 
-The problem of incompatible interfaces is a common software engineering problem and a possible  solution is captured in the \emph{adapter pattern} (cite Gamma).
-The adapter pattern makes two interfaces compatible by using a source interface to implement the methods of a target interface. 
-The structure which establishes this compatibility is called an adapter and the source interface is referred as the \emph{adaptee}. 
-An adapter introduces  a level of indirection between the incompatible interfaces.
-This means the when an object of the source interface should be adapted to an object of a target interface, an adapter object which wraps the source object and implements the target interface is created and passed on as the target object. 
-
-There are some issues attached to the traditional adapter pattern; its implementation can be problematic with some programming languages.
-A class adapter pattern is most efficiently implemented with a language that allows multiple inheritance. 
-Single inheritance programming languages need to use workarounds to achieve the same effect.
+There are some issues attached to the traditional adapter pattern.
+A class adapter is easily implemented with a language that supports multiple inheritance. 
+Developers of the single inheritance programming languages need to use workarounds to achieve the same effect.
 For example in Java multiple inheritance is simulated with the usage of interfaces since a class can implement multiple of them. 
 In order to inherit from two concrete types using Java, we need to extract the interface of one of the types and add this interface to the list of super-interfaces. 
-Then the concrete implementation of the interface is repeated in the sub-class. 
+However, we don't always have control over source code which would allow these operations. 
+
 
 The implementation of the object adapter pattern is more flexible, since it only needs to inherit from the target type. 
-However this implementation also does not allow a single object adapter to adapt to multiple target types. 
-Another issue is that the adapter pattern adds a level of indirection between the source and the target, which needs to be maintained. 
-The last issue is related to the additional dependencies introduced by the adapter classes. 
-The integration code has to refer to the specific adapter classes to initialize the desired objects. 
-This need for specific references has two side effects; first, the implementation contains a direct reference to the adapter type instead of just the source and the target types, which introduces an additional maintenance efforts. 
-Second, the user is required to know exactly which adapter is responsible for a establishing type compatibility.
-This may be a problem when adapters are not planned to be reusable and documented poorly. 
-In such cases the information about which interfaces are adapted is communicated through a particular adapters name or one has to go inside that adapter class to understand the expected source and the target types. 
-This process is error-prone as well as time consuming.
+However the adapter class is an additional type that is introduced to the source code and it adds a level of indirection between the source and the target.
+Hence the adapter definitions themselves are dependent on other types; they also need to updated when the source or the target interface is altered, thus requiring additional maintenance.
 
-Adaptation is only one part of the integration problem. 
-The second part entails establishing dependencies between the integrated components. i.e binding. 
+The integration code has to refer to the specific adapter classes to initialize the desired objects. 
+The implementation contains a direct reference to the adapter type instead of just the source and the target types, which introduces an additional maintenance efforts. 
+Another problem is related to the reuse of adapters.
+The developer may not possess the knowledge of which adapter is suitable for the adaptation task at hand.
+This is a problem when adapters are not planned to be reusable and documented poorly. 
+Then one has to search the type hierarchy to find the classes implementing the target type, then among these classes the suitable adapter has to be found. 
+The developer may even have to identify if the class she found is indeed an adapter class if it is not clear from the naming.
+This is an ad-hoc process that is error-prone as well as time consuming.
+
+
+So far we have established that integrating two separately developed components requires making their interfaces compatible and assigning object values to the appropriate field thereby building the necessary dependencies.
+The latter is implemented in the \emph{glue code}.
 In component-based design loose-coupling is an important principle.  
 Dependency injection (DI) (cite fowler) is a lightweight method for keeping modules loosely coupled by delegating the creation of concrete objects to so-called \emph{injectors}. 
 This approach allows a customizable and a decoupled way of creating dependencies, while maintaining loose coupling. 
-Typically these two parts, adaptation and binding, are handled separately from each other during integration. 
-
+When using the adapter pattern, the injection specification is coupled to the adapter implementation.
+This means during development time the adaptation and the binding tasks are not independent of each other; the developer that is writing the glue code should be aware of the adapters that are available to her.
 
 Let us summarize the problems we have identified so far:
 \begin{enumerate}[{P}-1]
@@ -53,11 +62,11 @@ Let us summarize the problems we have identified so far:
 In light of the issues discussed, we have devised the requirements below. The first three requirements refer to a specific problem in the above itemization. The last two requirements are concerned with the binding.
 
 \begin{enumerate}[{R}-1]
-\item Inheritance-free adapter structures. (P-1) 
+\item Inheritance-free adapter structures. (P-1) \TODO{I don't have a restriction, I do not require it!} 
 \item Use adaptation without creating dependencies to specific adapter classes. (P-2)
 \item Adapters are found automatically given a source object and a target type. (P-3)
 \item Means to separate the adaptation logic from the integration logic during development time.
-\item Binding mechanisms that provide loose coupling, which can work with the adaptation logic.
+\item Dependency injection which can work with the adaptation logic.
 \end{enumerate}
 
 In order to satisfy these requirements we have designed the \zamk framework, which unites dependency injection with \emph{under-the-hood} adaptation logic.
@@ -70,7 +79,7 @@ We automate the adaptation process by exploiting the type hierarchies and provid
 \label{sec:adapter:motiv}
 
 In the previous section we have identified the problems attached to the traditional adapter pattern\footnote{Throughout this chapter, the term adapter pattern will refer to the object adapter pattern. References to the class adapter pattern will explicitly include the term class.} and we have come up with requirements for a solution that would remedy these problems. In this section we will illustrate the said problems with an hypothetical example.
-
+%Changing requirements force software systems to include new components to extend their functionality. 
 Assume we have a plot drawing software which uses the Cartesian coordinate system to represent the points in the plot. 
 The software includes a data component which contains a class called \lstinln{Cartesian} which has two fields \lstinln{x, y}, that represents the values on the x-axis and y-axis respectively. 
 This class also includes getters and setters for these fields (\lstinln{Component1} in Figure~\ref{fig:components}).
@@ -216,6 +225,7 @@ In this simple example, this reference is manageable.
 However if several such extensions are to be made, there will be several such references.
 This requires keeping track of all referenced classes; if one is deleted then we would have errors in our code, due to broken dependencies. 
 Also the developer performing the integration has to know all the specific classes that are responsible for adaptations. 
+\TODO{Rephrase according to the change in introduction}
 If the adapter class is not known, then the names of the adapter classes gives the developer hints about the types the adapter adapts from and to. 
 However depending solely on naming is error-prone. 
 In this case the developer has to go into the class to understand the types included in the adapter. 
@@ -224,7 +234,7 @@ This results in a slower integration process.
 \begin{lstlisting}[float, caption={The integration of Polar coordinates}, label={lst:integration}]
 
 public void viewPointValue(Point selected)
-{
+
 	if(GUI.format == CARTESIAN)
 		GUI.createNewValueBox(selected.loc(), selected.getCoordinates().toString());
 	else if(GUI.format == POLAR)

@@ -28,6 +28,7 @@
      \scalebox{#1}{\input{#2}}  
 }
 
+\graphicspath{{./chapteripc//}{./chapteradapters//}{./chapteroce//}}
 
 \newcommand{\zamkph}[1]{\textsf{\textit{#1}}}
 
@@ -58,7 +59,7 @@
 	breaklines=true,
   tabsize=2,
   	backgroundcolor=\color[rgb]{0.99,0.98,0.97},
-	emph={aspect, instance pointcut, instance, select, UNTIL,pc, instanceType, exp, removeExp, composite, inter, union, .add , .remove, .add_after, .add_before, .remove_after, .remove_before, glue, with, single, retval, parents}, 
+	emph={aspect, instance, select, UNTIL,pc, instanceType, exp, removeExp, composite, inter, union, .add , .remove, .add_after, .add_before, .remove_after, .remove_before, glue, with, single, retval, parents}, 
 	emphstyle=\textbf,
 	escapechar={~},
 	showstringspaces= false,
@@ -88,7 +89,7 @@
 \newcommand{\TODO}[1]{\textcolor{Mulberry}{\textbf{TODO:#1}}}
 
 %\newcommand{\lstinln}[1]{\breakabletexttt{#1}}
-\newcommand{\lstinln}[1]{\texttt{#1}}
+\newcommand{\lstinln}[1]{{\small\texttt{#1}}}
 \tikzstyle{every picture}+=[font=\sffamily]
 \newcommand{\zamk}{\textit{\texttt{zamk}}\xspace}
 \newcommand{\gluer}{\textit{Gluer}\xspace}

@@ -28,7 +28,6 @@
      \scalebox{#1}{\input{#2}}  
 }
 
-\graphicspath{{./chapteripc//}{./chapteradapters//}{./chapteroce//}}
 
 \newcommand{\zamkph}[1]{\textsf{\textit{#1}}}
 
@@ -89,7 +88,7 @@
 \newcommand{\TODO}[1]{\textcolor{Mulberry}{\textbf{TODO:#1}}}
 
 %\newcommand{\lstinln}[1]{\breakabletexttt{#1}}
-\newcommand{\lstinln}[1]{{\small\texttt{#1}}}
+\newcommand{\lstinln}[1]{\texttt{#1}}
 \tikzstyle{every picture}+=[font=\sffamily]
 \newcommand{\zamk}{\textit{\texttt{zamk}}\xspace}
 \newcommand{\gluer}{\textit{Gluer}\xspace}

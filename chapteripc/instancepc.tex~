@@ -6,11 +6,11 @@
 
 \chapter{Instance Pointcuts}
 
-% \input{chapteripc/absintromotiv}
-% \input{chapteripc/ipcmainbody}
+\input{chapteripc/absintromotiv}
+\input{chapteripc/ipcmainbody}
 \input{chapteripc/ipcdesignpattern}
-% \input{chapteripc/ipccocos}
-% \input{chapteripc/ipcRWConc}
+\input{chapteripc/ipccocos}
+\input{chapteripc/ipcRWConc}
 
 
 

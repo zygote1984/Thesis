@@ -3,80 +3,72 @@
 \section{Introduction}
 \label{sec:adapter:intro}
 
-\TODO{Assumptions should be explicit in the beginning}
-Changing requirements force software systems to include new components to extend their functionality. 
+
 Software components are self-contained entities with a well-defined interface and behavior. 
 For two components to co-operate they must be \emph{integrated} through a compatible interface. 
+The integration task also entails creating dependencies between the components, i.e. assigning objects to fields in order to communicate data.
+The assignment operation requires the object and the assigned field are of a compatible \textit{type}.
 When components are developed separately the compatibility is not a given. 
 Therefore it should be, often manually, established through additional programming. 
 
-
-The integration task also entails creating dependencies between the components. 
-These dependencies are...
-Once the object is represented through a compatible interface it is assigned to a target field. 
-This integration also requires keeping the referenced data synchronized. 
-...
-%; this operation is called data binding.
-
-The problem of incompatible interfaces is a common software engineering problem and a possible  solution is captured in the \emph{adapter pattern} (cite Gamma).
-
-Gamma et al. defined the adapter pattern as follows... one object makes a reference to a data value it requires a specific type, a target type. another object repersents the desired data and behaavior but this object is an insance of a source type, which is different of the target type then the adapter pattern tells you how to make this source object compatible with the expected target type. 
-Adapter implements the target type and wraps the source object, it implments the methods of the target type by invoking methods defined in the source type.
-\TODO{make it better}The adapter pattern makes two interfaces compatible by adapting the instances of a source interface to work with a target interface. 
-This means when an object of the source interface should be assigned to an field of target interface, an adapter object which wraps the source object and implements the target interface is created and passed on as the target object. 
-
-The structure which establishes this compatibility is called an adapter and the source interface is referred as the \emph{adaptee}. 
-An adapter introduces  a level of indirection between the incompatible interfaces.
+The problem of incompatible interfaces is a common software engineering problem and a possible  solution is captured in the \emph{adapter pattern}~\cite{gamma2011design}.
+The adapter pattern describes how to make two types compatible with each other. 
+When an object makes a reference to a data value it requires a specific type, which we refer to as the \textit{target type}. 
+Another object which represents the desired data and behavior but is an instance of the so-called \textit{source type}, different from the target type, is made compatible with an \emph{adapter}.
+An adapter implements the methods of the target type by invoking methods defined in the source type, thereby establishing compatibility.
+There are two types of adapters; class adapters and object adapters.
+Class adapters use multiple inheritance to subclass both the source and the target types.
+Object adapters wrap the source object and subclass the target type; it implements the target methods by invoking the methods of the source object.
+An adapter introduces a level of indirection between the types whose interfaces are incompatible with each other.
 
 There are some issues attached to the traditional adapter pattern.
-A class adapter pattern is most efficiently implemented with a language that allows multiple inheritance. 
-Developers of the ingle inheritance programming languages need to use workarounds to achieve the same effect.
+A class adapter is easily implemented with a language that supports multiple inheritance. 
+Developers using single inheritance programming languages need to use workarounds to achieve the same effect.
 For example in Java multiple inheritance is simulated with the usage of interfaces since a class can implement multiple of them. 
 In order to inherit from two concrete types using Java, we need to extract the interface of one of the types and add this interface to the list of super-interfaces. 
-\TODO{Limitation, we don't always have control over source code}
-Then the concrete implementation of the interface is repeated in the sub-class. 
+However, we don't always have control over source code which would allow these operations. 
 
-\TODO{There are two problem statements, better structuring separate into two paragraphs}
+
 The implementation of the object adapter pattern is more flexible, since it only needs to inherit from the target type. 
-An issue is that the adapter pattern adds a level of indirection between the source and the target, which needs to be maintained \TODO{Maintained why?}. 
-The last issue is related to the additional dependencies introduced by the adapter classes. 
-The integration code has to refer to the specific adapter classes to initialize the desired objects. 
-This need for specific references has two side effects; first, the implementation contains a direct reference to the adapter type instead of just the source and the target types, which introduces an additional maintenance efforts. 
-\TODO{It should be explicit that the user wants to reuse the adapter}
-Second, the user is required to know exactly which adapter is responsible for a establishing type compatibility.
-This may be a problem when adapters are not planned to be reusable and documented poorly. 
-One has to search the type hierarchy.....to find the classes implementing the target type...
-In such cases the information about which interfaces are adapted is communicated through a particular adapters name or one has to go inside that adapter class to understand the expected source and the target types. 
-\TODO{How would you know if it is an adapter if it is not indicated with naming conventions?}
-This process is error-prone as well as time consuming.
+However the adapter class is an additional type that is introduced to the source code. 
+Hence the adapter definitions themselves are dependent on other types; they also need to ne updated when the source or the target interface is altered, thus requiring additional maintenance.
+ 
+The integration code contains a direct reference to the adapter type instead of just the source and the target types, which introduces additional maintenance efforts. 
+Another problem is related to the \emph{reuse of adapters}.
+The developer may not possess the knowledge of which adapter is suitable for the adaptation task at hand.
+This is a problem when adapters are not planned to be reusable and documented poorly. 
+Then one has to search the type hierarchy to find the classes implementing the target type, then among these classes the suitable adapter has to be found. 
+The developer may even have to identify if the class she found is indeed an adapter class if it is not clear from the naming.
+This is an ad-hoc process that is error-prone as well as time consuming.
 
-Adaptation is only one part of the integration problem. 
-The second part entails establishing dependencies between the integrated components. i.e binding. 
+
+So far we have established that integrating two separately developed components requires making their interfaces compatible and assigning object values to the appropriate field thereby building the necessary dependencies.
+The latter is implemented in the \emph{glue code}.
 In component-based design loose-coupling is an important principle.  
 Dependency injection (DI) (cite fowler) is a lightweight method for keeping modules loosely coupled by delegating the creation of concrete objects to so-called \emph{injectors}. 
-This approach allows a customizable and a decoupled way of creating dependencies, while maintaining loose coupling. 
-Typically these two parts, adaptation and binding, are handled separately from each other during integration. 
+This approach allows a creating loosly coupled dependencies. 
+When using the adapter pattern, the injection specification is coupled to the adapter implementation.
+This means during development time the adaptation and the binding tasks are not independent of each other; the developer that is writing the glue code should be aware of the adapters that are available to her.
 
-
-Let us summarize the problems we have identified so far:
+Let us summarize the problems we have identified above:
 \begin{enumerate}[{P}-1]
 \item Implementation of the adapter pattern can be hindered by programming language properties.
 \item Adapter pattern introduces additional dependencies, which increases maintenance efforts.
-\item Adapters require additional knowledge and effort from the side of the developer to be used properly.
+\item Reusing adapters require additional knowledge and effort from the side of the developer to be used properly.
+\item The glue code contains dependencies to the adapter classes, which hinders loose coupling.
 \end{enumerate}
 
 In light of the issues discussed, we have devised the requirements below. The first three requirements refer to a specific problem in the above itemization. The last two requirements are concerned with the binding.
 
 \begin{enumerate}[{R}-1]
-\item Inheritance-free adapter structures. (P-1) \TODO{I don't have a restriction, I do not require it!} 
-\item Use adaptation without creating dependencies to specific adapter classes. (P-2)
-\item Adapters are found automatically given a source object and a target type. (P-3)
-\item Means to separate the adaptation logic from the integration logic during development time.
-\item Dependency injection which can work with the adaptation logic.
+\item It must be possible to implement adapters without inheritance. (P-1)
+\item The adaptations must be performed without creating dependencies to specific adapter classes. (P-2)
+\item Adapters must be found automatically given a source object and a target type. (P-3)
+\item Glue code must not contain references to concrete adapters; it must be possible to implement these separately. (P-4)
 \end{enumerate}
 
 In order to satisfy these requirements we have designed the \zamk framework, which unites dependency injection with \emph{under-the-hood} adaptation logic.
-For our framework we do not employ the traditional adapter pattern and we have created \emph{converters}, which are user-defined inheritance-free classes. 
+For our framework we do not employ the traditional adapter pattern but we have created the concept of \emph{converters}, which are user-defined classes that do not have to inherit from a target type to realize the adaptation.
 \zamk comes with its own dependency injection mechanism that is used with a designated domain-specific language called \gluer. 
 The dependency injection logic is intertwined with the adaptation logic which uses the conversion registry to perform automated adaptation between source and target types. 
 We automate the adaptation process by exploiting the type hierarchies and provide checks and context-relevant messages for correct integration. The details of the framework will be explained throughout the chapter.
@@ -84,14 +76,16 @@ We automate the adaptation process by exploiting the type hierarchies and provid
 \subsection{Motivating Example}
 \label{sec:adapter:motiv}
 
-In the previous section we have identified the problems attached to the traditional adapter pattern\footnote{Throughout this chapter, the term adapter pattern will refer to the object adapter pattern. References to the class adapter pattern will explicitly include the term class.} and we have come up with requirements for a solution that would remedy these problems. In this section we will illustrate the said problems with an hypothetical example.
-
+In the previous section we have identified the problems attached to the traditional adapter pattern\footnote{Throughout this chapter, the term adapter pattern will refer to the object adapter pattern. References to the class adapter pattern will explicitly include the term class.} and we have come up with requirements for a solution that would remedy these problems. In this section we will illustrate the said problems with an example.
 Assume we have a plot drawing software which uses the Cartesian coordinate system to represent the points in the plot. 
 The software includes a data component which contains a class called \lstinln{Cartesian} which has two fields \lstinln{x, y}, that represents the values on the x-axis and y-axis respectively. 
 This class also includes getters and setters for these fields (\lstinln{Component1} in Figure~\ref{fig:components}).
-A new requirement is received which states that the software must also support polar coordinates, and the user must be able to view plot points in a selected view. (Cartesian or polar). 
+A new requirement is received which states that the software must also support polar coordinates, and the user must be able to view plot points in a selected view (\lstinln{Cartesian} or \lstinln{Polar}). 
 
-In order to support polar coordinates, a new component which contains classes to represent such data is introduced (\lstinln{Component2} in Figure~\ref{fig:components}). The class \lstinln{Polar} contains two fields \lstinln{r} representing the radius and \lstinln{theta} of type \lstinln{Angle}. This component is to be integrated with the \lstinln{Cartesian} component. It should be possible to obtain the \lstinln{Polar} representation of any \lstinln{Cartesian} object by using an \emph{adapter}.
+In order to support polar coordinates, a new component which contains classes to represent such data is introduced (\lstinln{Component2} in Figure~\ref{fig:components}). The class \lstinln{Polar} contains two fields \lstinln{r} representing the radius and \lstinln{theta} of type \lstinln{Angle}. This component is to be integrated with the \lstinln{Cartesian} component. 
+Consider we want to integrate both components using the traditional adapter pattern. 
+It should be possible to obtain the \lstinln{Polar} representation of any \lstinln{Cartesian} object by using an \emph{adapter}.
+This solution is discussed in the following.
 
 \begin{figure}
 \centering
@@ -163,8 +157,12 @@ public aspect Cartesian2PolarAdapter {
 \caption{The diagram of the object adapter and the corresponding Java implementation}
 \end{figure}
 
-In their paper on aspect-oriented implementation of gang-of-four design patters (\cite{hannemann:oopsla02}) Hannemann and Kiczales mention an adapter pattern implementation using inter-type declarations. 
-According to the auxiliary code they provide with this study, they propose the adaptee class should subclass the target class, which results as the diagram shown in Figure~\ref{fig:hkaop}. For our example case the \lstinln{Cartesian} class will directly have to subclass the \lstinln{Polar} class and implement its method using its \lstinln{x, y} field values. This is depicted in the aspect shown in Listing~\ref{lst:objadapteraoplst}. The inter-type declaration on line~\ref{lst:line:it} declares the inheritance relation and the subsequent method implementations are woven into the \lstinln{Cartesian} class.
+A convenient implementation of the adapter pattern requires a lot of boilerplate code. 
+An improvement over this implementation is proposed by  Hannemann and Kiczales~\cite{hannemann:oopsla02}. 
+In this study they propose a re-usable implementation to the class adapter pattern using inter-type declarations. 
+According to the auxiliary code they provide with this study, they propose the adaptee class should subclass the target class, which results as the diagram shown in Figure~\ref{fig:hkaop}.
+For our example case the \lstinln{Cartesian} class will directly have to subclass the \lstinln{Polar} class and implement its method using its \lstinln{x, y} field values. This is depicted in the aspect shown in Listing~\ref{lst:objadapteraoplst}.
+The inter-type declaration on line~\ref{lst:line:it} declares the inheritance relation and the subsequent method implementations are woven into the \lstinln{Cartesian} class.
 
 \begin{figure}
 \centering
@@ -218,24 +216,18 @@ According to the auxiliary code they provide with this study, they propose the a
 \end{figure}
 
 The obvious problem with this implementation is that, since \lstinln{Polar} is a concrete type, it would quickly become unusable due to Java's single inheritance. 
-If the \lstinln{Cartesian} class were extending any other class, that it would not be possible to declare that it also extends \lstinln{Polar} class. 
 Another limitation comes from the semantics of inter-type declarations. 
 Only \emph{sibling} types, i.e. types which share a parent class, can be used in an inter-type declaration. In this example both classes' super-type is \lstinln{Object}, which allows us to use the inter-type declaration. 
 
-
-In order to integrate the polar coordinates into our plotting software, we need to alter some code. 
+Up to now, we have explained the issues related to the implementation of adaptation concern, we also need to bind the newly added component to our application.
+In order to bind the polar coordinates into our plotting software, we need to alter some code. 
 According to the selection made in the GUI, the information box should display the coordinate value in the correct format. 
-An hypothetical example for the integration code is given in Listing~\ref{lst:integration}.
-On line~\ref{lst:integration:adapt} we see an explicit reference to the class \lstinln{Cartesian2PolarAdapter}.
-In this simple example, this reference is manageable. 
-However if several such extensions are to be made, there will be several such references.
-This requires keeping track of all referenced classes; if one is deleted then we would have errors in our code, due to broken dependencies. 
-Also the developer performing the integration has to know all the specific classes that are responsible for adaptations. 
-\TODO{Rephrase according to the change in introduction}
-If the adapter class is not known, then the names of the adapter classes gives the developer hints about the types the adapter adapts from and to. 
-However depending solely on naming is error-prone. 
-In this case the developer has to go into the class to understand the types included in the adapter. 
-This results in a slower integration process.
+An example for the integration code is given in Listing~\ref{lst:integration}.
+On line~\ref{lst:integration:adapt} we see an explicit reference to the class \lstinln{Cartesian2PolarAdapter}; this adapter is introduced at the beginning of the section in listing~\ref{lst:objadapterlst}.
+Referring to a low-level implementation type hinders software evolution because we need to change code when another adaptation should be used. 
+The other issue is that in order to reuse existing adapters, the developer has to have knowledge about these adapters, or she needs to search to see if a suitable one exists. 
+The explicit reference on line~\ref{lst:integration:adapt} is also a disadvantage for the binding process since how the \lstinln{Polar} field is initialized is fixed with this reference.
+
 
 \begin{lstlisting}[float, caption={The integration of Polar coordinates}, label={lst:integration}]
 
@@ -254,17 +246,19 @@ public void viewPointValue(Point selected)
 In this section we have used the plotter example to illustrate the problems we have identified in Section~\ref{sec:adapter:intro}. 
 Firstly we have described how programming languages can affect the implementation of the adapter pattern by using Java and AspectJ (P-1). 
 Secondly we have shown the disadvantages of introducing adapter dependencies in the integration code, by using the introduction \lstinln{Polar} view extension to the plotter software (P-2).
-Lastly, using the same example, we have discussed why the developer needs adapter specific knowledge and how it slows down the integration process (P-3). 
-
+Thirdly, using the same example, we have discussed why the developer needs adapter specific knowledge and how it slows down the integration process (P-3). 
+Lastly, we have discussed the disadvantage of having an explicit dependency in the glue code.
 
 
 \section{Approach}
 \label{sec:adapter:approach}
 In this section we will explain the details of the \zamk framework which is designed according to the requirements specified in Section~\ref{sec:adapter:intro}. 
 
-\zamk is a development framework specifically tailored for adapter-based integration. 
+\zamk is a development framework specifically tailored for reusable adapters and adapter-aware dependency injection. 
 It offers a new and a light-weight way of defining adapters; these light-weight structures are called \emph{converters}. 
-Converters are user-defined classes that do not need use sub-class any of the types to implement adaptations. Converter classes are stateless. 
+Converters contain the logic that is used to convert one type to another. 
+Typically this logic defined how an object of a target type can be initialized using the values provided by an object of a source type (e.g. calculating the polar coordinate values from Cartesian values). 
+Converters are provided by the developer and they do not need to use sub-class any of the types to implement adaptations. Converter classes are stateless. 
 \zamk runtime is responsible for finding the correct converter, given a source and a target object. 
 This means the only additional dependency we have to include in the implementation is the \zamk runtime API. 
 Since the user does not have to refer to specific adapters, \zamk allows separation of adaptation and binding concerns during integration.
@@ -283,27 +277,32 @@ Figure~\ref{fig:framework} shows an overview of the stages that are necessary to
 \zamk requires user-defined input to perform an integration.
 
 \paragraph{Development Time}
-The user-defined input is a produced during \zamkph{development time}. In the figure we show four inputs that are fed to the \zamk compile-time; they are (in the order shown in the figure):
+The goal of the \zamkph{development time} is to provide the necessary input to \zamk. 
+In the figure we show four inputs that are fed to the \zamk compile-time; they are (in the order shown in the figure):
 
 \begin{description}
 \item{\gluer files}: Gluer files contain the \gluer statements that define which objects are going to be injected to which fields. \gluer statements are used to generate conversion requests, which are \zamk API calls that trigger the \zamk adaptation work-flow. The \gluer language is discussed in Section~\ref{sec:adapter:gluer}. 
 \item{Application Classes}: These classes are scanned to retrieve information for integration. The retrieved information is used in checking. Also application classes are instrumented with conversion requests that are derived from \gluer statements. 
-\item{Converters}: These are the user-defined classes that adhere to a specific structure. Converters contains methods necessary to convert one type to the other. These are discussed in Section~\ref{sec:adapter:converter}.
-\item{Converter Precedence Declarations}: these are used to resolve conflicts when more than one conversion is found for a specific request. In this case the conversion which is contained by the converter class that has the higher precedence is used. 
+\item{Converters}: Converters contain methods necessary to convert one type to the other. They are annotated in order to be registered by \zamk. 
+These are discussed in Section~\ref{sec:adapter:converter}.
+\item{Converter Precedence Declarations}: These are used to resolve conflicts when more than one conversion is found for a specific request. In this case the conversion which is contained by the converter class that has the higher precedence is used. 
 \end{description}
 
 It is also possible to write plain Java code that calls the \zamk API directly.
-However these statements are not processed during compile-time; plain Java statements. 
+However these statements are not processed during compile-time. 
 That is why we do not list them as compile-time inputs. 
 During the \zamkph{final compilation} phase, they are compiled with all the code that is provided by the user and generated by \zamk.
 
 \paragraph{Compile Time}
-Once the input is provided, the \zamk compiler work-flow starts. This work-flow is composed of the following sequential phases. The descriptions below follow the same structure and the order as in upper-half of the Figure~\ref{fig:framework}. 
+The goal of the compile-time stage is to check the provided input and generate the necessary code using the information derived from the input.
+Once the input is provided, the \zamk compile-time work-flow starts. This work-flow is composed of the following sequential phases. The descriptions below follow the same structure and the order as in upper-half of the Figure~\ref{fig:framework}. 
 
 \begin{description}
 \item{\zamkph{Checking}}: There are two checkers; one responsible for checking the \gluer files and the other for converter classes. The gluer checker performs the syntax checking; it also checks if the references made in the \gluer statement actually exist in the application code. The converter checker performs type checking and well-formedness checking. If any of these checks fails, a compile-error is produced. 
-\item{\zamkph{Conversion registry}}: When the converter checking is finished without any problems, \zamk builds a conversion registry\footnote{One converter class may include multiple conversions} in the form of a data structure to be used in the next step of compile-time work flow; \zamkph{code generation}. Also during this phase the conversion registry data structure is serialized in XML format creating the registry XML. 
-\item{\zamkph{Code Generation}}: This step consists of two separate generation processes. Byte-code instrumentation is responsible for inserting \zamk conversion requests to the places indicated as the binding points defined in the \gluer statements. The conversion registry that is created in the previous step is used to generate the conversion aspects, which are responsible for monitoring the converted objects. 
+\item{\zamkph{Conversion registry}}: When the converter checking is finished without any problems, \zamk builds a conversion registry\footnote{One converter class may include multiple conversions} in the form of a data structure to be used in the next step of compile-time work flow: \zamkph{code generation}. Also during this phase the conversion registry data structure is serialized in XML format creating the registry XML. 
+\item{\zamkph{Code Generation}}: This step consists of two separate generation processes. Byte-code instrumentation is responsible for inserting \zamk conversion requests to the places indicated as the binding points defined in the \gluer statements, i.e implementing the dependency injection.
+The conversion registry that is created in the previous step is used to generate the \emph{conversion aspects}.
+The conversion aspects are responsible for monitoring the source objects which are associated with a target object. 
 \item{\zamkph{Final Compilation}}: When the compile-time work flow is complete a final compilation step is performed, which makes sure the instrumented application classes and the generated files do not contain any errors. At the end of this step we obtain a \zamk run-time ready code, in this figure we assume the final compilation product is an executable.
 \end{description}
  
@@ -311,7 +310,7 @@ The \zamk compile time produces two outputs; registry XML which will be loaded d
 
 
 \paragraph{Run-time}
-
+During run-time \zamk processes conversion requests.
 \zamk run-time consists of two parts, a one time \zamkph{initialization} and a \zamkph{run-time work flow} which is executed for every conversion request (
 lower-half of Figure~\ref{fig:framework}). 
 
@@ -322,8 +321,11 @@ The loading process produces a data structure called run-time conversion registr
 A conversion request contains the source object and the desired target type to which the source object should be converted. 
 The \emph{find conversion} process searches for the correct conversion by using the type information included in the conversion request. 
 If a suitable conversion cannot be found, \zamk produces a run-time exception indicating the error. 
-If a conversion is found, one of two things can happen. Either the request may result in a new conversion, i.e. it may trigger the process to create a new source--target pair. In order to create a new source--target pair, the corresponding conversion method is invoked and the newly created target object is returned. 
-The conversion aspects are responsible for monitoring the source objects which are associated with a target object. Alternatively, \zamk may find that a request to the same target type was processed before with the given source object. In that case the existing target object is retrieved and returned. 
+When a conversion is found, one of two things can happen. 
+If the requested conversion was never performed before for the given source object and the target type, the suitable conversion method is invoked and an object of target type is created. 
+This pair of objects, provided source object and the associated target object, is referred to as a source--target pair. 
+Alternatively, \zamk may find that a request to the same target type was processed before with the given source object. 
+In that case the existing target object is retrieved and returned. 
 \end{description}
 
 

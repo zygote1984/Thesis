@@ -1,0 +1,53 @@
+
+\section{Related Work}
+AO-extensions for improving aspect-object relationships are proposed in several studies. Sakurai et al.~\cite{sakurai2004association} proposed Association Aspects. This is an extension to aspect instantiation mechanisms in AspectJ to declaratively associate an aspect to a tuple of objects. In this work the type of object tuples are declared with a \lstinln{perobjects} clause and the specific objects are selected by pointcuts. This work offers a method for defining relationships between objects. Similar to association aspects, Relationship Aspects \cite{pearce2006relationship} also offer a declarative mechanism to define relationships between objects, which are cross-cutting to the OO-implementation. This work focuses on managing relationships between associated objects. Bodden et al.~\cite{bodden2008relational} claim that the two above approaches lack generality and propose a tracematch-based approach. Although the semantics of the approaches are very similar, Bodden et al.\ combine features of thread safety,
+ memory safety, per-association state and binding of primitive values or values of non-weavable classes. Our approach, also extending AO, differs from these approaches since our aim is not defining new relationships but using the existing structures as a base to group objects together for behaviour extensions. Our approach also offers additional features of composition and refinement.
+
+The ``dflow'' pointcut~\cite{kawauchi:aosd-aosdsec04} is an extension to AspectJ that can be used to reason about the values bound by pointcut expressions. Thereby it can be specified that a pointcut only matches at a join point when the origin of the specified value from the context of this join point did or did not appear in the context of another, previous join point (also specified in terms of a pointcut expression). This construct is limited to restricting the applicability of pointcut expressions rather than reifying all objects that match certain criteria, as our approach does.
+
+Another related field is Object Query Languages~(OQL) which are used to query objects in an object-oriented program (e.g.,~\cite{cluet1998designing}). However OQLs do not support event based querying, which selects objects based on the events they participate in, as presented in our approach. It is interesting to combine instance pointcuts with OQL. For example instance pointcuts can be used as a predicate in OQL expressions, in order to select from phase-specific object sets. We will explore possible applications in future work.
+
+Type States~\cite{DeLine2004} allow to define a state chart for a type.
+This specifies which states an object of that type can be in and what causes state transitions.
+Similar to our approach, state transitions are triggered by runtime events.
+However unlike instance pointcuts, in type states an objects state can only change at method calls where the object is the receiver; with instance pointcuts, objects life-cycle phases can be defined more flexibly by referring to any event where the object is in the dynamic context, e.g., passed as argument or result value.
+The purpose of the type states approach is to facilitate more powerful invariant checking at compile-time, whereas we provide a mechanism to actually track object sets at runtime.
+It would be interesting to investigate possibilities for combining both approaches in the future.
+
+\section{Conclusion and Future Work}
+In this work we have presented instance pointcuts, a specialized pointcut mechanism for reifying phase-specific object sets.
+Our approach provides a declarative syntax for defining events when an object starts or ends to belong to a life-cycle phase.
+Instance pointcuts maintain multisets providing a count for objects which enter the same life-cycle phase more than once.
+Instance pointcut sets can be accessed easily and any changes to these sets can also be monitored with the help of automatically created set monitoring pointcuts.
+The sets can be declaratively composed, which allows reuse of existing instance pointcuts and consistency among corresponding multisets.
+Finally, we have presented our modular compilation approach for instance pointcuts based on AspectJ and the ALIA4J Language implementation architecture.
+ALIA4J provided us with the flexibility AspectJ lacked in instance pointcut composition and type refinement.
+
+The syntax and expressiveness of instance pointcuts partially depend on the underlying AO language;
+this is evident especially in our usage of the AspectJ pointcut language in the specification of events.
+Since AspectJ's join points are ``regions in time'' rather than events, we had to add the ``before'' and ``after'' keywords to our add and remove expressions.
+Thus, compiling to a different target language with native support for events (e.g., EScala~\cite{Gasiunas2011} or Composition Filters~\cite{Bergmans2001b}, the point-in-time join point model~\cite{masuharafine}) would influence the notation of these expressions.
+
+We think the instance pointcut concept is very flexible and can be useful in various applications.
+It eliminates boilerplate code to a great extent and provides a readable syntax.
+We believe that the reuse and composition mechanisms offered by instance pointcuts are beneficial for software evolution since they make it easy to create tailored variations according to new requirements.
+
+
+
+\TODO{COCOS conclusion stramline}
+In this section we proposed an application of the instance pointcuts approach to the program comprehension domain, as an extension to the Eclipse debugger.
+Our vision is that by using instance pointcuts during debugging, we will be able to identify objects based on how they are used which is not observable by the class structure.
+Inspired by the challenges encountered while debugging an extension of the Jikes VM's optimizing compiler, we devised three scenarios~(section~\ref{sec:walkthrough}).
+In the first scenario we explained how the instance pointcuts concept is useful during debugging; we can easily identify objects that are relevant to the debugging task by looking if they are contained by a certain instance pointcut.
+In the second scenario we explored the use of instance pointcuts with conditional breakpoints; instance pointcuts can be referenced as \lstinline!Set!s and we can observe if an object is added to the instance pointcut set by means of a conditional expression.
+In the third and the final scenario we have utilized the removal feature of instance pointcuts; here instance pointcuts are used to maintain a set of objects starting from the time they were \lstinline!create!d until they were \lstinline!mutate!d.
+We also showed how the built-in joinpoints for add and remove operations can be used to define watchpoints.
+
+Despite some limitations, instance pointcuts are beneficial for program comprehension since they provide the means to create meaningful runtime categories.
+We think that this extra dimension brings practicality for understanding dynamic behavior.
+In future work, we will develop this idea further and explore different event selection languages to overcome limitations introduced by AspectJ.
+\TODO{Cocos conclusion end}
+
+One relevant field of application for instance pointcuts are design patterns which are known to be good examples for aspect-oriented programming~\cite{hannemann:oopsla02}.
+Many design patterns exist for defining the behaviour for groups of objects; thus implementing them with our instance pointcuts seems to provide a natural benefit.
+We are currently working on creating object adapters wrapping the objects reified by an instance pointcut.

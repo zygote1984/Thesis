@@ -2,4 +2,4 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces The type distances of conversion's source--target types to the source--target types given in the conversion request \texttt {getConvertedValue(mammal, WarmBlooded.class)}}}{72}{table.4.1}

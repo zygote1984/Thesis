@@ -10,14 +10,14 @@
 
 % \maketitle
 % \frontmatter 
-%\tableofcontents 
+% \tableofcontents 
 % \listoffigures
 % \listoftables
 % \include{todo}
-
+% 
 \mainmatter 
-\include{chapter1intro/introduction}
-\include{chapteroce/chapteroce}
+% \include{chapter1intro/introduction}
+% \include{chapteroce/chapteroce}
 \include{chapteripc/instancepc} 
 \include{chapteradapters/adapters}
 
